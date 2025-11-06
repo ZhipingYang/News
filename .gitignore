@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output (keep docs for GitHub Pages)
+# docs/  # Commented out - we want to commit docs for GitHub Pages
+
+# Temp files
+*.tmp
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# MCP Server specific
+mcp-server/node_modules/
+mcp-server/package-lock.json

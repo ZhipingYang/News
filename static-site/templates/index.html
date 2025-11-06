@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 资讯收集 - 首页</title>
+    <meta name="description" content="专注于 AI 芯片、量子计算、机器人、生成式AI和AI编程的最新资讯">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🤖 AI 资讯收集</h1>
+            <p>专注于前沿科技领域的最新动态</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="index.html">🏠 首页</a>
+            <a href="search.html">🔍 搜索</a>
+            <a href="stats.html">📊 统计</a>
+            <a href="feed.xml">📡 RSS</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>每日资讯汇总</h2>
+                <p style="color: var(--text-light);">选择日期查看当天的资讯内容</p>
+            </div>
+
+            <div class="dates-container">
+                {{DATE_LIST}}
+            </div>
+
+            <footer style="margin-top: 3rem; text-align: center; color: var(--text-light);">
+                <p>最后更新时间：{{UPDATE_TIME}}</p>
+            </footer>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>🚀 AI 资讯收集仓库 | 专注前沿科技</p>
+            <p>
+                <a href="https://github.com/your-username/News" target="_blank">GitHub</a> | 
+                <a href="feed.xml">RSS 订阅</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
