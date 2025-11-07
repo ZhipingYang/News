@@ -55,6 +55,20 @@
       "credibility": 0.9,
       "category": "company_blog",
       "description": "Hugging Face博客，AI模型和工具"
+    },
+    {
+      "name": "AWS Machine Learning Blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "credibility": 0.9,
+      "category": "company_blog",
+      "description": "AWS机器学习博客，AI开发工具和服务"
+    },
+    {
+      "name": "Google AI Research",
+      "url": "https://ai.googleblog.com/feeds/posts/default",
+      "credibility": 0.95,
+      "category": "company_official",
+      "description": "Google AI研究博客，前沿AI技术"
     }
   ],
   "generative_ai": [
@@ -127,6 +141,20 @@
       "credibility": 0.85,
       "category": "company_blog",
       "description": "Cohere博客，企业级AI模型"
+    },
+    {
+      "name": "Mistral AI Blog",
+      "url": "https://mistral.ai/news/rss/",
+      "credibility": 0.9,
+      "category": "company_blog",
+      "description": "Mistral AI博客，开源大模型"
+    },
+    {
+      "name": "Inflection AI",
+      "url": "https://inflection.ai/blog/rss",
+      "credibility": 0.85,
+      "category": "company_blog",
+      "description": "Inflection AI博客，AI助手技术"
     }
   ],
   "ai_chips": [
@@ -199,6 +227,20 @@
       "credibility": 0.85,
       "category": "company_blog",
       "description": "ARM社区博客，AI处理器架构"
+    },
+    {
+      "name": "Graphcore Blog",
+      "url": "https://www.graphcore.ai/blog/rss",
+      "credibility": 0.85,
+      "category": "company_blog",
+      "description": "Graphcore博客，AI加速器芯片"
+    },
+    {
+      "name": "Cerebras Blog",
+      "url": "https://www.cerebras.net/blog/rss",
+      "credibility": 0.85,
+      "category": "company_blog",
+      "description": "Cerebras博客，大模型训练芯片"
     }
   ],
   "quantum_computing": [
@@ -264,6 +306,20 @@
       "credibility": 0.95,
       "category": "academic",
       "description": "MIT量子计算新闻"
+    },
+    {
+      "name": "Quantinuum",
+      "url": "https://www.quantinuum.com/news/rss",
+      "credibility": 0.85,
+      "category": "company_official",
+      "description": "Quantinuum量子计算公司新闻"
+    },
+    {
+      "name": "Atom Computing",
+      "url": "https://atom-computing.com/blog/rss",
+      "credibility": 0.85,
+      "category": "company_blog",
+      "description": "Atom Computing量子计算博客"
     }
   ],
   "robotics": [
@@ -338,13 +394,85 @@
       "description": "DeepMind博客，AI与机器人"
     }
   ],
+  "tech_general": [
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "credibility": 0.95,
+      "category": "tech_news",
+      "description": "MIT Technology Review，权威科技媒体"
+    },
+    {
+      "name": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/rss",
+      "credibility": 0.95,
+      "category": "tech_news",
+      "description": "IEEE Spectrum，IEEE旗舰科技媒体"
+    },
+    {
+      "name": "Nature News",
+      "url": "https://www.nature.com/nature.rss",
+      "credibility": 0.95,
+      "category": "academic",
+      "description": "Nature新闻，顶级科学期刊"
+    },
+    {
+      "name": "Science News",
+      "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science",
+      "credibility": 0.95,
+      "category": "academic",
+      "description": "Science新闻，顶级科学期刊"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "TechCrunch，知名科技媒体"
+    },
+    {
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "Wired，科技文化媒体"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "The Verge，科技新闻媒体"
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "Ars Technica，深度科技分析"
+    },
+    {
+      "name": "New Scientist",
+      "url": "https://www.newscientist.com/feed/home/",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "New Scientist，科学新闻"
+    },
+    {
+      "name": "Scientific American",
+      "url": "https://rss.sciam.com/ScientificAmerican-News",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "Scientific American，科学美国人"
+    }
+  ],
   "settings": {
     "update_interval": 3600,
     "max_age_days": 7,
-    "min_credibility": 0.85,
+    "min_credibility": 0.8,
     "fetch_timeout": 10000,
     "retry_attempts": 3,
-    "description": "RSS源配置，定期更新以确保源的有效性。每个主题包含5-10个高质量RSS源，按可信度排序。"
+    "description": "RSS源配置，定期更新以确保源的有效性。每个主题包含5-10个高质量RSS源，按可信度排序。已放宽可信度阈值至0.8以获取更多有效资讯。"
   }
 }
 

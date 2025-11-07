@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 /**
  * 处理RSS抓取数据：去重、评估、筛选
  */
-async function processRSSData(rssDataPath, minCredibility = 0.85) {
+async function processRSSData(rssDataPath, minCredibility = 0.8) {
   console.log(`\n📊 开始处理RSS数据：${rssDataPath}\n`);
 
   // 1. 读取RSS数据
@@ -31,6 +31,7 @@ async function processRSSData(rssDataPath, minCredibility = 0.85) {
     ai_chips: "ai-chips",
     quantum_computing: "quantum-computing",
     robotics: "robotics",
+    tech_general: "tech-general",
   };
 
   for (const [topic, items] of Object.entries(rssData)) {
@@ -109,7 +110,7 @@ async function main() {
     const rssFile =
       process.argv[2] ||
       path.join(__dirname, "../data/rss-fetch-2025-11-07.json");
-    const minCredibility = parseFloat(process.argv[3]) || 0.85;
+    const minCredibility = parseFloat(process.argv[3]) || 0.8;
 
     const processed = await processRSSData(rssFile, minCredibility);
     const byDate = groupByDate(processed);
