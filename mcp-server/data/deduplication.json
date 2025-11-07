@@ -1,0 +1,14 @@
+{
+  "history": {},
+  "stats": {
+    "total_checked": 0,
+    "duplicates_found": 0
+  },
+  "settings": {
+    "similarity_threshold": 0.8,
+    "max_history_days": 7,
+    "keyword_overlap_threshold": 0.7
+  },
+  "description": "去重数据库，记录最近7天的资讯信息用于去重检查。自动清理过期数据。"
+}
+

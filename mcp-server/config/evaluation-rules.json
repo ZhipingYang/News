@@ -1,10 +1,13 @@
 {
   "minimum_requirements": {
-    "min_length": 200,
+    "min_length": 300,
     "require_data_points": true,
     "require_source_attribution": true,
-    "max_age_days": 7
+    "require_technical_details": true,
+    "max_age_days": 7,
+    "min_credibility_score": 0.85
   },
+  "comment": "提高最低要求：增加最小长度至300字，要求必须包含技术细节，可信度≥0.85",
   "scoring_weights": {
     "source_credibility": 0.4,
     "content_completeness": 0.25,
@@ -12,10 +15,12 @@
     "content_quality": 0.2
   },
   "quality_thresholds": {
-    "high": 0.8,
-    "medium": 0.7,
-    "low": 0.5
+    "high": 0.85,
+    "medium": 0.75,
+    "low": 0.6,
+    "accept_threshold": 0.85
   },
+  "comment": "提高质量标准：只接受可信度≥0.85的资讯，确保高质量内容",
   "red_flags": {
     "excessive_hype": {
       "keywords": [
