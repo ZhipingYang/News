@@ -80,8 +80,8 @@ export class StaticSiteGenerator {
     // 移除文件头部的汇总标题
     content = content.replace(/^#\s+.*资讯汇总\s*\n+/, "");
 
-    // 按分隔符拆分
-    const sections = content.split(/\n---\n\s*\n/);
+    // 按 "# 🔥" 标题拆分为多条资讯（更可靠的方式）
+    const sections = content.split(/(?=\n# 🔥)/);
     const items = [];
 
     for (const section of sections) {
