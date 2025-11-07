@@ -19,10 +19,41 @@
 2. ✅ 评估内容可信度（使用 sources.json 标准）
 3. ✅ 生成 1500-2000 字深度分析（遵循 AI-ANALYSIS-GUIDE.md）
 4. ✅ 保存到对应的 markdown 文件
-5. ✅ 构建静态网站
-6. ✅ Git 提交并推送
+5. ✅ 更新 README.md（如有需要）
+6. ✅ 构建静态网站
+7. ✅ Git 提交并自动推送到 GitHub
+8. ✅ 触发 GitHub Pages 更新
 
 **执行时间：** 35-50 分钟（全程自动，无需人工干预）
+
+---
+
+### 🔐 首次配置（仅需一次）
+
+**配置 GitHub Token 以支持自动推送：**
+
+1. **生成 Personal Access Token：**
+   - 访问：https://github.com/settings/tokens
+   - 点击 "Generate new token (classic)"
+   - 设置名称：`News Auto Push`
+   - 勾选权限：`repo`（完整仓库访问）
+   - 生成并复制 token
+
+2. **配置到本地（不会提交到 GitHub）：**
+   ```bash
+   cd /Users/xcodeyang/RC_Work/News
+   cp .env.example .env
+   nano .env  # 或用你喜欢的编辑器
+   # 将 GITHUB_TOKEN=your_github_token_here 替换为你的实际 token
+   ```
+
+3. **验证配置：**
+   ```bash
+   ./scripts/auto-push.sh
+   ```
+   看到 "✅ 推送成功！" 即表示配置成功
+
+**注意：** `.env` 文件已在 `.gitignore` 中，不会被提交到 GitHub，你的 token 是安全的
 
 ---
 
@@ -93,18 +124,22 @@ npm run build
 - `docs/news/YYYY-MM-DD/*.html` - 各资讯详情页
 - `docs/feed.xml` - RSS订阅
 
-#### 第六阶段：Git 提交
+#### 第六阶段：Git 提交并自动推送
 ```bash
-git add .
-git commit -m "Add AI news analysis for YYYY-MM-DD
-
-- AI Programming: [资讯标题]
-- Generative AI: [资讯标题]
-- AI Chips: [资讯标题]
-- Quantum Computing: [资讯标题]
-- Robotics: [资讯标题]"
-git push origin master
+# 自动执行（使用 .env 中的 GITHUB_TOKEN）
+./scripts/auto-push.sh
 ```
+
+脚本会自动：
+- 添加所有更改到 Git
+- 创建提交（包含当日日期和资讯标题）
+- 使用安全的 token 推送到 GitHub
+- 触发 GitHub Pages 自动更新
+
+**安全特性：**
+- Token 存储在 `.env` 文件（已在 .gitignore 中，不会上传）
+- 推送时 token 不会显示在命令行历史
+- 推送输出中会过滤掉 token 信息
 
 ---
 
@@ -169,11 +204,40 @@ A：可以，在 Cursor Chat 中指定：
 # 2024-11-06/ai-programming.md (或其他分类)
 
 # 3. 生成并发布网站
-npm run build && git add . && git commit -m "Add news for $(date +%Y-%m-%d)" && git push
+npm run build
+
+# 4. 自动推送（使用 token）
+./scripts/auto-push.sh
 ```
 
 **详细工作流请查看：[DAILY-WORKFLOW.md](./DAILY-WORKFLOW.md)**  
 **分析方法论请查看：[AI-ANALYSIS-GUIDE.md](./AI-ANALYSIS-GUIDE.md)**
+
+---
+
+## 🛠️ 自动化脚本说明
+
+### `scripts/auto-push.sh` - 自动推送脚本
+
+**功能：**
+- 自动检测文件更改
+- 创建带日期的 Git 提交
+- 使用 `.env` 中的 token 安全推送
+- 无需每次输入密码
+
+**使用方法：**
+```bash
+./scripts/auto-push.sh
+```
+
+**环境要求：**
+- 需要在 `.env` 文件中配置 `GITHUB_TOKEN`
+- Token 权限：`repo`（完整仓库访问）
+
+**安全性：**
+- ✅ Token 存储在本地 `.env` 文件（不会上传到 GitHub）
+- ✅ 推送时 token 不显示在终端输出
+- ✅ Token 不会保存在命令行历史中
 
 ## 📊 关注领域
 
