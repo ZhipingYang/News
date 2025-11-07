@@ -1,0 +1,136 @@
+{
+  "byDate": {
+    "2025-11-05": [
+      {
+        "title": "10 Smart Performance Hacks For Faster Python Code",
+        "link": "https://blog.jetbrains.com/pycharm/2025/11/10-smart-performance-hacks-for-faster-python-code/",
+        "description": "This is a guest post from Dido Grigorov, a deep learning engineer and Python programmer with 17 years of experience in the field. In the rapidly evolving domain of software development, Python has established itself as a premier language, renowned for its simplicity, readability, and versatility. It underpins a vast range of applications, from web […]",
+        "pubDate": "Wed, 05 Nov 2025 10:50:20 +0000",
+        "source": "JetBrains Blog",
+        "sourceUrl": "https://blog.jetbrains.com/feed/",
+        "credibility": 0.9,
+        "category": "ai-programming",
+        "evaluation": {
+          "shouldGenerate": true,
+          "credibilityScore": 0.86,
+          "confidence": "high",
+          "category": "ai-programming",
+          "categoryConfidence": 20,
+          "sourceValidation": {
+            "isTrusted": true,
+            "sourceType": "company_blog",
+            "sourceScore": 0.85,
+            "domain": "blog.jetbrains.com",
+            "reason": "匹配模式：official_blog"
+          },
+          "contentAnalysis": {
+            "hasNumbers": false,
+            "hasTechnicalTerms": true,
+            "hasCompanyNames": false,
+            "estimatedReadingTime": 1
+          },
+          "scoreBreakdown": {
+            "sourceScore": {
+              "value": 0.85,
+              "weight": 0.4
+            },
+            "completeness": {
+              "value": 0.8333333333333334,
+              "weight": 0.25,
+              "details": "缺少具体数据；包含技术细节"
+            },
+            "timeliness": {
+              "value": 0.9,
+              "weight": 0.15,
+              "details": "3天内发布"
+            },
+            "quality": {
+              "value": 0.9,
+              "weight": 0.2,
+              "details": "未检测到明显质量问题；内容结构较简单",
+              "redFlags": []
+            }
+          },
+          "recommendation": "generate",
+          "reason": "可信度评分高（0.86/1.0），建议生成",
+          "warnings": [
+            "内容缺少具体数据"
+          ],
+          "suggestedTags": [
+            "#aiprogramming"
+          ],
+          "summary": "This is a guest post from Dido Grigorov, a deep learning engineer and Python programmer with 17 years of experience in the field."
+        }
+      }
+    ]
+  },
+  "processed": {
+    "ai_programming": [
+      {
+        "title": "10 Smart Performance Hacks For Faster Python Code",
+        "link": "https://blog.jetbrains.com/pycharm/2025/11/10-smart-performance-hacks-for-faster-python-code/",
+        "description": "This is a guest post from Dido Grigorov, a deep learning engineer and Python programmer with 17 years of experience in the field. In the rapidly evolving domain of software development, Python has established itself as a premier language, renowned for its simplicity, readability, and versatility. It underpins a vast range of applications, from web […]",
+        "pubDate": "Wed, 05 Nov 2025 10:50:20 +0000",
+        "source": "JetBrains Blog",
+        "sourceUrl": "https://blog.jetbrains.com/feed/",
+        "credibility": 0.9,
+        "category": "ai-programming",
+        "evaluation": {
+          "shouldGenerate": true,
+          "credibilityScore": 0.86,
+          "confidence": "high",
+          "category": "ai-programming",
+          "categoryConfidence": 20,
+          "sourceValidation": {
+            "isTrusted": true,
+            "sourceType": "company_blog",
+            "sourceScore": 0.85,
+            "domain": "blog.jetbrains.com",
+            "reason": "匹配模式：official_blog"
+          },
+          "contentAnalysis": {
+            "hasNumbers": false,
+            "hasTechnicalTerms": true,
+            "hasCompanyNames": false,
+            "estimatedReadingTime": 1
+          },
+          "scoreBreakdown": {
+            "sourceScore": {
+              "value": 0.85,
+              "weight": 0.4
+            },
+            "completeness": {
+              "value": 0.8333333333333334,
+              "weight": 0.25,
+              "details": "缺少具体数据；包含技术细节"
+            },
+            "timeliness": {
+              "value": 0.9,
+              "weight": 0.15,
+              "details": "3天内发布"
+            },
+            "quality": {
+              "value": 0.9,
+              "weight": 0.2,
+              "details": "未检测到明显质量问题；内容结构较简单",
+              "redFlags": []
+            }
+          },
+          "recommendation": "generate",
+          "reason": "可信度评分高（0.86/1.0），建议生成",
+          "warnings": [
+            "内容缺少具体数据"
+          ],
+          "suggestedTags": [
+            "#aiprogramming"
+          ],
+          "summary": "This is a guest post from Dido Grigorov, a deep learning engineer and Python programmer with 17 years of experience in the field."
+        }
+      }
+    ],
+    "generative_ai": [],
+    "ai_chips": [],
+    "quantum_computing": [],
+    "robotics": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "ai_programming": [
+    {
+      "title": "GitHub Copilot CLI 101: How to use GitHub Copilot from the command line",
+      "link": "https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/",
+      "description": "Curious about using GitHub Copilot in your terminal? Here's our guide to GitHub Copilot CLI, including a starter kit with the best prompts for a wide range of use cases.\nThe post GitHub Copilot CLI 101: How to use GitHub Copilot from the command line appeared first on The GitHub Blog.",
+      "pubDate": "Thu, 06 Nov 2025 20:30:00 +0000",
+      "source": "GitHub Blog",
+      "sourceUrl": "https://github.blog/feed/",
+      "credibility": 0.95,
+      "category": "company_official"
+    },
+    {
+      "title": "TypeScript’s rise in the AI era: Insights from Lead Architect, Anders Hejlsberg",
+      "link": "https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/",
+      "description": "TypeScript just became the most-used language on GitHub. Here’s why, according to its creator.\nThe post TypeScript’s rise in the AI era: Insights from Lead Architect, Anders Hejlsberg appeared first on The GitHub Blog.",
+      "pubDate": "Thu, 06 Nov 2025 17:00:00 +0000",
+      "source": "GitHub Blog",
+      "sourceUrl": "https://github.blog/feed/",
+      "credibility": 0.95,
+      "category": "company_official"
+    }
+  ],
+  "generative_ai": [
+    {
+      "title": "Introducing the File Search Tool in Gemini API",
+      "link": "https://blog.google/technology/developers/file-search-gemini-api/",
+      "description": "File Search is a fully managed Retrieval Augmented Generation (RAG) system built directly into the Gemini API.",
+      "pubDate": "Thu, 06 Nov 2025 18:00:00 +0000",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "credibility": 0.95,
+      "category": "company_official"
+    },
+    {
+      "title": "Google Finance adds AI features for research, earnings and more",
+      "link": "https://blog.google/products/search/new-google-finance-ai-deep-search/",
+      "description": "Learn more about the new Google Finance, including new features like Deep Search and prediction markets data.",
+      "pubDate": "Thu, 06 Nov 2025 17:00:00 +0000",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "credibility": 0.95,
+      "category": "company_official"
+    }
+  ],
+  "ai_chips": [
+    {
+      "title": "Fall Into Gaming With 20+ Titles Joining GeForce NOW in November",
+      "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-november-2025-games/",
+      "description": "Editor’s note: This blog has been updated to reflect the correct launch date for ‘Call of Duty: Black Ops 7’, November 14.   A crisp chill’s in the air — and so is the action. GeForce NOW is packing November with 23 games hitting the cloud, including the launch of the highly anticipated Call of Duty:\t\n\t\tRead Article",
+      "pubDate": "Thu, 06 Nov 2025 14:00:37 +0000",
+      "source": "NVIDIA Blog",
+      "sourceUrl": "https://blogs.nvidia.com/feed/",
+      "credibility": 0.95,
+      "category": "company_official"
+    },
+    {
+      "title": "NVIDIA Founder and CEO Jensen Huang and Chief Scientist Bill Dally Awarded Prestigious Queen Elizabeth Prize for Engineering",
+      "link": "https://blogs.nvidia.com/blog/nvidia-founder-and-ceo-jensen-huang-and-chief-scientist-bill-dally-awarded-prestigious-queen-elizabeth-prize-for-engineering/",
+      "description": "NVIDIA founder and CEO Jensen Huang and chief scientist Bill Dally were honored this week in the U.K. for their foundational work in AI and machine learning. They were among the seven recipients of the 2025 Queen Elizabeth Prize for Engineering, recognized for their contributions to modern machine learning. Presented by His Majesty King Charles\t\n\t\tRead Article",
+      "pubDate": "Thu, 06 Nov 2025 12:40:19 +0000",
+      "source": "NVIDIA Blog",
+      "sourceUrl": "https://blogs.nvidia.com/feed/",
+      "credibility": 0.95,
+      "category": "company_official"
+    }
+  ],
+  "quantum_computing": [
+    {
+      "title": "The electron double-slit experiment from an ISP perspective",
+      "link": "https://arxiv.org/abs/2511.02863",
+      "description": "arXiv:2511.02863v1 Announce Type: new \nAbstract: This paper presents a pedagogical model, and accompanying R code, of the electron double-slit experiment using the perspective of indivisible stochastic processes. The approach offers an alternative lens on quantum probability and coherence phenomena, emphasizing a statistical rather than purely wave-mechanical interpretation.",
+      "pubDate": "Thu, 06 Nov 2025 00:00:00 -0500",
+      "source": "ArXiv Quantum Physics",
+      "sourceUrl": "http://export.arxiv.org/rss/quant-ph",
+      "credibility": 0.95,
+      "category": "academic"
+    },
+    {
+      "title": "Clifford Hierarchy Stabilizer Codes: Transversal Non-Clifford Gates and Magic",
+      "link": "https://arxiv.org/abs/2511.02900",
+      "description": "arXiv:2511.02900v1 Announce Type: new \nAbstract: A fundamental problem in fault-tolerant quantum computation is the tradeoff between universality and dimensionality, exemplified by the the Bravyi-K\\\"onig bound for $n$-dimensional topological stabilizer codes. In this work, we extend topological Pauli stabilizer codes to a broad class of $n$-dimensional Clifford hierarchy stabilizer codes. These codes correspond to the $(n+1)$D Dijkgraaf-Witten gauge theories with non-Abelian topological order. We construct transversal non-Clifford gates through automorphism symmetries represented by cup products. In 2D, we obtain the first transversal non-Clifford logical gates including T and CS for Clifford stabilizer codes, using the automorphism of the twisted $\\mathbb{Z}_2^3$ gauge theory (equivalent to $\\mathbb{D}_4$ topological order). We also combine it with the just-in-time decoder to fault-tolerantly prepare the logical T magic state in $O(d)$ rounds via code switching. In 3D, we construct a transversal logical $\\sqrt{\\text{T}}$ gate in a non-Clifford stabilizer code at the third level of the Clifford hierarchy, located on a tetrahedron corresponding to a twisted $\\mathbb{Z}_2^4$ gauge theory. Due to the potential single-shot code-switching properties of these codes, one could achieve the 4th level of Clifford hierarchy with an $O(d^3)$ space-time overhead, avoiding the tradeoff observed in 2D. We propose a conjecture extending the Bravyi-K\\\"onig bound to Clifford hierarchy stabilizer codes, with our explicit constructions providing an upper bound of spatial dimension $(N-1)$ for achieving the logical gates in the $N^\\text{th}$-level of Clifford hierarchy.",
+      "pubDate": "Thu, 06 Nov 2025 00:00:00 -0500",
+      "source": "ArXiv Quantum Physics",
+      "sourceUrl": "http://export.arxiv.org/rss/quant-ph",
+      "credibility": 0.95,
+      "category": "academic"
+    }
+  ],
+  "robotics": [
+    {
+      "title": "iRobot revenue continues to drop with ‘no sources’ of additional capital",
+      "link": "https://www.therobotreport.com/irobot-revenue-drops-again-with-no-sources-of-additional-capital/",
+      "description": "iRobot said if it can't obtain new capital it \"may be forced to significantly curtail or cease operations and would likely seek bankruptcy protection.\"\nThe post iRobot revenue continues to drop with ‘no sources’ of additional capital appeared first on The Robot Report.",
+      "pubDate": "Fri, 07 Nov 2025 00:40:07 +0000",
+      "source": "The Robot Report",
+      "sourceUrl": "https://www.therobotreport.com/feed/",
+      "credibility": 0.85,
+      "category": "tech_news"
+    },
+    {
+      "title": "Wandercraft earns second FDA clearance for Atalante X exoskeleton",
+      "link": "https://www.therobotreport.com/wandercraft-earns-second-fda-clearance-for-atalante-x-exoskeleton/",
+      "description": "This clearance comes just a few short months after Wandercraft received expanded CE Mark certification for enhanced clinical features.\nThe post Wandercraft earns second FDA clearance for Atalante X exoskeleton appeared first on The Robot Report.",
+      "pubDate": "Thu, 06 Nov 2025 21:44:21 +0000",
+      "source": "The Robot Report",
+      "sourceUrl": "https://www.therobotreport.com/feed/",
+      "credibility": 0.85,
+      "category": "tech_news"
+    }
+  ]
+}
