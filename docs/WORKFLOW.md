@@ -56,6 +56,19 @@ RSS源抓取 → 去重检查 → 可信度评估 → 深度分析生成 → 网
 - **唯一资讯**：进入下一阶段
 - **边界情况**：相似度70-80%，人工审核标记
 
+### 自动化工具
+使用 `mcp-server/tools/process-rss-data.js` 可以自动执行去重和评估：
+```bash
+cd mcp-server
+node tools/process-rss-data.js data/rss-fetch-YYYY-MM-DD.json 0.85
+```
+
+**功能：**
+- 自动去重检查
+- 自动可信度评估
+- 按日期分组结果
+- 保存处理结果到 `data/processed-rss-YYYY-MM-DD.json`
+
 ---
 
 ## 第三阶段：可信度评估（2-3分钟）
@@ -246,18 +259,35 @@ git push origin master
 cd mcp-server
 node tools/fetch-rss.js all
 
-# 2. 查看抓取结果
+# 2. 去重和评估（可选，使用自动化工具）
+node tools/process-rss-data.js data/rss-fetch-YYYY-MM-DD.json 0.85
+
+# 3. 查看抓取结果
 cat data/rss-fetch-YYYY-MM-DD.json
 
-# 3. 在Cursor Chat中请求分析
+# 4. 查看处理结果（如果使用了process-rss-data.js）
+cat data/processed-rss-YYYY-MM-DD.json
+
+# 5. 在Cursor Chat中请求分析
 @WORKFLOW.md 请根据RSS抓取结果生成今日分析
 
-# 4. 构建网站
+# 6. 构建网站
 npm run build
 
-# 5. 提交推送
+# 7. 提交推送
 ./scripts/auto-push.sh
 ```
+
+### 工具说明
+
+**`mcp-server/tools/process-rss-data.js`** - RSS数据处理工具
+- **功能**：整合去重检查和可信度评估流程
+- **用法**：`node tools/process-rss-data.js <rss文件路径> [可信度阈值]`
+- **参数**：
+  - `rss文件路径`：RSS抓取结果文件（如 `data/rss-fetch-2025-11-07.json`）
+  - `可信度阈值`：可选，默认0.85
+- **输出**：`data/processed-rss-YYYY-MM-DD.json`（包含去重和评估结果）
+- **优势**：自动化处理，减少手动步骤，提供详细的处理统计
 
 ---
 

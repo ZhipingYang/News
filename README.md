@@ -94,6 +94,7 @@ gh auth status
 | [WORKFLOW.md](./docs/WORKFLOW.md) | 自动化工作流详细说明，包含6个阶段的完整流程 |
 | [RSS-SOURCES.md](./docs/RSS-SOURCES.md) | RSS源配置与管理，包含47个高质量RSS源列表 |
 | [DEDUPLICATION.md](./docs/DEDUPLICATION.md) | 去重机制说明，双重检测确保移除所有重复内容 |
+| [TOOLS.md](./docs/TOOLS.md) | 工具使用指南，包含所有工具的使用方法和示例 |
 | [SETUP.md](./docs/SETUP.md) | 首次配置指南，包含环境配置和故障排查 |
 | [FAQ.md](./docs/FAQ.md) | 常见问题解答，涵盖28个常见问题 |
 | [TROUBLESHOOTING.md](./docs/TROUBLESHOOTING.md) | 故障排查指南，分类问题诊断和解决 |
@@ -148,13 +149,16 @@ gh auth status
 cd mcp-server
 node tools/fetch-rss.js all
 
-# 2. 在Cursor Chat中请求分析
+# 2. 去重和评估（可选，使用自动化工具）
+node tools/process-rss-data.js data/rss-fetch-YYYY-MM-DD.json 0.85
+
+# 3. 在Cursor Chat中请求分析
 @WORKFLOW.md 请根据RSS抓取结果生成今日分析
 
-# 3. 生成网站
+# 4. 生成网站
 npm run build
 
-# 4. 推送（自动选择GitHub CLI或Token）
+# 5. 推送（自动选择GitHub CLI或Token）
 ./scripts/auto-push.sh
 ```
 
@@ -187,11 +191,13 @@ News/
 │   │   ├── rss-sources.json    # RSS源配置（47个源）
 │   │   └── evaluation-rules.json # 评估规则（可信度≥0.85）
 │   ├── tools/
-│   │   └── fetch-rss.js        # RSS抓取工具
+│   │   ├── fetch-rss.js        # RSS抓取工具
+│   │   └── process-rss-data.js # RSS数据处理工具（去重+评估）
 │   ├── utils/
 │   │   └── deduplicator.js     # 去重工具
 │   └── data/
 │       ├── rss-fetch-*.json    # RSS抓取结果
+│       ├── processed-rss-*.json # 处理结果（去重+评估）
 │       └── deduplication.json  # 去重数据库
 │
 ├── static-site/                # 静态网站生成器
