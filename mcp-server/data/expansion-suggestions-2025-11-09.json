@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-11-10T08:40:10.898Z",
+  "categories": {
+    "ai_programming": {
+      "itemCount": 0,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    },
+    "generative_ai": {
+      "itemCount": 0,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    },
+    "ai_chips": {
+      "itemCount": 0,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    },
+    "quantum_computing": {
+      "itemCount": 0,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    },
+    "robotics": {
+      "itemCount": 0,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    },
+    "tech_general": {
+      "itemCount": 1,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    }
+  },
+  "summary": {
+    "totalCategories": 6,
+    "lowVolumeCategories": 6,
+    "highImpactNewsCount": 0,
+    "expansionRecommended": false
+  }
+}

@@ -125,10 +125,10 @@ console.log(`
 export function evaluateGitHubProject(project) {
   let score = 0;
   const reasons = [];
-  
+
   // 评估逻辑...
   // (可以在这里实现具体的评估算法)
-  
+
   return { score, reasons };
 }
 
@@ -137,16 +137,15 @@ export const EVALUATION_STANDARDS = {
     viral: 5000,
     trending: 1000,
     rising: 100,
-    notable: 50
+    notable: 50,
   },
   dailyGrowth: {
     explosive: 500,
     trending: 100,
-    growing: 50
+    growing: 50,
   },
   scoreThresholds: {
     mustInclude: 70,
-    recommended: 50
-  }
+    recommended: 50,
+  },
 };
-
