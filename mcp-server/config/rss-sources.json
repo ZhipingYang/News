@@ -5,14 +5,7 @@
       "url": "https://github.blog/feed/",
       "credibility": 0.95,
       "category": "company_official",
-      "description": "GitHub官方博客，AI编程工具第一手资讯"
-    },
-    {
-      "name": "OpenAI Blog",
-      "url": "https://openai.com/blog/rss/",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "OpenAI官方博客，Codex等AI编程技术"
+      "description": "GitHub官方博客，AI编程工具和Copilot资讯"
     },
     {
       "name": "JetBrains Blog",
@@ -26,35 +19,28 @@
       "url": "https://devblogs.microsoft.com/feed/",
       "credibility": 0.9,
       "category": "company_blog",
-      "description": "Microsoft开发者博客，GitHub Copilot等"
+      "description": "Microsoft开发者博客，编程工具和技术"
     },
     {
       "name": "Stack Overflow Blog",
       "url": "https://stackoverflow.blog/feed/",
       "credibility": 0.85,
       "category": "tech_news",
-      "description": "Stack Overflow博客，开发者社区观点"
+      "description": "Stack Overflow博客，开发者社区观点和实践"
     },
     {
       "name": "Dev.to AI",
       "url": "https://dev.to/feed/tag/ai",
       "credibility": 0.8,
       "category": "developer",
-      "description": "Dev.to AI标签，开发者社区AI文章"
+      "description": "Dev.to AI标签，开发者社区AI编程文章"
     },
     {
       "name": "Google Developers Blog",
       "url": "https://developers.googleblog.com/feeds/posts/default",
       "credibility": 0.9,
       "category": "company_blog",
-      "description": "Google开发者博客，AI开发工具"
-    },
-    {
-      "name": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/feed.xml",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Hugging Face博客，AI模型和工具"
+      "description": "Google开发者博客，AI开发工具和API"
     },
     {
       "name": "AWS Machine Learning Blog",
@@ -64,334 +50,139 @@
       "description": "AWS机器学习博客，AI开发工具和服务"
     },
     {
-      "name": "Google AI Research",
-      "url": "https://ai.googleblog.com/feeds/posts/default",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "Google AI研究博客，前沿AI技术"
-    }
-  ],
-  "generative_ai": [
-    {
-      "name": "OpenAI Blog",
-      "url": "https://openai.com/blog/rss/",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "OpenAI官方博客，GPT系列第一手资讯"
-    },
-    {
-      "name": "Anthropic News",
-      "url": "https://www.anthropic.com/news/rss.xml",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "Anthropic官方新闻，Claude系列资讯"
-    },
-    {
-      "name": "Google AI Blog",
-      "url": "https://blog.google/technology/ai/rss/",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "Google AI官方博客，Gemini等模型资讯"
-    },
-    {
-      "name": "Microsoft AI Blog",
-      "url": "https://blogs.microsoft.com/ai/feed/",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Microsoft AI博客，Azure AI等"
-    },
-    {
       "name": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/feed.xml",
       "credibility": 0.9,
       "category": "company_blog",
-      "description": "Hugging Face博客，开源AI模型"
-    },
-    {
-      "name": "Papers with Code - NLP",
-      "url": "https://paperswithcode.com/rss/latest/nlp/",
-      "credibility": 0.9,
-      "category": "academic",
-      "description": "Papers with Code NLP最新论文"
-    },
-    {
-      "name": "ArXiv AI",
-      "url": "http://export.arxiv.org/rss/cs.AI",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "ArXiv AI论文预印本"
-    },
-    {
-      "name": "Meta AI Research",
-      "url": "https://ai.meta.com/blog/rss/",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Meta AI研究博客，Llama等模型"
-    },
-    {
-      "name": "Stability AI Blog",
-      "url": "https://stability.ai/blog/rss",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Stability AI博客，Stable Diffusion等"
-    },
-    {
-      "name": "Cohere Blog",
-      "url": "https://cohere.com/blog/rss.xml",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Cohere博客，企业级AI模型"
-    },
-    {
-      "name": "Mistral AI Blog",
-      "url": "https://mistral.ai/news/rss/",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Mistral AI博客，开源大模型"
-    },
-    {
-      "name": "Inflection AI",
-      "url": "https://inflection.ai/blog/rss",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Inflection AI博客，AI助手技术"
-    }
-  ],
-  "ai_chips": [
-    {
-      "name": "NVIDIA Blog",
-      "url": "https://blogs.nvidia.com/feed/",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "NVIDIA官方博客，GPU和AI芯片资讯"
-    },
-    {
-      "name": "AMD Blog",
-      "url": "https://community.amd.com/t5/blogs/rss",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "AMD社区博客，AI芯片资讯"
-    },
-    {
-      "name": "Intel Newsroom",
-      "url": "https://www.intel.com/content/www/us/en/newsroom/rss.html",
-      "credibility": 0.9,
-      "category": "company_official",
-      "description": "Intel新闻室，AI芯片和数据中心"
-    },
-    {
-      "name": "AnandTech",
-      "url": "https://www.anandtech.com/rss/",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "AnandTech，深度硬件评测和分析"
-    },
-    {
-      "name": "Tom's Hardware",
-      "url": "https://www.tomshardware.com/feeds/all",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "Tom's Hardware，硬件新闻和评测"
-    },
-    {
-      "name": "SemiWiki",
-      "url": "https://semiwiki.com/feed/",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "SemiWiki，半导体行业资讯"
-    },
-    {
-      "name": "Semiconductor Engineering",
-      "url": "https://semiengineering.com/feed/",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "半导体工程新闻"
-    },
-    {
-      "name": "Google Cloud Blog - AI",
-      "url": "https://cloud.google.com/blog/products/ai-machine-learning/rss",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Google Cloud AI博客，TPU等"
-    },
-    {
-      "name": "Qualcomm News",
-      "url": "https://www.qualcomm.com/news/rss",
-      "credibility": 0.85,
-      "category": "company_official",
-      "description": "Qualcomm新闻，AI移动芯片"
-    },
-    {
-      "name": "ARM Blog",
-      "url": "https://community.arm.com/arm-community-blogs/b/rss",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "ARM社区博客，AI处理器架构"
-    },
-    {
-      "name": "Graphcore Blog",
-      "url": "https://www.graphcore.ai/blog/rss",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Graphcore博客，AI加速器芯片"
-    },
-    {
-      "name": "Cerebras Blog",
-      "url": "https://www.cerebras.net/blog/rss",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Cerebras博客，大模型训练芯片"
-    }
-  ],
-  "quantum_computing": [
-    {
-      "name": "IBM Research Blog",
-      "url": "https://research.ibm.com/blog/rss",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "IBM研究博客，量子计算第一手资讯"
-    },
-    {
-      "name": "Google Quantum AI",
-      "url": "https://blog.google/technology/research/rss/",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "Google量子AI博客"
-    },
-    {
-      "name": "Microsoft Quantum Blog",
-      "url": "https://cloudblogs.microsoft.com/quantum/feed/",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Microsoft量子计算博客"
-    },
-    {
-      "name": "Nature Quantum Information",
-      "url": "https://www.nature.com/npjqi.rss",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "Nature量子信息期刊"
-    },
-    {
-      "name": "Physics World - Quantum",
-      "url": "https://physicsworld.com/c/quantum/feed/",
-      "credibility": 0.9,
-      "category": "academic",
-      "description": "Physics World量子物理"
-    },
-    {
-      "name": "IonQ News",
-      "url": "https://ionq.com/news/rss",
-      "credibility": 0.85,
-      "category": "company_official",
-      "description": "IonQ量子计算公司新闻"
-    },
-    {
-      "name": "Rigetti Computing Blog",
-      "url": "https://www.rigetti.com/blog/rss.xml",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Rigetti量子计算博客"
-    },
-    {
-      "name": "ArXiv Quantum Physics",
-      "url": "http://export.arxiv.org/rss/quant-ph",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "ArXiv量子物理论文"
-    },
-    {
-      "name": "MIT News - Quantum",
-      "url": "https://news.mit.edu/topic/mitquantum-rss.xml",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "MIT量子计算新闻"
-    },
-    {
-      "name": "Quantinuum",
-      "url": "https://www.quantinuum.com/news/rss",
-      "credibility": 0.85,
-      "category": "company_official",
-      "description": "Quantinuum量子计算公司新闻"
-    },
-    {
-      "name": "Atom Computing",
-      "url": "https://atom-computing.com/blog/rss",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Atom Computing量子计算博客"
-    }
-  ],
-  "robotics": [
-    {
-      "name": "IEEE Spectrum Robotics",
-      "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "IEEE Spectrum机器人频道"
-    },
-    {
-      "name": "The Robot Report",
-      "url": "https://www.therobotreport.com/feed/",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "机器人行业新闻报告"
-    },
-    {
-      "name": "Boston Dynamics Blog",
-      "url": "https://bostondynamics.com/blog/rss/",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Boston Dynamics官方博客"
-    },
-    {
-      "name": "MIT CSAIL News",
-      "url": "https://www.csail.mit.edu/news/rss.xml",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "MIT计算机科学与AI实验室"
-    },
-    {
-      "name": "CMU Robotics Institute",
-      "url": "https://www.ri.cmu.edu/feed/",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "卡内基梅隆大学机器人研究所"
-    },
-    {
-      "name": "Tesla AI Blog",
-      "url": "https://www.tesla.com/blog/rss",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Tesla博客，Optimus人形机器人"
-    },
-    {
-      "name": "Agility Robotics Blog",
-      "url": "https://agilityrobotics.com/blog/rss/",
-      "credibility": 0.85,
-      "category": "company_blog",
-      "description": "Agility Robotics博客，Digit机器人"
-    },
-    {
-      "name": "RoboticsBusinessReview",
-      "url": "https://www.roboticsbusinessreview.com/feed/",
-      "credibility": 0.8,
-      "category": "tech_news",
-      "description": "机器人商业评论"
+      "description": "Hugging Face博客，AI模型和开发工具"
     },
     {
       "name": "Stanford AI Lab Blog",
       "url": "https://ai.stanford.edu/blog/feed.xml",
       "credibility": 0.95,
       "category": "academic",
-      "description": "Stanford AI实验室博客"
+      "description": "Stanford AI实验室博客，AI技术和实践"
     },
     {
-      "name": "DeepMind Blog",
-      "url": "https://deepmind.google/blog/rss.xml",
+      "name": "Python Software Foundation News",
+      "url": "https://www.python.org/feeds/community.rss.xml",
+      "credibility": 0.9,
+      "category": "community",
+      "description": "Python官方新闻，编程语言和AI开发"
+    },
+    {
+      "name": "Towards Data Science - AI",
+      "url": "https://medium.com/feed/towards-data-science",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "description": "Towards Data Science，AI和数据科学文章"
+    }
+  ],
+  "ai_products": [
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
       "credibility": 0.95,
+      "category": "company_official",
+      "description": "Google AI官方博客，Gemini等产品资讯"
+    },
+    {
+      "name": "Microsoft AI Blog",
+      "url": "https://blogs.microsoft.com/ai/feed/",
+      "credibility": 0.9,
       "category": "company_blog",
-      "description": "DeepMind博客，AI与机器人"
+      "description": "Microsoft AI博客，Azure AI和产品发布"
+    },
+    {
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/feed/",
+      "credibility": 0.95,
+      "category": "company_official",
+      "description": "NVIDIA官方博客，GPU、AI芯片和产品"
+    },
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss",
+      "credibility": 0.95,
+      "category": "company_official",
+      "description": "OpenAI新闻RSS（备用URL）"
+    },
+    {
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/index/rss.xml",
+      "credibility": 0.95,
+      "category": "company_official",
+      "description": "Anthropic博客（备用URL）"
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/feed/",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "description": "VentureBeat AI频道，AI产品和商业新闻"
+    },
+    {
+      "name": "AI Business",
+      "url": "https://aibusiness.com/rss.xml",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "description": "AI Business，企业AI产品和应用"
+    },
+    {
+      "name": "InfoQ AI",
+      "url": "https://www.infoq.com/ai-ml-data-eng/rss/",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "description": "InfoQ AI/ML频道，技术和产品资讯"
+    },
+    {
+      "name": "Google Cloud Blog",
+      "url": "https://cloud.google.com/blog/rss",
+      "credibility": 0.9,
+      "category": "company_blog",
+      "description": "Google Cloud主博客，包含AI产品"
+    },
+    {
+      "name": "Amazon Web Services News",
+      "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
+      "credibility": 0.9,
+      "category": "company_official",
+      "description": "AWS最新发布，包含AI产品"
+    },
+    {
+      "name": "Microsoft Azure Blog",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "credibility": 0.9,
+      "category": "company_blog",
+      "description": "Azure博客，云AI产品和服务"
+    },
+    {
+      "name": "IBM Blog - AI",
+      "url": "https://www.ibm.com/blog/category/artificial-intelligence/feed/",
+      "credibility": 0.9,
+      "category": "company_blog",
+      "description": "IBM AI博客，AI产品和解决方案"
+    },
+    {
+      "name": "Salesforce AI Research",
+      "url": "https://blog.salesforceairesearch.com/rss/",
+      "credibility": 0.85,
+      "category": "company_blog",
+      "description": "Salesforce AI研究，AI产品和技术"
+    },
+    {
+      "name": "HumanLoop Blog",
+      "url": "https://humanloop.com/blog/rss.xml",
+      "credibility": 0.8,
+      "category": "company_blog",
+      "description": "HumanLoop，LLM产品和工具"
+    },
+    {
+      "name": "LangChain Blog",
+      "url": "https://blog.langchain.dev/rss/",
+      "credibility": 0.85,
+      "category": "company_blog",
+      "description": "LangChain博客，AI应用框架和产品"
     }
   ],
   "tech_general": [
@@ -428,21 +219,21 @@
       "url": "https://techcrunch.com/feed/",
       "credibility": 0.9,
       "category": "tech_news",
-      "description": "TechCrunch，知名科技媒体"
+      "description": "TechCrunch，知名科技媒体和创业资讯"
     },
     {
       "name": "Wired",
       "url": "https://www.wired.com/feed/rss",
       "credibility": 0.9,
       "category": "tech_news",
-      "description": "Wired，科技文化媒体"
+      "description": "Wired，科技文化和趋势媒体"
     },
     {
       "name": "The Verge",
       "url": "https://www.theverge.com/rss/index.xml",
       "credibility": 0.9,
       "category": "tech_news",
-      "description": "The Verge，科技新闻媒体"
+      "description": "The Verge，科技新闻和产品评测"
     },
     {
       "name": "Ars Technica",
@@ -456,14 +247,49 @@
       "url": "https://www.newscientist.com/feed/home/",
       "credibility": 0.9,
       "category": "tech_news",
-      "description": "New Scientist，科学新闻"
+      "description": "New Scientist，科学新闻和技术趋势"
     },
     {
-      "name": "Scientific American",
-      "url": "https://rss.sciam.com/ScientificAmerican-News",
+      "name": "ArXiv AI",
+      "url": "http://export.arxiv.org/rss/cs.AI",
+      "credibility": 0.95,
+      "category": "academic",
+      "description": "ArXiv AI论文预印本"
+    },
+    {
+      "name": "IEEE Spectrum Robotics",
+      "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
       "credibility": 0.9,
       "category": "tech_news",
-      "description": "Scientific American，科学美国人"
+      "description": "IEEE Spectrum机器人频道"
+    },
+    {
+      "name": "The Robot Report",
+      "url": "https://www.therobotreport.com/feed/",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "description": "机器人行业新闻报告"
+    },
+    {
+      "name": "CMU Robotics Institute",
+      "url": "https://www.ri.cmu.edu/feed/",
+      "credibility": 0.95,
+      "category": "academic",
+      "description": "卡内基梅隆大学机器人研究所"
+    },
+    {
+      "name": "Hacker News Best",
+      "url": "https://hnrss.org/best",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "description": "Hacker News最佳讨论，技术社区热点"
+    },
+    {
+      "name": "Quanta Magazine",
+      "url": "https://www.quantamagazine.org/feed/",
+      "credibility": 0.9,
+      "category": "tech_news",
+      "description": "Quanta Magazine，科学和数学深度报道"
     }
   ],
   "settings": {
@@ -472,7 +298,6 @@
     "min_credibility": 0.8,
     "fetch_timeout": 10000,
     "retry_attempts": 3,
-    "description": "RSS源配置，定期更新以确保源的有效性。每个主题包含5-10个高质量RSS源，按可信度排序。已放宽可信度阈值至0.8以获取更多有效资讯。"
+    "description": "优化后的RSS源配置：移除失败源，添加新的高质量源。ai_programming（11个源）、ai_products（15个源）、tech_general（15个源）。总计41个高质量RSS源。"
   }
 }
-

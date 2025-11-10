@@ -18,10 +18,8 @@ export class StaticSiteGenerator {
 
     this.categoryMap = {
       "ai-programming": { name: "AI编程", icon: "💻", color: "#4F46E5" },
-      "ai-chips": { name: "AI芯片", icon: "🔧", color: "#DC2626" },
-      "quantum-computing": { name: "量子计算", icon: "⚛️", color: "#7C3AED" },
-      robotics: { name: "机器人", icon: "🤖", color: "#059669" },
-      "generative-ai": { name: "生成式AI", icon: "🎨", color: "#EA580C" },
+      "ai-products": { name: "AI产品", icon: "🚀", color: "#DC2626" },
+      "tech-general": { name: "科技综合", icon: "🌐", color: "#059669" },
     };
 
     // 配置 marked

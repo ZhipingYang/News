@@ -1,0 +1,548 @@
+{
+  "timestamp": "2025-11-10T05:39:16.934Z",
+  "totalSources": 41,
+  "successCount": 34,
+  "failCount": 7,
+  "categories": {
+    "ai_programming": {
+      "totalSources": 11,
+      "successCount": 10,
+      "failCount": 1,
+      "sources": [
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 692,
+          "itemCount": 10,
+          "source": {
+            "name": "GitHub Blog",
+            "url": "https://github.blog/feed/",
+            "credibility": 0.95,
+            "category": "company_official",
+            "description": "GitHub官方博客，AI编程工具和Copilot资讯"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取12条资讯",
+          "duration": 1418,
+          "itemCount": 12,
+          "source": {
+            "name": "JetBrains Blog",
+            "url": "https://blog.jetbrains.com/feed/",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "JetBrains官方博客，IDE和AI辅助编程"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 960,
+          "itemCount": 10,
+          "source": {
+            "name": "Microsoft Developer Blog",
+            "url": "https://devblogs.microsoft.com/feed/",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "Microsoft开发者博客，编程工具和技术"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取40条资讯",
+          "duration": 364,
+          "itemCount": 40,
+          "source": {
+            "name": "Stack Overflow Blog",
+            "url": "https://stackoverflow.blog/feed/",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "Stack Overflow博客，开发者社区观点和实践"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取12条资讯",
+          "duration": 928,
+          "itemCount": 12,
+          "source": {
+            "name": "Dev.to AI",
+            "url": "https://dev.to/feed/tag/ai",
+            "credibility": 0.8,
+            "category": "developer",
+            "description": "Dev.to AI标签，开发者社区AI编程文章"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取20条资讯",
+          "duration": 3101,
+          "itemCount": 20,
+          "source": {
+            "name": "Google Developers Blog",
+            "url": "https://developers.googleblog.com/feeds/posts/default",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "Google开发者博客，AI开发工具和API"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取20条资讯",
+          "duration": 1310,
+          "itemCount": 20,
+          "source": {
+            "name": "AWS Machine Learning Blog",
+            "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "AWS机器学习博客，AI开发工具和服务"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取650条资讯",
+          "duration": 738,
+          "itemCount": 650,
+          "source": {
+            "name": "Hugging Face Blog",
+            "url": "https://huggingface.co/blog/feed.xml",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "Hugging Face博客，AI模型和开发工具"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取15条资讯",
+          "duration": 3484,
+          "itemCount": 15,
+          "source": {
+            "name": "Stanford AI Lab Blog",
+            "url": "https://ai.stanford.edu/blog/feed.xml",
+            "credibility": 0.95,
+            "category": "academic",
+            "description": "Stanford AI实验室博客，AI技术和实践"
+          }
+        },
+        {
+          "success": false,
+          "message": "Status code 404",
+          "source": {
+            "name": "Python Software Foundation News",
+            "url": "https://www.python.org/feeds/community.rss.xml",
+            "credibility": 0.9,
+            "category": "community",
+            "description": "Python官方新闻，编程语言和AI开发"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 654,
+          "itemCount": 10,
+          "source": {
+            "name": "Towards Data Science - AI",
+            "url": "https://medium.com/feed/towards-data-science",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "Towards Data Science，AI和数据科学文章"
+          }
+        }
+      ]
+    },
+    "ai_products": {
+      "totalSources": 15,
+      "successCount": 9,
+      "failCount": 6,
+      "sources": [
+        {
+          "success": true,
+          "message": "成功获取20条资讯",
+          "duration": 652,
+          "itemCount": 20,
+          "source": {
+            "name": "Google AI Blog",
+            "url": "https://blog.google/technology/ai/rss/",
+            "credibility": 0.95,
+            "category": "company_official",
+            "description": "Google AI官方博客，Gemini等产品资讯"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 1424,
+          "itemCount": 10,
+          "source": {
+            "name": "Microsoft AI Blog",
+            "url": "https://blogs.microsoft.com/ai/feed/",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "Microsoft AI博客，Azure AI和产品发布"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取18条资讯",
+          "duration": 1430,
+          "itemCount": 18,
+          "source": {
+            "name": "NVIDIA Blog",
+            "url": "https://blogs.nvidia.com/feed/",
+            "credibility": 0.95,
+            "category": "company_official",
+            "description": "NVIDIA官方博客，GPU、AI芯片和产品"
+          }
+        },
+        {
+          "success": false,
+          "message": "Status code 403",
+          "source": {
+            "name": "OpenAI News",
+            "url": "https://openai.com/news/rss",
+            "credibility": 0.95,
+            "category": "company_official",
+            "description": "OpenAI新闻RSS（备用URL）"
+          }
+        },
+        {
+          "success": false,
+          "message": "Status code 404",
+          "source": {
+            "name": "Anthropic Blog",
+            "url": "https://www.anthropic.com/index/rss.xml",
+            "credibility": 0.95,
+            "category": "company_official",
+            "description": "Anthropic博客（备用URL）"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取7条资讯",
+          "duration": 1929,
+          "itemCount": 7,
+          "source": {
+            "name": "VentureBeat AI",
+            "url": "https://venturebeat.com/category/ai/feed/",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "VentureBeat AI频道，AI产品和商业新闻"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取50条资讯",
+          "duration": 1364,
+          "itemCount": 50,
+          "source": {
+            "name": "AI Business",
+            "url": "https://aibusiness.com/rss.xml",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "AI Business，企业AI产品和应用"
+          }
+        },
+        {
+          "success": false,
+          "message": "Status code 404",
+          "source": {
+            "name": "InfoQ AI",
+            "url": "https://www.infoq.com/ai-ml-data-eng/rss/",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "InfoQ AI/ML频道，技术和产品资讯"
+          }
+        },
+        {
+          "success": false,
+          "message": "Invalid character in entity name\nLine: 0\nColumn: 59980\nChar: &",
+          "source": {
+            "name": "Google Cloud Blog",
+            "url": "https://cloud.google.com/blog/rss",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "Google Cloud主博客，包含AI产品"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取100条资讯",
+          "duration": 794,
+          "itemCount": 100,
+          "source": {
+            "name": "Amazon Web Services News",
+            "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
+            "credibility": 0.9,
+            "category": "company_official",
+            "description": "AWS最新发布，包含AI产品"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 8719,
+          "itemCount": 10,
+          "source": {
+            "name": "Microsoft Azure Blog",
+            "url": "https://azure.microsoft.com/en-us/blog/feed/",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "Azure博客，云AI产品和服务"
+          }
+        },
+        {
+          "success": false,
+          "message": "Attribute without value\nLine: 63\nColumn: 19\nChar: s",
+          "source": {
+            "name": "IBM Blog - AI",
+            "url": "https://www.ibm.com/blog/category/artificial-intelligence/feed/",
+            "credibility": 0.9,
+            "category": "company_blog",
+            "description": "IBM AI博客，AI产品和解决方案"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 5020,
+          "itemCount": 10,
+          "source": {
+            "name": "Salesforce AI Research",
+            "url": "https://blog.salesforceairesearch.com/rss/",
+            "credibility": 0.85,
+            "category": "company_blog",
+            "description": "Salesforce AI研究，AI产品和技术"
+          }
+        },
+        {
+          "success": false,
+          "message": "Status code 500",
+          "source": {
+            "name": "HumanLoop Blog",
+            "url": "https://humanloop.com/blog/rss.xml",
+            "credibility": 0.8,
+            "category": "company_blog",
+            "description": "HumanLoop，LLM产品和工具"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取15条资讯",
+          "duration": 2396,
+          "itemCount": 15,
+          "source": {
+            "name": "LangChain Blog",
+            "url": "https://blog.langchain.dev/rss/",
+            "credibility": 0.85,
+            "category": "company_blog",
+            "description": "LangChain博客，AI应用框架和产品"
+          }
+        }
+      ]
+    },
+    "tech_general": {
+      "totalSources": 15,
+      "successCount": 15,
+      "failCount": 0,
+      "sources": [
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 259,
+          "itemCount": 10,
+          "source": {
+            "name": "MIT Technology Review",
+            "url": "https://www.technologyreview.com/feed/",
+            "credibility": 0.95,
+            "category": "tech_news",
+            "description": "MIT Technology Review，权威科技媒体"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取30条资讯",
+          "duration": 1362,
+          "itemCount": 30,
+          "source": {
+            "name": "IEEE Spectrum",
+            "url": "https://spectrum.ieee.org/rss",
+            "credibility": 0.95,
+            "category": "tech_news",
+            "description": "IEEE Spectrum，IEEE旗舰科技媒体"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取75条资讯",
+          "duration": 617,
+          "itemCount": 75,
+          "source": {
+            "name": "Nature News",
+            "url": "https://www.nature.com/nature.rss",
+            "credibility": 0.95,
+            "category": "academic",
+            "description": "Nature新闻，顶级科学期刊"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取40条资讯",
+          "duration": 649,
+          "itemCount": 40,
+          "source": {
+            "name": "Science News",
+            "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science",
+            "credibility": 0.95,
+            "category": "academic",
+            "description": "Science新闻，顶级科学期刊"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取20条资讯",
+          "duration": 275,
+          "itemCount": 20,
+          "source": {
+            "name": "TechCrunch",
+            "url": "https://techcrunch.com/feed/",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "TechCrunch，知名科技媒体和创业资讯"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取50条资讯",
+          "duration": 1088,
+          "itemCount": 50,
+          "source": {
+            "name": "Wired",
+            "url": "https://www.wired.com/feed/rss",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "Wired，科技文化和趋势媒体"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取10条资讯",
+          "duration": 496,
+          "itemCount": 10,
+          "source": {
+            "name": "The Verge",
+            "url": "https://www.theverge.com/rss/index.xml",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "The Verge，科技新闻和产品评测"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取20条资讯",
+          "duration": 1133,
+          "itemCount": 20,
+          "source": {
+            "name": "Ars Technica",
+            "url": "https://feeds.arstechnica.com/arstechnica/index",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "Ars Technica，深度科技分析"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取100条资讯",
+          "duration": 546,
+          "itemCount": 100,
+          "source": {
+            "name": "New Scientist",
+            "url": "https://www.newscientist.com/feed/home/",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "New Scientist，科学新闻和技术趋势"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取179条资讯",
+          "duration": 985,
+          "itemCount": 179,
+          "source": {
+            "name": "ArXiv AI",
+            "url": "http://export.arxiv.org/rss/cs.AI",
+            "credibility": 0.95,
+            "category": "academic",
+            "description": "ArXiv AI论文预印本"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取30条资讯",
+          "duration": 559,
+          "itemCount": 30,
+          "source": {
+            "name": "IEEE Spectrum Robotics",
+            "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "IEEE Spectrum机器人频道"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取15条资讯",
+          "duration": 1605,
+          "itemCount": 15,
+          "source": {
+            "name": "The Robot Report",
+            "url": "https://www.therobotreport.com/feed/",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "机器人行业新闻报告"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取100条资讯",
+          "duration": 2131,
+          "itemCount": 100,
+          "source": {
+            "name": "CMU Robotics Institute",
+            "url": "https://www.ri.cmu.edu/feed/",
+            "credibility": 0.95,
+            "category": "academic",
+            "description": "卡内基梅隆大学机器人研究所"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取30条资讯",
+          "duration": 1949,
+          "itemCount": 30,
+          "source": {
+            "name": "Hacker News Best",
+            "url": "https://hnrss.org/best",
+            "credibility": 0.85,
+            "category": "tech_news",
+            "description": "Hacker News最佳讨论，技术社区热点"
+          }
+        },
+        {
+          "success": true,
+          "message": "成功获取5条资讯",
+          "duration": 1714,
+          "itemCount": 5,
+          "source": {
+            "name": "Quanta Magazine",
+            "url": "https://www.quantamagazine.org/feed/",
+            "credibility": 0.9,
+            "category": "tech_news",
+            "description": "Quanta Magazine，科学和数学深度报道"
+          }
+        }
+      ]
+    }
+  }
+}
