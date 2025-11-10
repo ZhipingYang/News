@@ -64,13 +64,6 @@
       "description": "Stanford AI实验室博客，AI技术和实践"
     },
     {
-      "name": "Python Software Foundation News",
-      "url": "https://www.python.org/feeds/community.rss.xml",
-      "credibility": 0.9,
-      "category": "community",
-      "description": "Python官方新闻，编程语言和AI开发"
-    },
-    {
       "name": "Towards Data Science - AI",
       "url": "https://medium.com/feed/towards-data-science",
       "credibility": 0.85,
@@ -101,20 +94,6 @@
       "description": "NVIDIA官方博客，GPU、AI芯片和产品"
     },
     {
-      "name": "OpenAI News",
-      "url": "https://openai.com/news/rss",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "OpenAI新闻RSS（备用URL）"
-    },
-    {
-      "name": "Anthropic Blog",
-      "url": "https://www.anthropic.com/index/rss.xml",
-      "credibility": 0.95,
-      "category": "company_official",
-      "description": "Anthropic博客（备用URL）"
-    },
-    {
       "name": "VentureBeat AI",
       "url": "https://venturebeat.com/category/ai/feed/",
       "credibility": 0.85,
@@ -127,20 +106,6 @@
       "credibility": 0.85,
       "category": "tech_news",
       "description": "AI Business，企业AI产品和应用"
-    },
-    {
-      "name": "InfoQ AI",
-      "url": "https://www.infoq.com/ai-ml-data-eng/rss/",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "InfoQ AI/ML频道，技术和产品资讯"
-    },
-    {
-      "name": "Google Cloud Blog",
-      "url": "https://cloud.google.com/blog/rss",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "Google Cloud主博客，包含AI产品"
     },
     {
       "name": "Amazon Web Services News",
@@ -157,25 +122,11 @@
       "description": "Azure博客，云AI产品和服务"
     },
     {
-      "name": "IBM Blog - AI",
-      "url": "https://www.ibm.com/blog/category/artificial-intelligence/feed/",
-      "credibility": 0.9,
-      "category": "company_blog",
-      "description": "IBM AI博客，AI产品和解决方案"
-    },
-    {
       "name": "Salesforce AI Research",
       "url": "https://blog.salesforceairesearch.com/rss/",
       "credibility": 0.85,
       "category": "company_blog",
       "description": "Salesforce AI研究，AI产品和技术"
-    },
-    {
-      "name": "HumanLoop Blog",
-      "url": "https://humanloop.com/blog/rss.xml",
-      "credibility": 0.8,
-      "category": "company_blog",
-      "description": "HumanLoop，LLM产品和工具"
     },
     {
       "name": "LangChain Blog",
@@ -235,6 +186,6 @@
     "min_credibility": 0.8,
     "fetch_timeout": 10000,
     "retry_attempts": 3,
-    "description": "精简后的RSS源配置：移除消费电子软文源（The Verge、Wired、TechCrunch、Ars Technica、Hacker News、ArXiv等），只保留高质量技术资讯源。ai_programming（11个源）、ai_products（15个源）、tech_general（6个源）。总计32个精品RSS源，聚焦AI核心技术和产品。"
+    "description": "精品RSS源配置：移除消费电子软文源（The Verge、Wired、TechCrunch、Ars Technica、Hacker News、ArXiv等）及失败源，只保留高质量AI技术资讯源。ai_programming（10个源）、ai_products（9个源）、tech_general（6个源）。总计25个精品RSS源，100%可用，聚焦AI核心技术和产品。"
   }
 }

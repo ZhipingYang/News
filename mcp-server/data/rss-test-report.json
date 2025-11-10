@@ -1,18 +1,18 @@
 {
-  "timestamp": "2025-11-10T05:39:16.934Z",
-  "totalSources": 41,
-  "successCount": 34,
-  "failCount": 7,
+  "timestamp": "2025-11-10T06:05:27.873Z",
+  "totalSources": 25,
+  "successCount": 25,
+  "failCount": 0,
   "categories": {
     "ai_programming": {
-      "totalSources": 11,
+      "totalSources": 10,
       "successCount": 10,
-      "failCount": 1,
+      "failCount": 0,
       "sources": [
         {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 692,
+          "duration": 457,
           "itemCount": 10,
           "source": {
             "name": "GitHub Blog",
@@ -25,7 +25,7 @@
         {
           "success": true,
           "message": "成功获取12条资讯",
-          "duration": 1418,
+          "duration": 1505,
           "itemCount": 12,
           "source": {
             "name": "JetBrains Blog",
@@ -38,7 +38,7 @@
         {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 960,
+          "duration": 898,
           "itemCount": 10,
           "source": {
             "name": "Microsoft Developer Blog",
@@ -51,7 +51,7 @@
         {
           "success": true,
           "message": "成功获取40条资讯",
-          "duration": 364,
+          "duration": 358,
           "itemCount": 40,
           "source": {
             "name": "Stack Overflow Blog",
@@ -64,7 +64,7 @@
         {
           "success": true,
           "message": "成功获取12条资讯",
-          "duration": 928,
+          "duration": 580,
           "itemCount": 12,
           "source": {
             "name": "Dev.to AI",
@@ -77,7 +77,7 @@
         {
           "success": true,
           "message": "成功获取20条资讯",
-          "duration": 3101,
+          "duration": 2234,
           "itemCount": 20,
           "source": {
             "name": "Google Developers Blog",
@@ -90,7 +90,7 @@
         {
           "success": true,
           "message": "成功获取20条资讯",
-          "duration": 1310,
+          "duration": 1352,
           "itemCount": 20,
           "source": {
             "name": "AWS Machine Learning Blog",
@@ -103,7 +103,7 @@
         {
           "success": true,
           "message": "成功获取650条资讯",
-          "duration": 738,
+          "duration": 767,
           "itemCount": 650,
           "source": {
             "name": "Hugging Face Blog",
@@ -116,7 +116,7 @@
         {
           "success": true,
           "message": "成功获取15条资讯",
-          "duration": 3484,
+          "duration": 3603,
           "itemCount": 15,
           "source": {
             "name": "Stanford AI Lab Blog",
@@ -127,20 +127,9 @@
           }
         },
         {
-          "success": false,
-          "message": "Status code 404",
-          "source": {
-            "name": "Python Software Foundation News",
-            "url": "https://www.python.org/feeds/community.rss.xml",
-            "credibility": 0.9,
-            "category": "community",
-            "description": "Python官方新闻，编程语言和AI开发"
-          }
-        },
-        {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 654,
+          "duration": 1153,
           "itemCount": 10,
           "source": {
             "name": "Towards Data Science - AI",
@@ -153,14 +142,14 @@
       ]
     },
     "ai_products": {
-      "totalSources": 15,
+      "totalSources": 9,
       "successCount": 9,
-      "failCount": 6,
+      "failCount": 0,
       "sources": [
         {
           "success": true,
           "message": "成功获取20条资讯",
-          "duration": 652,
+          "duration": 634,
           "itemCount": 20,
           "source": {
             "name": "Google AI Blog",
@@ -173,7 +162,7 @@
         {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 1424,
+          "duration": 629,
           "itemCount": 10,
           "source": {
             "name": "Microsoft AI Blog",
@@ -186,7 +175,7 @@
         {
           "success": true,
           "message": "成功获取18条资讯",
-          "duration": 1430,
+          "duration": 1378,
           "itemCount": 18,
           "source": {
             "name": "NVIDIA Blog",
@@ -197,31 +186,9 @@
           }
         },
         {
-          "success": false,
-          "message": "Status code 403",
-          "source": {
-            "name": "OpenAI News",
-            "url": "https://openai.com/news/rss",
-            "credibility": 0.95,
-            "category": "company_official",
-            "description": "OpenAI新闻RSS（备用URL）"
-          }
-        },
-        {
-          "success": false,
-          "message": "Status code 404",
-          "source": {
-            "name": "Anthropic Blog",
-            "url": "https://www.anthropic.com/index/rss.xml",
-            "credibility": 0.95,
-            "category": "company_official",
-            "description": "Anthropic博客（备用URL）"
-          }
-        },
-        {
           "success": true,
           "message": "成功获取7条资讯",
-          "duration": 1929,
+          "duration": 627,
           "itemCount": 7,
           "source": {
             "name": "VentureBeat AI",
@@ -234,7 +201,7 @@
         {
           "success": true,
           "message": "成功获取50条资讯",
-          "duration": 1364,
+          "duration": 1020,
           "itemCount": 50,
           "source": {
             "name": "AI Business",
@@ -245,31 +212,9 @@
           }
         },
         {
-          "success": false,
-          "message": "Status code 404",
-          "source": {
-            "name": "InfoQ AI",
-            "url": "https://www.infoq.com/ai-ml-data-eng/rss/",
-            "credibility": 0.85,
-            "category": "tech_news",
-            "description": "InfoQ AI/ML频道，技术和产品资讯"
-          }
-        },
-        {
-          "success": false,
-          "message": "Invalid character in entity name\nLine: 0\nColumn: 59980\nChar: &",
-          "source": {
-            "name": "Google Cloud Blog",
-            "url": "https://cloud.google.com/blog/rss",
-            "credibility": 0.9,
-            "category": "company_blog",
-            "description": "Google Cloud主博客，包含AI产品"
-          }
-        },
-        {
           "success": true,
           "message": "成功获取100条资讯",
-          "duration": 794,
+          "duration": 882,
           "itemCount": 100,
           "source": {
             "name": "Amazon Web Services News",
@@ -282,7 +227,7 @@
         {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 8719,
+          "duration": 9702,
           "itemCount": 10,
           "source": {
             "name": "Microsoft Azure Blog",
@@ -293,20 +238,9 @@
           }
         },
         {
-          "success": false,
-          "message": "Attribute without value\nLine: 63\nColumn: 19\nChar: s",
-          "source": {
-            "name": "IBM Blog - AI",
-            "url": "https://www.ibm.com/blog/category/artificial-intelligence/feed/",
-            "credibility": 0.9,
-            "category": "company_blog",
-            "description": "IBM AI博客，AI产品和解决方案"
-          }
-        },
-        {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 5020,
+          "duration": 2167,
           "itemCount": 10,
           "source": {
             "name": "Salesforce AI Research",
@@ -317,20 +251,9 @@
           }
         },
         {
-          "success": false,
-          "message": "Status code 500",
-          "source": {
-            "name": "HumanLoop Blog",
-            "url": "https://humanloop.com/blog/rss.xml",
-            "credibility": 0.8,
-            "category": "company_blog",
-            "description": "HumanLoop，LLM产品和工具"
-          }
-        },
-        {
           "success": true,
           "message": "成功获取15条资讯",
-          "duration": 2396,
+          "duration": 1548,
           "itemCount": 15,
           "source": {
             "name": "LangChain Blog",
@@ -343,14 +266,14 @@
       ]
     },
     "tech_general": {
-      "totalSources": 15,
-      "successCount": 15,
+      "totalSources": 6,
+      "successCount": 6,
       "failCount": 0,
       "sources": [
         {
           "success": true,
           "message": "成功获取10条资讯",
-          "duration": 259,
+          "duration": 518,
           "itemCount": 10,
           "source": {
             "name": "MIT Technology Review",
@@ -363,7 +286,7 @@
         {
           "success": true,
           "message": "成功获取30条资讯",
-          "duration": 1362,
+          "duration": 1073,
           "itemCount": 30,
           "source": {
             "name": "IEEE Spectrum",
@@ -376,7 +299,7 @@
         {
           "success": true,
           "message": "成功获取75条资讯",
-          "duration": 617,
+          "duration": 806,
           "itemCount": 75,
           "source": {
             "name": "Nature News",
@@ -389,7 +312,7 @@
         {
           "success": true,
           "message": "成功获取40条资讯",
-          "duration": 649,
+          "duration": 674,
           "itemCount": 40,
           "source": {
             "name": "Science News",
@@ -401,60 +324,8 @@
         },
         {
           "success": true,
-          "message": "成功获取20条资讯",
-          "duration": 275,
-          "itemCount": 20,
-          "source": {
-            "name": "TechCrunch",
-            "url": "https://techcrunch.com/feed/",
-            "credibility": 0.9,
-            "category": "tech_news",
-            "description": "TechCrunch，知名科技媒体和创业资讯"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取50条资讯",
-          "duration": 1088,
-          "itemCount": 50,
-          "source": {
-            "name": "Wired",
-            "url": "https://www.wired.com/feed/rss",
-            "credibility": 0.9,
-            "category": "tech_news",
-            "description": "Wired，科技文化和趋势媒体"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取10条资讯",
-          "duration": 496,
-          "itemCount": 10,
-          "source": {
-            "name": "The Verge",
-            "url": "https://www.theverge.com/rss/index.xml",
-            "credibility": 0.9,
-            "category": "tech_news",
-            "description": "The Verge，科技新闻和产品评测"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取20条资讯",
-          "duration": 1133,
-          "itemCount": 20,
-          "source": {
-            "name": "Ars Technica",
-            "url": "https://feeds.arstechnica.com/arstechnica/index",
-            "credibility": 0.9,
-            "category": "tech_news",
-            "description": "Ars Technica，深度科技分析"
-          }
-        },
-        {
-          "success": true,
           "message": "成功获取100条资讯",
-          "duration": 546,
+          "duration": 454,
           "itemCount": 100,
           "source": {
             "name": "New Scientist",
@@ -466,73 +337,8 @@
         },
         {
           "success": true,
-          "message": "成功获取179条资讯",
-          "duration": 985,
-          "itemCount": 179,
-          "source": {
-            "name": "ArXiv AI",
-            "url": "http://export.arxiv.org/rss/cs.AI",
-            "credibility": 0.95,
-            "category": "academic",
-            "description": "ArXiv AI论文预印本"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取30条资讯",
-          "duration": 559,
-          "itemCount": 30,
-          "source": {
-            "name": "IEEE Spectrum Robotics",
-            "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
-            "credibility": 0.9,
-            "category": "tech_news",
-            "description": "IEEE Spectrum机器人频道"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取15条资讯",
-          "duration": 1605,
-          "itemCount": 15,
-          "source": {
-            "name": "The Robot Report",
-            "url": "https://www.therobotreport.com/feed/",
-            "credibility": 0.85,
-            "category": "tech_news",
-            "description": "机器人行业新闻报告"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取100条资讯",
-          "duration": 2131,
-          "itemCount": 100,
-          "source": {
-            "name": "CMU Robotics Institute",
-            "url": "https://www.ri.cmu.edu/feed/",
-            "credibility": 0.95,
-            "category": "academic",
-            "description": "卡内基梅隆大学机器人研究所"
-          }
-        },
-        {
-          "success": true,
-          "message": "成功获取30条资讯",
-          "duration": 1949,
-          "itemCount": 30,
-          "source": {
-            "name": "Hacker News Best",
-            "url": "https://hnrss.org/best",
-            "credibility": 0.85,
-            "category": "tech_news",
-            "description": "Hacker News最佳讨论，技术社区热点"
-          }
-        },
-        {
-          "success": true,
           "message": "成功获取5条资讯",
-          "duration": 1714,
+          "duration": 910,
           "itemCount": 5,
           "source": {
             "name": "Quanta Magazine",

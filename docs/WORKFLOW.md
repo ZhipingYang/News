@@ -14,26 +14,53 @@ RSS源抓取 → 去重检查 → 可信度评估 → 智能补充 → 重要资
 
 ---
 
-## 第一阶段：RSS源抓取（5-8分钟）
+## 第一阶段：RSS源抓取 + GitHub Trending（8-12分钟）
 
 ### 资讯来源
-- **主要来源**：41个优质RSS源（成功率82.9%）
+- **主要来源**：25个精品RSS源（成功率100%）
+- **GitHub Trending**：每日AI开源项目趋势（新增）
 - **补充来源**：web_search搜索（按需触发）
 
 ### 抓取流程
 1. 读取 `mcp-server/config/rss-sources.json`
 2. 按类目抓取所有RSS源
-3. 过滤7天内的资讯
-4. 过滤可信度<0.8的源
-5. 按发布日期排序
+3. **通过web_search获取GitHub Trending AI项目**
+4. 过滤7天内的资讯
+5. 过滤可信度<0.8的源
+6. 按发布日期排序
 
 ### RSS源类目
-- **ai-programming**：11个源（GitHub、JetBrains、Microsoft等）
-- **ai-products**：15个源（Google AI、Microsoft、NVIDIA等）
-- **tech-general**：15个源（MIT Tech Review、IEEE、Nature等）
+- **ai-programming**：10个源（GitHub、JetBrains、Microsoft、AWS ML、Hugging Face等）
+- **ai-products**：9个源（Google AI、Microsoft AI、NVIDIA、AWS、LangChain等）
+- **tech-general**：6个源（MIT Tech Review、IEEE、Nature、Science等）
+
+### GitHub Trending评估标准（新增）
+
+**评分体系（100分制）：**
+- ⭐ Star数（30分）：病毒式传播≥5000、热门≥1000、上升≥100
+- 📈 今日增长（20分）：爆发≥500/day、热门≥100/day、增长≥50/day
+- 💥 颠覆性（20分）：revolutionary、breakthrough、novel、game-changing
+- 🎨 创造性（15分）：innovative、unique、creative、unconventional
+- 🎮 趣味性（10分）：fun、cool、amazing、engaging
+- 🤖 AI相关性（5分）：llm、agent、transformer、generative
+
+**添加标准：**
+- ✅ 必须添加：评分≥70（行业颠覆性、技术创新显著、社区热度极高）
+- 💡 推荐添加：评分≥50（有创新亮点、实用性强、增长势头好）
+- ❌ 不推荐：评分<50（缺乏创新、实用性一般、热度不足）
+
+**获取方式：**
+```bash
+# 方式1：在Cursor Chat中使用web_search
+"搜索今天GitHub Trending中的AI项目，评估哪些值得添加到AI编程资讯"
+
+# 方式2：查看评估指南
+node tools/evaluate-github-trending.js
+```
 
 ### 输出
-- 保存至：`mcp-server/data/rss-fetch-YYYY-MM-DD.json`
+- RSS抓取结果：`mcp-server/data/rss-fetch-YYYY-MM-DD.json`
+- GitHub Trending：通过web_search获取，AI评估后直接整合到资讯中
 
 ---
 

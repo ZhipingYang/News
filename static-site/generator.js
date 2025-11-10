@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import crypto from "crypto";
 import { fileURLToPath } from "url";
 import { marked } from "marked";
 
@@ -72,91 +73,104 @@ export class StaticSiteGenerator {
   }
 
   /**
-   * 解析 markdown 文件，拆分为多条资讯
+   * 解析 markdown 文件，每个类目文件作为一篇完整文章
    */
   parseMarkdownFile(content, category, date) {
-    // 移除文件头部的汇总标题
-    content = content.replace(/^#\s+.*资讯汇总\s*\n+/, "");
-
-    // 按 "# 🔥" 标题拆分为多条资讯（更可靠的方式）
-    const sections = content.split(/(?=\n# 🔥)/);
     const items = [];
 
-    for (const section of sections) {
-      if (section.trim().length < 50) continue; // 跳过太短的内容
+    // 检查内容是否为空或太短
+    if (content.trim().length < 100) return items;
 
-      // 提取标题
-      const titleMatch = section.match(/^#\s+🔥\s+(.*?)$/m);
-      const title = titleMatch ? titleMatch[1].trim() : "未命名资讯";
+    // 提取标题（支持任何emoji，提取emoji之后的文本）
+    const titleMatch = content.match(/^#\s+\S+\s+(.+?)$/m);
+    const title = titleMatch
+      ? titleMatch[1].trim()
+      : this.categoryMap[category]?.name || "未命名资讯";
 
-      // 提取发布日期
-      const dateMatch = section.match(
-        /\*\*发布日期：\*\*\s+(\d{4}-\d{2}-\d{2})/
-      );
-      const publishDate = dateMatch ? dateMatch[1] : date;
+    // 提取发布日期
+    const dateMatch = content.match(/\*\*发布日期：\*\*\s+(\d{4}-\d{2}-\d{2})/);
+    const publishDate = dateMatch ? dateMatch[1] : date;
 
-      // 提取来源
-      const sourceMatch = section.match(/\*\*来源：\*\*\s+\[(.*?)\]\((.*?)\)/);
-      const source = sourceMatch
-        ? { name: sourceMatch[1], url: sourceMatch[2] }
-        : null;
+    // 提取来源
+    const sourceMatch = content.match(/\*\*来源：\*\*\s+\[(.*?)\]\((.*?)\)/);
+    const source = sourceMatch
+      ? { name: sourceMatch[1], url: sourceMatch[2] }
+      : { name: "综合多源", url: null };
 
-      // 提取可信度评分
-      const scoreMatch = section.match(/\*\*可信度评分：\*\*\s+(⭐+)/);
-      const stars = scoreMatch ? scoreMatch[1].length : 3;
+    // 提取可信度评分
+    const scoreMatch = content.match(/\*\*可信度评分：\*\*\s+(⭐+)/);
+    const stars = scoreMatch ? scoreMatch[1].length : 5;
 
-      // 提取标签
-      const tagsMatch = section.match(/\*\*标签：\*\*\s+(.*?)$/m);
-      const tags = tagsMatch
-        ? tagsMatch[1].split(/\s+/).filter((t) => t.startsWith("#"))
-        : [];
+    // 提取标签（如果有的话）
+    const tagsMatch = content.match(/\*\*标签：\*\*\s+(.*?)$/m);
+    const tags = tagsMatch
+      ? tagsMatch[1].split(/\s+/).filter((t) => t.startsWith("#"))
+      : [];
 
-      // 生成摘要（取第一段非元数据的内容）
-      const contentLines = section.split("\n");
-      let summary = "";
-      let inContent = false;
-      for (const line of contentLines) {
-        if (line.startsWith("---")) break;
-        if (
-          inContent &&
-          line.trim() &&
-          !line.startsWith("**") &&
-          !line.startsWith("#")
-        ) {
-          summary = line.trim();
-          break;
-        }
-        if (line.includes("---")) inContent = true;
+    // 生成摘要（取"新闻背景"之后的第一段内容）
+    const contentLines = content.split("\n");
+    let summary = "";
+    let foundBackground = false;
+    for (const line of contentLines) {
+      if (line.includes("## 📰 新闻背景")) {
+        foundBackground = true;
+        continue;
       }
-      summary = summary.substring(0, 150) + (summary.length > 150 ? "..." : "");
-
-      items.push({
-        title,
-        category,
-        categoryInfo: this.categoryMap[category],
-        publishDate,
-        collectionDate: date,
-        source,
-        stars,
-        tags,
-        summary,
-        content: section,
-        slug: this.generateSlug(title, date),
-      });
+      if (foundBackground && line.trim() && line.startsWith("•")) {
+        summary += line.trim() + " ";
+        if (summary.length > 150) break;
+      }
+      if (foundBackground && summary && line.trim() === "") {
+        break;
+      }
     }
+    summary =
+      summary.trim().substring(0, 200) + (summary.length > 200 ? "..." : "");
+
+    // 如果没有找到摘要，使用分类名称作为默认
+    if (!summary) {
+      summary = `${this.categoryMap[category]?.name}相关深度分析`;
+    }
+
+    items.push({
+      title,
+      category,
+      categoryInfo: this.categoryMap[category],
+      publishDate,
+      collectionDate: date,
+      source,
+      stars,
+      tags,
+      summary,
+      content: content,
+      slug: this.generateSlug(title, date),
+    });
 
     return items;
   }
 
   /**
-   * 生成 URL slug
+   * 生成 URL slug（支持中文标题）
    */
   generateSlug(title, date) {
-    const slug = title
+    // 使用标题的哈希值作为唯一标识，避免中文URL和slug冲突问题
+    const hash = crypto
+      .createHash("md5")
+      .update(title)
+      .digest("hex")
+      .substring(0, 8);
+
+    // 尝试提取英文和数字作为可读部分
+    const readablePart = title
       .toLowerCase()
-      .replace(/[^\w\s-]/g, "")
+      .replace(/[^a-z0-9\s-]/g, "") // 只保留英文、数字、空格和连字符
       .replace(/\s+/g, "-")
-      .substring(0, 50);
+      .replace(/-+/g, "-") // 合并多个连字符
+      .trim()
+      .substring(0, 30);
+
+    // 如果有可读部分，使用它；否则只用哈希
+    const slug = readablePart ? `${readablePart}-${hash}` : hash;
     return `${date}-${slug}`;
   }
 
@@ -296,16 +310,16 @@ export class StaticSiteGenerator {
 
     const html = template
       .replace(/\{\{TITLE\}\}/g, item.title)
-      .replace("{{CATEGORY}}", item.categoryInfo.name)
-      .replace("{{CATEGORY_ICON}}", item.categoryInfo.icon)
-      .replace("{{CATEGORY_COLOR}}", item.categoryInfo.color)
-      .replace("{{DATE}}", item.publishDate)
-      .replace("{{STARS}}", "⭐".repeat(item.stars))
-      .replace("{{SOURCE_NAME}}", item.source?.name || "未知来源")
-      .replace("{{SOURCE_URL}}", item.source?.url || "#")
-      .replace("{{TAGS}}", item.tags.join(" "))
-      .replace("{{CONTENT}}", contentHtml)
-      .replace("{{BACK_LINK}}", `../../${date}.html`);
+      .replace(/\{\{CATEGORY\}\}/g, item.categoryInfo.name)
+      .replace(/\{\{CATEGORY_ICON\}\}/g, item.categoryInfo.icon)
+      .replace(/\{\{CATEGORY_COLOR\}\}/g, item.categoryInfo.color)
+      .replace(/\{\{DATE\}\}/g, item.publishDate)
+      .replace(/\{\{STARS\}\}/g, "⭐".repeat(item.stars))
+      .replace(/\{\{SOURCE_NAME\}\}/g, item.source?.name || "未知来源")
+      .replace(/\{\{SOURCE_URL\}\}/g, item.source?.url || "#")
+      .replace(/\{\{TAGS\}\}/g, item.tags.join(" "))
+      .replace(/\{\{CONTENT\}\}/g, contentHtml)
+      .replace(/\{\{BACK_LINK\}\}/g, `../../${date}.html`);
 
     // 确保目录存在
     const newsDir = path.join(this.docsDir, "news", date);
