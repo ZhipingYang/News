@@ -215,74 +215,11 @@
       "description": "Science新闻，顶级科学期刊"
     },
     {
-      "name": "TechCrunch",
-      "url": "https://techcrunch.com/feed/",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "TechCrunch，知名科技媒体和创业资讯"
-    },
-    {
-      "name": "Wired",
-      "url": "https://www.wired.com/feed/rss",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "Wired，科技文化和趋势媒体"
-    },
-    {
-      "name": "The Verge",
-      "url": "https://www.theverge.com/rss/index.xml",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "The Verge，科技新闻和产品评测"
-    },
-    {
-      "name": "Ars Technica",
-      "url": "https://feeds.arstechnica.com/arstechnica/index",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "Ars Technica，深度科技分析"
-    },
-    {
       "name": "New Scientist",
       "url": "https://www.newscientist.com/feed/home/",
       "credibility": 0.9,
       "category": "tech_news",
       "description": "New Scientist，科学新闻和技术趋势"
-    },
-    {
-      "name": "ArXiv AI",
-      "url": "http://export.arxiv.org/rss/cs.AI",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "ArXiv AI论文预印本"
-    },
-    {
-      "name": "IEEE Spectrum Robotics",
-      "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
-      "credibility": 0.9,
-      "category": "tech_news",
-      "description": "IEEE Spectrum机器人频道"
-    },
-    {
-      "name": "The Robot Report",
-      "url": "https://www.therobotreport.com/feed/",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "机器人行业新闻报告"
-    },
-    {
-      "name": "CMU Robotics Institute",
-      "url": "https://www.ri.cmu.edu/feed/",
-      "credibility": 0.95,
-      "category": "academic",
-      "description": "卡内基梅隆大学机器人研究所"
-    },
-    {
-      "name": "Hacker News Best",
-      "url": "https://hnrss.org/best",
-      "credibility": 0.85,
-      "category": "tech_news",
-      "description": "Hacker News最佳讨论，技术社区热点"
     },
     {
       "name": "Quanta Magazine",
@@ -298,6 +235,6 @@
     "min_credibility": 0.8,
     "fetch_timeout": 10000,
     "retry_attempts": 3,
-    "description": "优化后的RSS源配置：移除失败源，添加新的高质量源。ai_programming（11个源）、ai_products（15个源）、tech_general（15个源）。总计41个高质量RSS源。"
+    "description": "精简后的RSS源配置：移除消费电子软文源（The Verge、Wired、TechCrunch、Ars Technica、Hacker News、ArXiv等），只保留高质量技术资讯源。ai_programming（11个源）、ai_products（15个源）、tech_general（6个源）。总计32个精品RSS源，聚焦AI核心技术和产品。"
   }
 }

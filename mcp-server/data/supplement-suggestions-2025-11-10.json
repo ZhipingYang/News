@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-11-10T05:51:34.710Z",
+  "date": "2025-11-10",
+  "categories": {
+    "ai_programming": {
+      "analysis": {
+        "needsSupplement": false,
+        "reason": "质量和数量充足",
+        "count": 40,
+        "qualityScore": 0.92,
+        "avgCredibility": 0.87,
+        "avgLength": 3128
+      },
+      "searchQueries": [],
+      "targetCount": 0
+    },
+    "generative_ai": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "ai_chips": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "quantum_computing": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "robotics": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "tech_general": {
+      "analysis": {
+        "needsSupplement": false,
+        "reason": "质量和数量充足",
+        "count": 395,
+        "qualityScore": 0.95,
+        "avgCredibility": 0.92,
+        "avgLength": 1176
+      },
+      "searchQueries": [],
+      "targetCount": 0
+    }
+  },
+  "summary": {
+    "totalCategories": 6,
+    "needSupplementCount": 4,
+    "totalSearchQueries": 0
+  }
+}
