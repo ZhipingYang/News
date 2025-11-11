@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-11-11T08:02:53.783Z",
+  "date": "2025-11-11",
+  "categories": {
+    "ai_programming": {
+      "analysis": {
+        "needsSupplement": false,
+        "reason": "质量和数量充足",
+        "count": 14,
+        "qualityScore": 0.89,
+        "avgCredibility": 0.81,
+        "avgLength": 4631
+      },
+      "searchQueries": [],
+      "targetCount": 0
+    },
+    "generative_ai": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "ai_chips": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "quantum_computing": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "robotics": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [],
+      "targetCount": 5
+    },
+    "tech_general": {
+      "analysis": {
+        "needsSupplement": true,
+        "reason": "没有资讯",
+        "count": 0,
+        "qualityScore": 0
+      },
+      "searchQueries": [
+        "technology news 2025-11-11",
+        "tech industry updates",
+        "AI technology breakthrough",
+        "tech company announcement",
+        "emerging technology trends"
+      ],
+      "targetCount": 5
+    }
+  },
+  "summary": {
+    "totalCategories": 6,
+    "needSupplementCount": 5,
+    "totalSearchQueries": 5
+  }
+}

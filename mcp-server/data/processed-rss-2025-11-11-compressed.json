@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-11T08:03:20.390Z",
+    "compressionStats": {
+      "ai_programming": {
+        "totalItems": 14,
+        "compressedCount": 14,
+        "skippedCount": 0,
+        "compressionRatio": "76.1%"
+      },
+      "generative_ai": {
+        "totalItems": 0,
+        "compressedCount": 0,
+        "skippedCount": 0
+      },
+      "ai_chips": {
+        "totalItems": 0,
+        "compressedCount": 0,
+        "skippedCount": 0
+      },
+      "quantum_computing": {
+        "totalItems": 0,
+        "compressedCount": 0,
+        "skippedCount": 0
+      },
+      "robotics": {
+        "totalItems": 0,
+        "compressedCount": 0,
+        "skippedCount": 0
+      },
+      "tech_general": {
+        "totalItems": 0,
+        "compressedCount": 0,
+        "skippedCount": 0
+      }
+    }
+  },
+  "ai_programming": [
+    {
+      "title": "AI code means more critical thinking, not less",
+      "link": "https://stackoverflow.blog/2025/11/11/ai-code-means-more-critical-thinking-not-less/",
+      "pubDate": "Tue, 11 Nov 2025 08:40:00 GMT",
+      "source": "Stack Overflow Blog",
+      "sourceUrl": "https://stackoverflow.blog/feed/",
+      "credibility": 0.85,
+      "category": "tech_news",
+      "compressedDescription": "【标题】AI code means more critical thinking, not less\n【来源】Stack Overflow Blog (可信度: 0.85)\n\n【原文链接】https://stackoverflow.blog/2025/11/11/ai-code-means-more-critical-thinking-not-less/",
+      "compressed": true,
+      "originalLength": 308,
+      "compressedLength": 178,
+      "compressionRatio": "42.2%",
+      "keyDataPoints": [],
+      "technicalDetails": []
+    },
+    {
+      "title": "Teach Systems to Own Repetitive Work Without Losing Human Context",
+      "link": "https://dev.to/lesleyvos/teach-systems-to-own-repetitive-work-without-losing-human-context-55a4",
+      "pubDate": "Tue, 11 Nov 2025 07:56:31 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Teach Systems to Own Repetitive Work Without Losing Human Context\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- Example outcome: Most teams report a significant reduction in data reconciliation work\n- a manager who spent about 90 minutes per week on data reconciliation can often move to a 10-20 minute weekly review after setting up exceptions\n- Automation introduces new risks\n- For low effort wins, automate time tracking and payroll prep with a kiosk service like Timeclock\n- , the minutes that later lead to lost focus, slower performance, and burned-out teammates\n- Fixes turn into firefights rather than opportunities to improve the flow\n- Involve people in decision-making, not in performing routine tasks Practical tip: Implement a \"suggested action\" mode for 2–4 weeks before switching to auto-apply\n- ) For time-tracking and kiosk-style inputs, a service like Timeclock\n\n【技术关键词】\ngo, go \n\n【原文链接】https://dev.to/lesleyvos/teach-systems-to-own-repetitive-work-without-losing-human-context-55a4",
+      "compressed": true,
+      "originalLength": 6822,
+      "compressedLength": 993,
+      "compressionRatio": "85.4%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "go",
+        "go "
+      ]
+    },
+    {
+      "title": "Automated Multi-Scale Feature Extraction for Enhanced Hartmann Effect Wavefront Sensing",
+      "link": "https://dev.to/freederia-research/automated-multi-scale-feature-extraction-for-enhanced-hartmann-effect-wavefront-sensing-4o62",
+      "pubDate": "Tue, 11 Nov 2025 07:54:37 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Automated Multi-Scale Feature Extraction for Enhanced Hartmann Effect Wavefront Sensing\n【来源】Dev.to AI (可信度: 0.8)\n\n【关键数据】\n- 增长/变化: 45%\n- 金额: $1.5\n- 金额: 1.5 billion\n\n【核心内容】\n- The data was split into three sets: 8,000 for training the CNN, 1,000 for validation (checking performance during training), and 1,000 for testing (evaluating the final trained model)\n- Conclusion This research introduces a novel, automated method for multi-scale feature extraction in the Hartmann Effect, significantly improving the efficiency and accuracy of wavefront sensing\n- This research specifically tunes its architecture to apply data-driven analytics to this specific problem\n- On the measured data, the model was able to recounstruct wavefronts to a precision of 3\n- 5 billion market for AO by 2028 underscores the demand for faster, more accurate, and automated solutions\n- On measured datasets, the model returned a precise reconstruction of 3\n- This research addresses this limitation by introducing an automated pipeline for multi-scale feature extraction\n- Proposed Methodology: CNN-Driven Multi-Scale Feature Extraction Our approach consists of three primary phases: Data Preprocessing, Feature Extraction using a CNN, and Wavefront Reconstruction\n\n【技术关键词】\narchitecture leverages, architecture is, model to, model was, architecture can, algorithm particularly, Model and, Algorithm Explanation, architecture described, model against, model returned, architecture are, architecture to, MaxPool, GPU\n\n【原文链接】https://dev.to/freederia-research/automated-multi-scale-feature-extraction-for-enhanced-hartmann-effect-wavefront-sensing-4o62",
+      "compressed": true,
+      "originalLength": 17634,
+      "compressedLength": 1627,
+      "compressionRatio": "90.8%",
+      "keyDataPoints": [
+        "增长/变化: 45%",
+        "金额: $1.5",
+        "金额: 1.5 billion"
+      ],
+      "technicalDetails": [
+        "architecture leverages",
+        "architecture is",
+        "model to",
+        "model was",
+        "architecture can",
+        "algorithm particularly",
+        "Model and",
+        "Algorithm Explanation",
+        "architecture described",
+        "model against",
+        "model returned",
+        "architecture are",
+        "architecture to",
+        "MaxPool",
+        "GPU"
+      ]
+    },
+    {
+      "title": "Devanux Launched - Experts in DevOps, Linux and Software Dev",
+      "link": "https://dev.to/viggoblum/devanux-launched-experts-in-devops-linux-and-software-dev-1jo0",
+      "pubDate": "Tue, 11 Nov 2025 07:52:20 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Devanux Launched - Experts in DevOps, Linux and Software Dev\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- This month marks the official launch of Devanux, a new danish IT consulting company built by engineers who believe that technology should be powerful, but never complicated\n- We’ve spent years working in and around large enterprises, from Bankdata and TV2 Denmark to Vitec Software Group, and we kept seeing the same pattern: IT systems were becoming increasingly complex, slow to change, and full of hidden dependencies\n- We believe that good infrastructure, smart automation, and well-designed software can make teams faster, safer, and more focused on what actually matters\n- Our services include: Linux & UNIX support, from Red Hat and SUSE to Debian and AIX\n- AI forecasting and anomaly detection, turning raw data into decisions\n- Whether it’s optimizing uptime, reducing risk, or building your next SaaS product, we help you align technology with business goals\n- Our background includes everything from enterprise operations to startup launches\n- We’ve led technical due diligence for acquisitions, built full SaaS platforms like Nureti\n\n【技术关键词】\nDevOps, go, Go, Java.\n\n【原文链接】https://dev.to/viggoblum/devanux-launched-experts-in-devops-linux-and-software-dev-1jo0",
+      "compressed": true,
+      "originalLength": 2413,
+      "compressedLength": 1270,
+      "compressionRatio": "47.4%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "DevOps",
+        "go",
+        "Go",
+        "Java."
+      ]
+    },
+    {
+      "title": "Why Every HR Admin Needs a Smarter Attendance System in 2025",
+      "link": "https://dev.to/zfourhr_ms/why-every-hr-admin-needs-a-smarter-attendance-system-in-2025-4mn4",
+      "pubDate": "Tue, 11 Nov 2025 07:40:52 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Why Every HR Admin Needs a Smarter Attendance System in 2025\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- From GPS-based logins to auto-shift management, these tools save hours every week and improve compliance\n- Manual attendance tracking is outdated, error-prone, and time-consuming\n- in/post/how-admins-can-master-attendance-management-easily         HRTech #Automation #AttendanceManagement\n\n【技术关键词】\nAttendanceManagement\n\n【原文链接】https://dev.to/zfourhr_ms/why-every-hr-admin-needs-a-smarter-attendance-system-in-2025-4mn4",
+      "compressed": true,
+      "originalLength": 306,
+      "compressedLength": 517,
+      "compressionRatio": "-69.0%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "AttendanceManagement"
+      ]
+    },
+    {
+      "title": "Real-World Applications of AI: How It Will Impact Industries in 2026",
+      "link": "https://dev.to/alona_instandart/real-world-applications-of-ai-how-it-will-impact-industries-in-2026-4fnd",
+      "pubDate": "Tue, 11 Nov 2025 07:38:17 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Real-World Applications of AI: How It Will Impact Industries in 2026\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- By 2026, predictive maintenance will become standard practice: sensors and AI models will monitor equipment performance in real time, identifying problems before they break down\n- com/by-services/innovation-emerging-technologies/real-world-applications-of-ai-how-it-will-impact-industries-in-2026/\n- Fraud detection algorithms will analyze transactions in real time, identifying irregularities that may indicate fraud or a data breach\n- By 2026, it will be deeply integrated into many sectors, driving smarter decisions, improving efficiency, and creating new opportunities for growth\n- Introduction Artificial Intelligence (AI) is steadily moving from innovation labs into everyday business operations\n- Advanced algorithms will analyze medical images, identify patterns, and detect conditions like cancer or cardiovascular disease earlier than ever before\n- Machine learning will analyze data on online behavior, purchases, and even social media to create hyper-personalized recommendations\n- In healthcare, artificial intelligence is already proving its value, and by 2026, it will become indispensable\n\n【技术关键词】\ngo\n\n【原文链接】https://dev.to/alona_instandart/real-world-applications-of-ai-how-it-will-impact-industries-in-2026-4fnd",
+      "compressed": true,
+      "originalLength": 1600,
+      "compressedLength": 1337,
+      "compressionRatio": "16.4%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "go"
+      ]
+    },
+    {
+      "title": "Programmable Cell Therapy: High-Throughput Parameter Optimization via Bayesian Inference and Microfluidic Screening",
+      "link": "https://dev.to/freederia-research/programmable-cell-therapy-high-throughput-parameter-optimization-via-bayesian-inference-and-1m0e",
+      "pubDate": "Tue, 11 Nov 2025 07:33:38 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Programmable Cell Therapy: High-Throughput Parameter Optimization via Bayesian Inference and Microfluidic Screening\n【来源】Dev.to AI (可信度: 0.8)\n\n【关键数据】\n- 增长/变化: 25%\n- 增长/变化: 75%\n\n【核心内容】\n- We demonstrate this through a case study optimizing a synthetic Notch signaling circuit for controlled cytokine release in CAR-T cells, showing a 10-fold increase in optimization speed and improved circuit performance compared to standard combinatorial screening\n- However, the Bayesian inference-guided microfluidic platform achieved a 75% improvement, a 3-fold better performance\n- This approach allows for a closed-loop optimization process, continuously updating the model based on experimental data and iteratively refining circuit performance\n- For this study, we model a synthetic Notch signaling circuit designed to control cytokine release upon activation\n- Data Analysis Techniques: Regression analysis quantified the relationship between predicted and measured cytokine release, enabling correction of parameters in the mathematical model\n- 3 Bayesian Inference Engine A Bayesian inference engine is used to estimate the optimal circuit parameters based on the observed cytokine release data\n- Initial combinatorial screening of 32 variants yielded a 25% improvement in release profile relative to a baseline circuit\n- Traditional screening, tested 32 different circuit variants, achieved a 25% improvement in the desired cytokine release profile\n\n【技术关键词】\nframework that, framework coupled, model based, model of, Model Development, model incorporates, model a, model and, library design, model provides, model doesn, Model and, model uses, model itself, model requires\n\n【原文链接】https://dev.to/freederia-research/programmable-cell-therapy-high-throughput-parameter-optimization-via-bayesian-inference-and-1m0e",
+      "compressed": true,
+      "originalLength": 18620,
+      "compressedLength": 1807,
+      "compressionRatio": "90.3%",
+      "keyDataPoints": [
+        "增长/变化: 25%",
+        "增长/变化: 75%"
+      ],
+      "technicalDetails": [
+        "framework that",
+        "framework coupled",
+        "model based",
+        "model of",
+        "Model Development",
+        "model incorporates",
+        "model a",
+        "model and",
+        "library design",
+        "model provides",
+        "model doesn",
+        "Model and",
+        "model uses",
+        "model itself",
+        "model requires"
+      ]
+    },
+    {
+      "title": "I Tried Thousands of ChatGPT Prompts, and These 4 Saved Me Hours (No BS)",
+      "link": "https://dev.to/nitinfab/i-tried-thousands-of-chatgpt-prompts-and-these-4-saved-me-hours-no-bs-2d3d",
+      "pubDate": "Tue, 11 Nov 2025 07:28:28 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】I Tried Thousands of ChatGPT Prompts, and These 4 Saved Me Hours (No BS)\n【来源】Dev.to AI (可信度: 0.8)\n\n【关键数据】\n- 增长/变化: 20%\n- 增长/变化: 80%\n\n【核心内容】\n- And that's how you'll understand faster than most people who spent days studying the same thing\n- That's why, I've spent hundreds of hours testing prompts for every kind of task imaginable, writing, marketing, coding, design, learning, you name it\n- Learn any skill, fast Let's be honest, most people want to learn new things but get stuck because they don't know where to start\n- And if you want to go beyond theory, just follow up with: Prompt: \"I'm a beginner and want to get better at [skill]\n- In seconds, you'll have a curated list of quality resources, like someone already did the research for you\n- As a web developer, and a content writer, I've used this exact method to learn frameworks, design principles, and marketing skills without wasting time or money\n- Here's where ChatGPT shines: Prompt: \"Explain [concept] like I'm 5\"\n- And if you're reading a long book or article, just say: \"Summarize this chapter and give me 5 key takeaways with real-world examples\"\n\n【技术关键词】\nYouTube, go, go , Go\n\n【原文链接】https://dev.to/nitinfab/i-tried-thousands-of-chatgpt-prompts-and-these-4-saved-me-hours-no-bs-2d3d",
+      "compressed": true,
+      "originalLength": 4577,
+      "compressedLength": 1256,
+      "compressionRatio": "72.6%",
+      "keyDataPoints": [
+        "增长/变化: 20%",
+        "增长/变化: 80%"
+      ],
+      "technicalDetails": [
+        "YouTube",
+        "go",
+        "go ",
+        "Go"
+      ]
+    },
+    {
+      "title": "The Dot Connecting Concept: How Our Life’s Pattern Shapes Our Intelligence, Similar to AI",
+      "link": "https://dev.to/ozee/the-dot-connecting-concept-how-our-lifes-pattern-shapes-our-intelligence-similar-to-ai-1o9e",
+      "pubDate": "Tue, 11 Nov 2025 07:28:00 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】The Dot Connecting Concept: How Our Life’s Pattern Shapes Our Intelligence, Similar to AI\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- AI models learn from data, study patterns, find relationships between points, and use them to predict outcomes\n- Over time, that reflective process strengthens our intelligence and allows us to make smarter, more informed decisions, just like AI gets smarter with more data\n- What if you took your last 20 or 30 years, the years you remember clearly, and divided them into 5-year segments\n- Then you take the next 5 years and do the same, then the next, and so on\n- Over the years, I’ve come to realize that everything in life, both personal and professional follows a sequence of connected events\n- Every major or minor experience leaves an impression, a dot in our life\n- Some of these dots shine brightly, while others challenge and stretch us\n- But each carries a lesson, and together they form the bigger picture of who we become\n\n【技术关键词】\nFactsByte, GrowthMindset, LifeLessons, MachineLearning, PersonalDevelopment\n\n【原文链接】https://dev.to/ozee/the-dot-connecting-concept-how-our-lifes-pattern-shapes-our-intelligence-similar-to-ai-1o9e",
+      "compressed": true,
+      "originalLength": 1749,
+      "compressedLength": 1167,
+      "compressionRatio": "33.3%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "FactsByte",
+        "GrowthMindset",
+        "LifeLessons",
+        "MachineLearning",
+        "PersonalDevelopment"
+      ]
+    },
+    {
+      "title": "RAG vs CAG vs MCP: The Next Evolution in Machine Learning-Powered AI Systems",
+      "link": "https://dev.to/emily_smith_86b5b7960eebb/rag-vs-cag-vs-mcp-the-next-evolution-in-machine-learning-powered-ai-systems-53dg",
+      "pubDate": "Tue, 11 Nov 2025 07:27:40 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】RAG vs CAG vs MCP: The Next Evolution in Machine Learning-Powered AI Systems\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- Each represents a major step forward in how machine learning and large language models (LLMs) combine to make AI more contextual, adaptive, and intelligent\n- RAG – Retrieval-Augmented Generation RAG integrates machine learning with external data retrieval to enhance LLM accuracy\n- It fetches relevant information from databases or vector stores before generating an answer — reducing hallucinations and improving factual grounding\n- MCP – Memory-Context Processing MCP introduces persistent memory, enabling AI agents to remember, reason, and evolve across interactions\n- Together, they mark the shift from reactive AI to agentic, learning-based AI systems that understand, reason, and improve continuously\n- CAG – Context-Augmented Generation CAG goes beyond retrieval by using contextual awareness — such as user history, tone, and intent — to generate more adaptive and personalized responses\n- The Bigger Picture RAG laid the groundwork for intelligent retrieval, CAG added situational awareness, and MCP is now enabling memory-driven intelligence\n- As AI continues to evolve, three key frameworks are shaping the future of how intelligent systems retrieve, understand, and act on information — RAG (Retrieval-Augmented Generation), CAG (Context-Augmented Generation), and MCP (Memory-Context Processing)\n\n【技术关键词】\ngo\n\n【原文链接】https://dev.to/emily_smith_86b5b7960eebb/rag-vs-cag-vs-mcp-the-next-evolution-in-machine-learning-powered-ai-systems-53dg",
+      "compressed": true,
+      "originalLength": 1303,
+      "compressedLength": 1566,
+      "compressionRatio": "-20.2%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "go"
+      ]
+    },
+    {
+      "title": "How Edge Computing is Transforming the Future of IT Infrastructure",
+      "link": "https://dev.to/itcs11/how-edge-computing-is-transforming-the-future-of-it-infrastructure-183g",
+      "pubDate": "Tue, 11 Nov 2025 07:16:21 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】How Edge Computing is Transforming the Future of IT Infrastructure\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- Introduction: As the volume of data generated by devices, applications, and users grows exponentially, traditional centralized computing models are struggling to keep up\n- Healthcare: Remote monitoring devices and hospital equipment can process patient data locally, ensuring faster response times for critical conditions\n- Businesses that leverage edge computing strategically will gain faster insights, reduce operational costs, and deliver superior experiences to their customers\n- Edge computing moves processing power from centralized data centers to the \"edge\" of the network—closer to devices generating data\n- Enter edge computing—a paradigm that brings computation and data storage closer to the source of data\n- This approach is reshaping IT infrastructure, enabling faster processing, lower latency, and more efficient resource usage\n- This could be IoT devices, local servers, or micro data centers near end-users\n- Instead of sending all data to the cloud, edge devices can analyze and process it locally, sending only relevant information back to centralized servers\n\n【原文链接】https://dev.to/itcs11/how-edge-computing-is-transforming-the-future-of-it-infrastructure-183g",
+      "compressed": true,
+      "originalLength": 3026,
+      "compressedLength": 1287,
+      "compressionRatio": "57.5%",
+      "keyDataPoints": [],
+      "technicalDetails": []
+    },
+    {
+      "title": "Understanding Controllers in Express.js",
+      "link": "https://dev.to/msnmongare/understanding-controllers-in-expressjs-9h9",
+      "pubDate": "Tue, 11 Nov 2025 07:15:06 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】Understanding Controllers in Express.js\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- Break controllers down even further: Controller → Service → Model Controller handles requests\n- js application grows, route handlers can quickly become cluttered with business logic, validation, database queries, and response formatting\n- Useful for large apps where services are injected into controllers\n- getUsers = async (req, res) => {   const users = await userService\n- json({ success: true, data: users })\n- json({ success: true, data: user })\n- json({ success: false, message: 'Invalid data' })\n- js   models/     User\n\n【技术关键词】\nAPI grows, Model\n\nController, API or, UserController, go\n\n【原文链接】https://dev.to/msnmongare/understanding-controllers-in-expressjs-9h9",
+      "compressed": true,
+      "originalLength": 4165,
+      "compressedLength": 748,
+      "compressionRatio": "82.0%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "API grows",
+        "Model\n\nController",
+        "API or",
+        "UserController",
+        "go"
+      ]
+    },
+    {
+      "title": "How AI is Transforming Business Intelligence in 2026 and Beyond",
+      "link": "https://dev.to/ravi_teja_4/how-ai-is-transforming-business-intelligence-in-2026-and-beyond-5132",
+      "pubDate": "Tue, 11 Nov 2025 07:12:02 +0000",
+      "source": "Dev.to AI",
+      "sourceUrl": "https://dev.to/feed/tag/ai",
+      "credibility": 0.8,
+      "category": "developer",
+      "compressedDescription": "【标题】How AI is Transforming Business Intelligence in 2026 and Beyond\n【来源】Dev.to AI (可信度: 0.8)\n\n【核心内容】\n- Businesses prepared for these changes can act faster and make better use of their data, while those who hesitate risk falling behind\n- ​ Business intelligence used to involve waiting for end-of-month reports and digging through static charts\n- This change is helping organizations become more flexible, data-driven, and successful\n- Train and support your workforce to work with new tools confidently\n- Successful companies blend people and intelligent tools, build strong data ecosystems, and prepare for an environment where data powers every decision\n- Artificial intelligence is changing business intelligence in 2026 and will keep making a big difference in the years ahead\n- Invest in data governance and compliance policies\n- Artificial intelligence is redefining business intelligence from the ground up in 2026 and beyond\n\n【技术关键词】\ngo, Go\n\n【原文链接】https://dev.to/ravi_teja_4/how-ai-is-transforming-business-intelligence-in-2026-and-beyond-5132",
+      "compressed": true,
+      "originalLength": 1927,
+      "compressedLength": 1052,
+      "compressionRatio": "45.4%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "go",
+        "Go"
+      ]
+    },
+    {
+      "title": "JetBrains and DMCC AI Centre Announce Strategic Partnership to Accelerate AI Innovation",
+      "link": "https://blog.jetbrains.com/blog/2025/11/11/jetbrains-and-dmcc-ai-centre-announce-strategic-partnership-to-accelerate-ai-innovation/",
+      "pubDate": "Tue, 11 Nov 2025 07:00:00 +0000",
+      "source": "JetBrains Blog",
+      "sourceUrl": "https://blog.jetbrains.com/feed/",
+      "credibility": 0.9,
+      "category": "company_blog",
+      "compressedDescription": "【标题】JetBrains and DMCC AI Centre Announce Strategic Partnership to Accelerate AI Innovation\n【来源】JetBrains Blog (可信度: 0.9)\n\n【核心内容】\n- JetBrains and the DMCC AI Centre, a premier hub for artificial intelligence (AI) and innovation in the UAE, have announced a strategic collaboration to advance the growth of AI-driven innovation, entrepreneurship, and technical excellence within Dubai’s technology ecosystem\n- The agreement marks a key step in JetBrains’ rapid expansion across the MENA region, as its local […]\n\n【技术关键词】\nJetBrains\n\n【原文链接】https://blog.jetbrains.com/blog/2025/11/11/jetbrains-and-dmcc-ai-centre-announce-strategic-partnership-to-accelerate-ai-innovation/",
+      "compressed": true,
+      "originalLength": 377,
+      "compressedLength": 668,
+      "compressionRatio": "-77.2%",
+      "keyDataPoints": [],
+      "technicalDetails": [
+        "JetBrains"
+      ]
+    }
+  ],
+  "generative_ai": [],
+  "ai_chips": [],
+  "quantum_computing": [],
+  "robotics": [],
+  "tech_general": []
+}
