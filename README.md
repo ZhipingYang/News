@@ -8,34 +8,48 @@
 
 ---
 
-## 🚀 工作流模式
+## 🤖 AI Agent 一键自动化
 
-本项目支持两种模式：
+**让Cursor AI Agent自动完成所有工作** - 无需人工干预！
 
-### 模式1: 自动化批量处理（推荐）
+### 快速开始
 
-```bash
-# 1. 抓取RSS资讯
-cd mcp-server && node tools/fetch-rss.js all
+在Cursor Chat中输入：
 
-# 2. 处理与过滤（自动去重、评分）
-node tools/process-rss-data.js data/rss-fetch-$(date +%Y-%m-%d).json
-
-# 3. AI深度分析（在Cursor中）
-@AI-ANALYSIS-GUIDE.md 对今天的资讯进行深度分析
-
-# 4. 生成网站
-cd .. && npm run build
-
-# 5. 推送发布
-./scripts/auto-push.sh
+```
+@AI-AGENT-WORKFLOW.md 请执行今日AI资讯自动化工作流
 ```
 
-### 模式2: 手动单条处理
+AI Agent会自动：
+1. ✅ 抓取RSS资讯（25个精品源）
+2. ✅ 去重和可信度评估（自动更新历史）
+3. ✅ 智能补充分析（检测资讯不足）
+4. ✅ 高影响力资讯扩展（识别重要资讯）
+5. 🤖 **AI自动处理**：
+   - 自动执行web_search搜索
+   - 自动评估内容质量（evaluate_content）
+   - 自动生成深度分析（1500-2000字）
+   - 自动添加到对应类目（process_news）
+6. ✅ 重新生成静态网站
+7. ✅ 推送到GitHub发布
 
-使用MCP工具 `evaluate_content` 和 `process_news` 处理单条高质量资讯。
+**特点**：
+- 🎯 **完全自动化** - AI Agent自动处理所有步骤，无需人工确认
+- 🧠 **智能判断** - 自动检测是否需要补充或扩展资讯
+- 📊 **质量保证** - 只保留可信度≥0.85的高质量资讯
+- ⚡ **高效执行** - 10-15分钟完成所有工作
 
-**详细说明**: 查看 [完整工作流文档](./WORKFLOW.md)
+### 也可以手动运行脚本
+
+```bash
+# 运行自动化脚本（程序化部分）
+npm run auto
+
+# 然后让AI Agent处理建议文件（AI部分）
+# 脚本会提示AI Agent需要执行的操作
+```
+
+**完整说明**: 查看 [AI Agent工作流指南](./AI-AGENT-WORKFLOW.md)
 
 ---
 
@@ -93,39 +107,48 @@ cd mcp-server && npm install && cd ..
 
 ### 3. 配置GitHub认证（见上方配置部分）
 
-### 4. 执行自动化工作流
+### 4. 让AI Agent执行工作流
 
 在Cursor Chat中输入：
+
 ```
-@README.md 请执行今日AI资讯自动化分析工作流
+@AI-AGENT-WORKFLOW.md 请执行今日AI资讯自动化工作流
 ```
+
+AI Agent会自动完成所有步骤，包括：
+- 运行自动化脚本
+- 处理补充和扩展建议
+- 执行web_search和内容评估
+- 生成深度分析并保存
+- 重新生成网站并推送
 
 ---
 
-## 🛠️ 手动执行（可选）
+## 🛠️ 调试和测试
+
+### 测试RSS源可用性
 
 ```bash
-# 1. 测试RSS源可用性
 cd mcp-server
 node tools/test-rss-sources.js
+```
 
-# 2. 抓取RSS源
-node tools/fetch-rss.js all
+### 手动运行脚本部分
 
-# 3. 智能补充判断（可选）
-node tools/intelligent-supplement.js data/rss-fetch-YYYY-MM-DD.json
+```bash
+# 只运行程序化的自动化脚本
+npm run auto
 
-# 4. 重要资讯扩展（可选）
-node tools/expand-important-news.js data/processed-rss-YYYY-MM-DD.json
+# 脚本会输出建议文件路径，然后让AI Agent处理
+```
 
-# 5. 内容压缩（可选）
-node utils/content-compressor.js data/processed-rss-YYYY-MM-DD.json
+### 生成和推送
 
-# 6. 生成网站
-cd ..
+```bash
+# 重新生成网站
 npm run build
 
-# 7. 推送（自动选择GitHub CLI或Token）
+# 推送到GitHub
 ./scripts/auto-push.sh
 ```
 
@@ -249,9 +272,10 @@ AI会自动评估资讯影响力，并为高影响力资讯生成搜索查询建
 
 - [在线网站](https://zhipingyang.github.io/News/)
 - [GitHub仓库](https://github.com/ZhipingYang/News)
-- [工作流文档](./WORKFLOW.md) - 完整工作流说明
-- [工具文档](./TOOLS.md) - 所有工具职责说明
+- [AI Agent工作流](./AI-AGENT-WORKFLOW.md) - AI Agent完整执行指南⭐
+- [工作流文档](./WORKFLOW.md) - 技术细节和说明
 - [AI分析指南](./AI-ANALYSIS-GUIDE.md) - 深度分析方法论
+- [工具文档](./mcp-server/TOOLS.md) - 所有工具说明
 - [RSS源配置](./mcp-server/config/rss-sources.json)
 
 ---
@@ -266,11 +290,16 @@ MIT License
 **维护者：** ZhipingYang
 
 **核心特性：**
+- 🤖 **AI Agent完全自动化** - Cursor AI自动完成所有工作，无需人工干预
+- 🧠 **智能补充和扩展** - AI自动检测、搜索、评估、生成、保存
 - ✅ 3大核心类目，25个精品RSS源（成功率100%）
-- ✅ 双重去重检测，移除所有重复（相似度≥80%）
+- ✅ 双重去重检测，自动更新历史（相似度≥80%）
 - ✅ 严格质量过滤（可信度≥0.85）
-- ✅ AI智能补充，动态判断资讯充足度
-- ✅ 重要资讯扩展，自动识别并深度分析高影响力资讯
-- ✅ MCP工具支持，单条资讯精细处理
-- ✅ 自动化部署，GitHub CLI优先推送
-- ✅ 详细工作流文档 - 查看 [WORKFLOW.md](./WORKFLOW.md)
+- ✅ AI深度分析（1500-2000字专业分析）
+- ✅ MCP工具集成（evaluate_content、process_news）
+- ⚡ 10-15分钟完成整个工作流
+
+**重要更新**（2025-11-12）：
+- 🤖 **AI Agent工作流**: 让Cursor AI自动执行所有步骤 - 查看 [AI-AGENT-WORKFLOW.md](./AI-AGENT-WORKFLOW.md)
+- 🎯 **完全自动化**: 移除人工确认，AI Agent自动处理补充和扩展
+- 🔧 **Bug修复**: 去重历史自动更新，防止重复资讯

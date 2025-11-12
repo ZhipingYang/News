@@ -65,6 +65,16 @@ async function processRSSData(rssDataPath, minCredibility = 0.8) {
     }
 
     console.log(`  ✓ 可信度≥${minCredibility}：${qualified.length} 条`);
+    
+    // 将筛选后的资讯添加到去重历史
+    for (const item of qualified) {
+      const date = item.pubDate
+        ? new Date(item.pubDate).toISOString().split("T")[0]
+        : new Date().toISOString().split("T")[0];
+      await addToHistory(date, item);
+    }
+    console.log(`  ✓ 已更新去重历史：${qualified.length} 条`);
+    
     allProcessed[topic] = qualified;
   }
 

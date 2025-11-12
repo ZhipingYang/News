@@ -77,21 +77,21 @@ function generateSearchQueries(category, date) {
   const dateStr = dateObj.toISOString().split("T")[0];
 
   const queryMap = {
-    ai_programming: [
+    "ai-programming": [
       `AI coding tools ${dateStr}`,
       `GitHub Copilot new features ${dateStr}`,
       `AI programming assistant updates`,
       `code generation AI news`,
       `developer AI tools latest`,
     ],
-    ai_products: [
+    "ai-products": [
       `AI product launch ${dateStr}`,
       `new AI model release`,
       `GPT Claude Gemini updates`,
       `AI startup announcement`,
       `enterprise AI products news`,
     ],
-    tech_general: [
+    "tech-general": [
       `technology news ${dateStr}`,
       `tech industry updates`,
       `AI technology breakthrough`,

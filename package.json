@@ -4,6 +4,7 @@
   "description": "AI news collection and static site generation system",
   "type": "module",
   "scripts": {
+    "auto": "./scripts/auto-workflow.sh",
     "build": "node static-site/generator.js",
     "serve": "npx http-server docs -p 8080 -o",
     "mcp": "cd mcp-server && npm start",
