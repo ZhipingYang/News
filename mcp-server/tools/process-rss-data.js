@@ -26,12 +26,9 @@ async function processRSSData(rssDataPath, minCredibility = 0.8) {
   // 3. 按主题处理
   const allProcessed = {};
   const categoryMap = {
-    ai_programming: "ai-programming",
-    generative_ai: "generative-ai",
-    ai_chips: "ai-chips",
-    quantum_computing: "quantum-computing",
-    robotics: "robotics",
-    tech_general: "tech-general",
+    "ai-programming": "ai-programming",
+    "ai-products": "ai-products",
+    "tech-general": "tech-general",
   };
 
   for (const [topic, items] of Object.entries(rssData)) {

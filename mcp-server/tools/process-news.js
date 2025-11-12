@@ -17,18 +17,14 @@ export class ProcessNewsTool {
 
     this.categoryFileMap = {
       "ai-programming": "ai-programming.md",
-      "ai-chips": "ai-chips.md",
-      "quantum-computing": "quantum-computing.md",
-      robotics: "robotics.md",
-      "generative-ai": "generative-ai.md",
+      "ai-products": "ai-products.md",
+      "tech-general": "tech-general.md",
     };
 
     this.categoryNameMap = {
       "ai-programming": "AI编程",
-      "ai-chips": "AI芯片",
-      "quantum-computing": "量子计算",
-      robotics: "机器人",
-      "generative-ai": "生成式AI",
+      "ai-products": "AI产品",
+      "tech-general": "科技综合",
     };
   }
 

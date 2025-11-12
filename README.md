@@ -8,26 +8,34 @@
 
 ---
 
-## 🚀 一键自动化工作流
+## 🚀 工作流模式
 
-在Cursor Chat中输入：
+本项目支持两种模式：
 
+### 模式1: 自动化批量处理（推荐）
+
+```bash
+# 1. 抓取RSS资讯
+cd mcp-server && node tools/fetch-rss.js all
+
+# 2. 处理与过滤（自动去重、评分）
+node tools/process-rss-data.js data/rss-fetch-$(date +%Y-%m-%d).json
+
+# 3. AI深度分析（在Cursor中）
+@AI-ANALYSIS-GUIDE.md 对今天的资讯进行深度分析
+
+# 4. 生成网站
+cd .. && npm run build
+
+# 5. 推送发布
+./scripts/auto-push.sh
 ```
-@README.md 请执行今日AI资讯自动化分析工作流
-```
 
-**AI自动完成以下步骤（25-35分钟）：**
+### 模式2: 手动单条处理
 
-1. **RSS源抓取** - 从25个精品RSS源抓取最新资讯（成功率100%）
-2. **GitHub Trending评估** - 获取并评估每日AI开源项目（新增✨）
-3. **去重检查** - 移除所有重复内容（相似度≥80%）
-4. **可信度评估** - 只接受可信度≥0.85的高质量资讯
-5. **智能补充** - AI动态判断是否需要web_search补充资讯
-6. **重要资讯扩展** - 对高影响力资讯进行深度搜索和扩展分析
-7. **内容压缩** - 智能提取关键信息，压缩上下文至30-40%
-8. **深度分析生成** - 生成1500-2000字专业分析
-9. **网站构建** - 自动生成静态网站
-10. **Git推送** - 使用GitHub CLI或Token自动推送
+使用MCP工具 `evaluate_content` 和 `process_news` 处理单条高质量资讯。
+
+**详细说明**: 查看 [完整工作流文档](./WORKFLOW.md)
 
 ---
 
@@ -168,13 +176,6 @@ News/
 - **tech-general**: 6个精品源（MIT Tech Review、IEEE、Nature、Science等）
 - **总计**: 25个精品RSS源，成功率100%，可信度≥0.8
 
-### GitHub Trending评估（新增✨）
-- **评分体系**: 100分制，综合评估Star数、增长、颠覆性、创造性、趣味性
-- **添加标准**: 评分≥70必须添加，≥50推荐添加，<50不推荐
-- **关注重点**: 具有颠覆性、创造性或趣味性的AI开源项目
-- **获取方式**: 通过web_search获取每日GitHub Trending，AI自动评估
-- **评估工具**: `node tools/evaluate-github-trending.js` 查看评估标准
-
 ### 智能补充机制
 - AI动态判断每个类目是否需要补充
 - 触发条件：资讯<3条 或 质量分数<0.75
@@ -248,8 +249,10 @@ AI会自动评估资讯影响力，并为高影响力资讯生成搜索查询建
 
 - [在线网站](https://zhipingyang.github.io/News/)
 - [GitHub仓库](https://github.com/ZhipingYang/News)
+- [工作流文档](./WORKFLOW.md) - 完整工作流说明
+- [工具文档](./TOOLS.md) - 所有工具职责说明
+- [AI分析指南](./AI-ANALYSIS-GUIDE.md) - 深度分析方法论
 - [RSS源配置](./mcp-server/config/rss-sources.json)
-- [工作流文档](./docs/WORKFLOW.md)
 
 ---
 
@@ -264,10 +267,10 @@ MIT License
 
 **核心特性：**
 - ✅ 3大核心类目，25个精品RSS源（成功率100%）
-- ✅ GitHub Trending评估，每日发现AI创新项目（新增✨）
+- ✅ 双重去重检测，移除所有重复（相似度≥80%）
+- ✅ 严格质量过滤（可信度≥0.85）
 - ✅ AI智能补充，动态判断资讯充足度
 - ✅ 重要资讯扩展，自动识别并深度分析高影响力资讯
-- ✅ 内容压缩，减少30-40%冗余上下文
-- ✅ 双重去重检测，移除所有重复
-- ✅ 严格质量过滤（可信度≥0.85）
-- ✅ GitHub CLI优先推送（安全可靠）
+- ✅ MCP工具支持，单条资讯精细处理
+- ✅ 自动化部署，GitHub CLI优先推送
+- ✅ 详细工作流文档 - 查看 [WORKFLOW.md](./WORKFLOW.md)

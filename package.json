@@ -1,6 +1,6 @@
 {
   "name": "ai-news-collection",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "AI news collection and static site generation system",
   "type": "module",
   "scripts": {
@@ -8,6 +8,7 @@
     "serve": "npx http-server docs -p 8080 -o",
     "mcp": "cd mcp-server && npm start",
     "mcp:install": "cd mcp-server && npm install",
+    "setup": "npm install && cd mcp-server && npm install && cd ..",
     "clean": "rm -rf docs/*",
     "dev": "npm run build && npm run serve"
   },
@@ -17,13 +18,23 @@
     "mcp",
     "static-site"
   ],
-  "author": "",
+  "author": "ZhipingYang",
   "license": "MIT",
   "dependencies": {
     "marked": "^12.0.0"
   },
   "devDependencies": {
     "http-server": "^14.1.1"
+  },
+  "workspaces": [
+    "mcp-server"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZhipingYang/News.git"
   }
 }
 

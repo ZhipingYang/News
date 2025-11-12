@@ -1,5 +1,5 @@
 {
-  "ai_programming": [
+  "ai-programming": [
     {
       "name": "GitHub Blog",
       "url": "https://github.blog/feed/",
@@ -71,7 +71,7 @@
       "description": "Towards Data Science，AI和数据科学文章"
     }
   ],
-  "ai_products": [
+  "ai-products": [
     {
       "name": "Google AI Blog",
       "url": "https://blog.google/technology/ai/rss/",
@@ -136,7 +136,7 @@
       "description": "LangChain博客，AI应用框架和产品"
     }
   ],
-  "tech_general": [
+  "tech-general": [
     {
       "name": "MIT Technology Review",
       "url": "https://www.technologyreview.com/feed/",

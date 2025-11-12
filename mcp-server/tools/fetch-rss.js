@@ -113,12 +113,9 @@ async function fetchTopicRSS(topic, maxAgeDays = 7) {
 async function fetchAllRSS(maxAgeDays = 7) {
   const config = await loadRSSConfig();
   const topics = [
-    "ai_programming",
-    "generative_ai",
-    "ai_chips",
-    "quantum_computing",
-    "robotics",
-    "tech_general",
+    "ai-programming",
+    "ai-products",
+    "tech-general",
   ];
 
   console.log("🚀 开始抓取所有RSS源...\n");

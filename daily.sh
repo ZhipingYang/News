@@ -50,8 +50,8 @@ else
 fi
 
 # 创建所有分类的空文件（如果不存在）
-categories=("ai-programming" "ai-chips" "quantum-computing" "robotics" "generative-ai")
-category_names=("AI编程" "AI芯片" "量子计算" "机器人" "生成式AI")
+categories=("ai-programming" "ai-products" "tech-general")
+category_names=("AI编程" "AI产品" "科技综合")
 
 for i in "${!categories[@]}"; do
     category="${categories[$i]}"
@@ -86,10 +86,8 @@ echo "   [粘贴资讯内容]"
 echo ""
 echo -e "${GREEN}3. 保存分析结果到对应文件：${NC}"
 echo "   • AI编程 → $TODAY/ai-programming.md"
-echo "   • AI芯片 → $TODAY/ai-chips.md"
-echo "   • 量子计算 → $TODAY/quantum-computing.md"
-echo "   • 机器人 → $TODAY/robotics.md"
-echo "   • 生成式AI → $TODAY/generative-ai.md"
+echo "   • AI产品 → $TODAY/ai-products.md"
+echo "   • 科技综合 → $TODAY/tech-general.md"
 echo ""
 echo -e "${YELLOW}💡 提示：AI编程相关资讯是重点！${NC}"
 echo ""
