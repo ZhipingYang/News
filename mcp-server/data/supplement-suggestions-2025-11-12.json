@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-11-13T00:55:57.637Z",
+  "date": "2025-11-12",
+  "categories": {
+    "ai-programming": {
+      "analysis": {
+        "needsSupplement": false,
+        "reason": "质量和数量充足",
+        "count": 27,
+        "qualityScore": 0.91,
+        "avgCredibility": 0.86,
+        "avgLength": 1694
+      },
+      "searchQueries": [],
+      "targetCount": 0
+    },
+    "ai-products": {
+      "analysis": {
+        "needsSupplement": false,
+        "reason": "质量和数量充足",
+        "count": 3,
+        "qualityScore": 0.82,
+        "avgCredibility": 0.92,
+        "avgLength": 343
+      },
+      "searchQueries": [],
+      "targetCount": 0
+    },
+    "tech-general": {
+      "analysis": {
+        "needsSupplement": false,
+        "reason": "质量和数量充足",
+        "count": 15,
+        "qualityScore": 0.8,
+        "avgCredibility": 0.93,
+        "avgLength": 305
+      },
+      "searchQueries": [],
+      "targetCount": 0
+    }
+  },
+  "summary": {
+    "totalCategories": 3,
+    "needSupplementCount": 0,
+    "totalSearchQueries": 0
+  }
+}

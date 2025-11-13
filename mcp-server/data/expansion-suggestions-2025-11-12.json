@@ -1,0 +1,425 @@
+{
+  "timestamp": "2025-11-13T00:56:07.574Z",
+  "categories": {
+    "ai-programming": {
+      "itemCount": 27,
+      "isLowVolume": false,
+      "highImpactNews": [
+        {
+          "title": "Building a Production RAG System for Resume Search: What Actually Worked (and What Didn't)",
+          "link": "https://dev.to/harrywynn/building-a-production-rag-system-for-resume-search-what-actually-worked-and-what-didnt-3jaa",
+          "description": "After 25 years in software development, I recently tackled a problem that's becoming increasingly common: implementing a production-ready RAG (Retrieval-Augmented Generation) system using AWS Bedrock Knowledge Bases. The use case was resume search for a recruiting database, and the results were significant enough that I wanted to share what worked, what didn't, and the gotchas I hit along the way.\nRecruiters were drowning in manual work. They'd run keyword searches against the resume database, then spend hours manually sifting through results trying to match candidates to job descriptions. The core issue? Basic keyword search doesn't understand context or semantic meaning.\nA job description asking for \"frontend expertise with modern JavaScript frameworks\" might miss excellent candidates whose resumes say \"React developer\" or \"Vue.js specialist\" because the exact keywords don't match. Recruiters were compensating by running dozens of search variations, then manually evaluating each result.\nThe pain point: Searches that should take an hour were taking 2 days or more to compile a quality candidate list.\nInstead of making recruiters search harder, I inverted the problem. The system takes a job description, generates an optimized semantic query, and searches the knowledge base for candidates whose experience actually matches what the role needs - not just the keywords used to describe it.\nThe architecture is straightforward:  \nData source: Bullhorn ATS\n\n\nData transformation: Resumes exported and converted to Markdown files with recruiter notes embedded for additional context\n\n\nStorage: Transformed files in S3\n\n\nVector store: AWS Bedrock Knowledge Base with OpenSearch Serverless\n\n\nEmbeddings: Cohere Embed model\n\n\nQuery processing: Job descriptions converted to optimized prompts before querying\nThe Markdown transformation was critical - it provided a clean, consistent format while preserving the recruiter context that often makes the difference between \"technically qualified\" and \"actually a good fit.\"\nThis was the most critical decision and took the most trial and error.\nMy initial approach used semantic splitting - breaking documents at natural boundaries based on content meaning. The theory was sound: keep related information together. The results were... okay. Not terrible, but not targeted enough. Search results felt scattered, like the system was giving me pieces of information from across someone's entire career instead of the relevant parts.\nI switched to 400-character chunks with 20% overlap (80 characters of overlap between adjacent chunks).\nWhy this worked better:\nConsistency matters for vector search. Fixed-size chunks create more uniform embeddings, which means more predictable search results. When chunks vary wildly in size (which happens with semantic splitting on resumes), you get inconsistent matching quality.\nOverlap prevents context loss. A candidate's key qualification might span a chunk boundary. The 20% overlap ensures that critical context doesn't get split awkwardly. If someone's resume says \"Led migration from Angular to React, reducing bundle size by 40%,\" you want that whole thought captured somewhere.\nShorter chunks = more precise matching. At 400 characters, each chunk represents a focused piece of someone's experience. When a query matches, you're getting specific relevant context, not an entire job history.\nThe difference was noticeable immediately. Search results became more focused and relevant sections of resumes consistently bubbled to the top.\nThis is where the real power comes in. Raw semantic search is good; semantic search + metadata filtering is game-changing.\nTitle (job title)\nDepartment\nRecruiter (who sourced them)\nSkills (extracted skill list)\nCompanies (employment history)\nEducation\nLocation\nEmail\nDepartment filtering was huge. Being able to search within \"Accounting\" vs \"Creative\" vs \"HR\" immediately cuts noise and improves relevance. When you're filling a finance role, you don't want creative professionals showing up just because they mentioned \"budgets\" in their portfolio management section.\nSkills metadata let recruiters combine semantic search with hard requirements. \"Find candidates whose experience matches this job description AND have Python + AWS in their skills list\" catches people who might describe their work differently but have the required technical background.\nLocation filtering became essential for roles that weren't fully remote. No point showing Dallas candidates for a NYC office-required position.\nThe other metadata fields were valuable for the application layer but didn't significantly improve search quality itself. They're worth capturing, but they're not doing heavy lifting in the retrieval step.\nThe numbers tell the story:\nBefore: Compiling a quality candidate list for a specialized role took 2 days or more of recruiter time - running multiple keyword searches, manually reviewing resumes, cross-referencing requirements.\nAfter: Same task took 2 hours. The recruiter reviews the job description, the system returns ranked candidates with relevant experience highlighted, and they spend their time on actual evaluation instead of archaeological searches.\nQuality validation: When we tracked placements, candidates that were actually hired appeared in the top search results the majority of the time. The system wasn't just faster - it was finding the right people.\nThis cost me the most time. My initial implementation used inline documents (sending resume content directly to Bedrock via API). It worked, but indexing was painfully slow - we're talking days to process and index resumes from Bullhorn.\nOne important note: resumes are only indexed if they have been updated witin the past 2 years. Anything older than that quickly loses relevance in the recruiting world - skills change, candidates move on, contact information goes stale. This scoping decision kept the database manageable and ensured search results stayed current.\nThe fix: A two-step transformation process. First, I exported resumes from Bullhorn (filtering for the past 2 years) and converted them to Markdown files, embedding recruiter notes as additional context within the documents. Then I stored these transformed files in S3 and pointed the Knowledge Base at the bucket.\nResult: Indexing time dropped from days to hours.\nWhy did this work so much better?\nAWS Bedrock Knowledge Bases are optimized for S3-based workflows. The service can parallelize file processing much more efficiently than handling inline content through API calls.\nMarkdown provided structure and consistency. Instead of dealing with varied resume formats (PDFs, Word docs, text files), everything became clean, parseable Markdown. This consistency improved both indexing speed and search quality.\nRecruiter notes added critical context. When a recruiter writes \"Strong cultural fit for startup environments\" or \"Excellent communicator, handled difficult client situations well,\" that context gets indexed alongside technical qualifications. The semantic search can now match on soft skills and work style, not just keywords.\nIf I were starting over, I'd go straight to the Markdown transformation approach and save myself a week of frustration. Plus, updates became simpler - export from Bullhorn, transform to Markdown, drop in S3, trigger a sync, done.\nThis system is production-ready, but it's not perfect. It's a work in progress, and there are areas I'd continue refining:\nDynamic chunk sizing based on content type. Resumes aren't uniform - executive resumes vs junior developer resumes have different information density. Adaptive chunking might improve results further.\nBetter handling of acronyms and industry jargon. The system sometimes misses matches when candidates use acronyms (e.g., \"K8s\") vs full terms (e.g., \"Kubernetes\"). Some preprocessing or synonym expansion could help.\nQuery optimization based on role type. Different job categories (engineering vs sales vs finance) might benefit from different query formulations. There's room to tune the prompt generation based on department.\nStart with fixed-size chunking. It's simpler, more predictable, and easier to tune than semantic splitting. You can always get fancier later.\n\n\nOverlap is worth it. The 20% overlap prevented edge cases where important context got split. The storage cost is negligible compared to the quality improvement.\n\n\nMetadata filtering is not optional. Semantic search alone is good. Semantic search + metadata filtering is what makes the system production-ready.\n\n\nTransform your data into a consistent format. Converting everything to Markdown before indexing improved both speed and quality. If you're working with an ATS or any heterogeneous data source, the transformation step is worth the effort.\n\n\nUse S3 for document storage from day one. Don't make my mistake of starting with inline documents.\n\n\nEmbed human context wherever possible. Recruiter notes added dimensions that pure resume text couldn't capture. If you have expert annotations, comments, or contextual notes in your source system, include them.\n\n\nMeasure what matters. We tracked time-to-candidate-list and placement rates. Those metrics proved the system's value and guided optimization priorities.\n\n\n\n\n  \n  \n  The Bottom Line\n\n\nImplementing RAG systems with AWS Bedrock isn't rocket science, but the details matter. The difference between \"okay results\" and \"recruiters will use this every day\" came down to chunking strategy, metadata design, data transformation, and infrastructure choices.\nFor this use case, the combination of pulling from Bullhorn ATS, transforming to Markdown with recruiter context, using 400-character fixed chunks with 20% overlap, rich metadata filtering, and S3-based storage created a system that genuinely improved recruiter productivity. Searches that took 2 days or more became 2-hour searches, and the candidates being placed were consistently appearing in top results.\nIf you're building similar systems - whether for recruiting, document search, customer support, or any other knowledge retrieval application - the principles transfer. Start simple, measure results, and optimize based on what your users actually need. And if you're working with data from an ATS, CRM, or any structured system, invest the time in a clean transformation pipeline. It pays dividends.\nNeed help implementing AWS Bedrock Knowledge Bases or optimizing your RAG system? I do consulting and implementation work through Concept Cache. Feel free to reach out if you're hitting similar challenges.",
+          "pubDate": "Thu, 13 Nov 2025 00:07:31 +0000",
+          "source": "Dev.to AI",
+          "sourceUrl": "https://dev.to/feed/tag/ai",
+          "credibility": 0.8,
+          "category": "ai-programming",
+          "evaluation": {
+            "shouldGenerate": true,
+            "credibilityScore": 0.92,
+            "confidence": "high",
+            "category": "ai-programming",
+            "categoryConfidence": 70,
+            "sourceValidation": {
+              "isTrusted": true,
+              "sourceType": "community",
+              "sourceScore": 0.8,
+              "domain": "dev.to",
+              "reason": "可信来源：Dev.to 开发者社区"
+            },
+            "contentAnalysis": {
+              "hasNumbers": true,
+              "hasTechnicalTerms": true,
+              "hasCompanyNames": true,
+              "estimatedReadingTime": 8
+            },
+            "scoreBreakdown": {
+              "sourceScore": {
+                "value": 0.8,
+                "weight": 0.4
+              },
+              "completeness": {
+                "value": 1,
+                "weight": 0.25,
+                "details": "包含具体数据；包含技术细节"
+              },
+              "timeliness": {
+                "value": 1,
+                "weight": 0.15,
+                "details": "24小时内发布"
+              },
+              "quality": {
+                "value": 1,
+                "weight": 0.2,
+                "details": "未检测到明显质量问题",
+                "redFlags": []
+              }
+            },
+            "recommendation": "generate",
+            "reason": "可信度评分高（0.92/1.0），建议生成",
+            "warnings": [],
+            "suggestedTags": [
+              "#aiprogramming",
+              "#性能提升"
+            ],
+            "summary": "After 25 years in software development, I recently tackled a problem that's becoming increasingly common: implementing a production-ready RAG (Retriev..."
+          },
+          "assessment": {
+            "impactScore": 65,
+            "isHighImpact": true,
+            "reasons": [
+              "包含3个高影响力关键词",
+              "涉及知名机构：Meta",
+              "包含关键数据指标",
+              "内容详细（>500字）"
+            ],
+            "needsExpansion": true
+          },
+          "searchQueries": [
+            "Building a Production RAG System for Resume Search: What Actually Worked (and What Didn't)",
+            "Building a Production RAG System for Resume Search: What Actually Worked (and What Didn't) background context",
+            "Building a Production RAG System for Resume Search: What Actually Worked (and What Didn't) technical details",
+            "Building a Production RAG System for Resume Search: What Actually Worked (and What Didn't) market reaction analysis",
+            "Building a Production RAG System for Resume Search: What Actually Worked (and What Didn't) expert opinion"
+          ]
+        },
+        {
+          "title": "C# 14 Language Features in ReSharper and Rider 2025.3",
+          "link": "https://blog.jetbrains.com/dotnet/2025/11/11/csharp-14-language-features-in-resharper-and-rider-2025-3/",
+          "description": "Last year marked the first time we shipped ReSharper and Rider side by side with the official .NET SDK release – and we’re happy to announce that we’ve done it again with the 2025.3 release! Download Rider 2025.3 Download ReSharper 2025.3 With .NET 10 and C# 14, both ReSharper and Rider are ready on day […]",
+          "pubDate": "Tue, 11 Nov 2025 15:49:55 +0000",
+          "source": "JetBrains Blog",
+          "sourceUrl": "https://blog.jetbrains.com/feed/",
+          "credibility": 0.9,
+          "category": "ai-programming",
+          "evaluation": {
+            "shouldGenerate": true,
+            "credibilityScore": 0.82,
+            "confidence": "medium",
+            "category": "ai-programming",
+            "categoryConfidence": 86,
+            "sourceValidation": {
+              "isTrusted": true,
+              "sourceType": "company_blog",
+              "sourceScore": 0.85,
+              "domain": "blog.jetbrains.com",
+              "reason": "匹配模式：company_blogs"
+            },
+            "contentAnalysis": {
+              "hasNumbers": false,
+              "hasTechnicalTerms": false,
+              "hasCompanyNames": false,
+              "estimatedReadingTime": 1
+            },
+            "scoreBreakdown": {
+              "sourceScore": {
+                "value": 0.85,
+                "weight": 0.4
+              },
+              "completeness": {
+                "value": 0.6666666666666666,
+                "weight": 0.25,
+                "details": "缺少具体数据；技术细节较少"
+              },
+              "timeliness": {
+                "value": 0.9,
+                "weight": 0.15,
+                "details": "3天内发布"
+              },
+              "quality": {
+                "value": 0.9,
+                "weight": 0.2,
+                "details": "未检测到明显质量问题；内容结构较简单",
+                "redFlags": []
+              }
+            },
+            "recommendation": "generate_with_note",
+            "reason": "可信度评分中等（0.82/1.0），可以生成但需标注来源",
+            "warnings": [
+              "建议标注来源并验证关键信息",
+              "内容缺少技术细节",
+              "内容缺少具体数据"
+            ],
+            "suggestedTags": [
+              "#aiprogramming",
+              "#新产品"
+            ],
+            "summary": "Last year marked the first time we shipped ReSharper and Rider side by side with the official ."
+          },
+          "assessment": {
+            "impactScore": 50,
+            "isHighImpact": true,
+            "reasons": [
+              "包含3个高影响力关键词",
+              "来源可信度高（0.9）"
+            ],
+            "needsExpansion": true
+          },
+          "searchQueries": [
+            "C# 14 Language Features in ReSharper and Rider 2025.3",
+            "C# 14 Language Features in ReSharper and Rider 2025.3 background context",
+            "C# 14 Language Features in ReSharper and Rider 2025.3 technical details",
+            "C# 14 Language Features in ReSharper and Rider 2025.3 market reaction analysis",
+            "C# 14 Language Features in ReSharper and Rider 2025.3 expert opinion"
+          ]
+        },
+        {
+          "title": "ReSharper C++ 2025.3: C++26 Language Support, Faster Unreal Engine Startup, and Visual Studio 2026 Compatibility",
+          "link": "https://blog.jetbrains.com/rscpp/2025/11/11/resharper-cpp-2025-3/",
+          "description": "We’re excited to announce that ReSharper C++ 2025.3 is here, bringing major language updates, performance improvements, and a refined UI in the upcoming Microsoft Visual Studio 2026 release. This version advances C++26 support with new language features, improves constexpr evaluation, and offers a refined Out-of-Process mode for smoother, more responsive performance. Unreal Engine developers will […]",
+          "pubDate": "Tue, 11 Nov 2025 15:48:50 +0000",
+          "source": "JetBrains Blog",
+          "sourceUrl": "https://blog.jetbrains.com/feed/",
+          "credibility": 0.9,
+          "category": "ai-programming",
+          "evaluation": {
+            "shouldGenerate": true,
+            "credibilityScore": 0.86,
+            "confidence": "high",
+            "category": "ai-programming",
+            "categoryConfidence": 50,
+            "sourceValidation": {
+              "isTrusted": true,
+              "sourceType": "company_blog",
+              "sourceScore": 0.85,
+              "domain": "blog.jetbrains.com",
+              "reason": "匹配模式：company_blogs"
+            },
+            "contentAnalysis": {
+              "hasNumbers": false,
+              "hasTechnicalTerms": true,
+              "hasCompanyNames": true,
+              "estimatedReadingTime": 1
+            },
+            "scoreBreakdown": {
+              "sourceScore": {
+                "value": 0.85,
+                "weight": 0.4
+              },
+              "completeness": {
+                "value": 0.8333333333333334,
+                "weight": 0.25,
+                "details": "缺少具体数据；包含技术细节"
+              },
+              "timeliness": {
+                "value": 0.9,
+                "weight": 0.15,
+                "details": "3天内发布"
+              },
+              "quality": {
+                "value": 0.9,
+                "weight": 0.2,
+                "details": "未检测到明显质量问题；内容结构较简单",
+                "redFlags": []
+              }
+            },
+            "recommendation": "generate",
+            "reason": "可信度评分高（0.86/1.0），建议生成",
+            "warnings": [
+              "内容缺少具体数据"
+            ],
+            "suggestedTags": [
+              "#aiprogramming",
+              "#新产品"
+            ],
+            "summary": "We’re excited to announce that ReSharper C++ 2025."
+          },
+          "assessment": {
+            "impactScore": 55,
+            "isHighImpact": true,
+            "reasons": [
+              "包含2个高影响力关键词",
+              "来源可信度高（0.9）",
+              "涉及知名机构：Microsoft"
+            ],
+            "needsExpansion": true
+          },
+          "searchQueries": [
+            "ReSharper C++ 2025.3: C++26 Language Support, Faster Unreal Engine Startup, and Visual Studio 2026 Compatibility",
+            "ReSharper C++ 2025.3: C++26 Language Support, Faster Unreal Engine Startup, and Visual Studio 2026 Compatibility background context",
+            "ReSharper C++ 2025.3: C++26 Language Support, Faster Unreal Engine Startup, and Visual Studio 2026 Compatibility technical details",
+            "ReSharper C++ 2025.3: C++26 Language Support, Faster Unreal Engine Startup, and Visual Studio 2026 Compatibility market reaction analysis",
+            "ReSharper C++ 2025.3: C++26 Language Support, Faster Unreal Engine Startup, and Visual Studio 2026 Compatibility expert opinion"
+          ]
+        },
+        {
+          "title": "The Go Ecosystem in 2025: Key Trends in Frameworks, Tools, and Developer Practices",
+          "link": "https://blog.jetbrains.com/go/2025/11/10/go-language-trends-ecosystem-2025/",
+          "description": "Go turns 16 this year. To celebrate this milestone, we have taken a closer look at the latest Developer Ecosystem Survey results and examined the evolution of the Go ecosystem over the past five years. According to JetBrains Data Playground, 2.2 million professional developers use Go as their primary programming language – twice as many […]",
+          "pubDate": "Mon, 10 Nov 2025 09:24:35 +0000",
+          "source": "JetBrains Blog",
+          "sourceUrl": "https://blog.jetbrains.com/feed/",
+          "credibility": 0.9,
+          "category": "ai-programming",
+          "evaluation": {
+            "shouldGenerate": true,
+            "credibilityScore": 0.83,
+            "confidence": "medium",
+            "category": "ai-programming",
+            "categoryConfidence": 80,
+            "sourceValidation": {
+              "isTrusted": true,
+              "sourceType": "company_blog",
+              "sourceScore": 0.85,
+              "domain": "blog.jetbrains.com",
+              "reason": "匹配模式：company_blogs"
+            },
+            "contentAnalysis": {
+              "hasNumbers": true,
+              "hasTechnicalTerms": false,
+              "hasCompanyNames": false,
+              "estimatedReadingTime": 1
+            },
+            "scoreBreakdown": {
+              "sourceScore": {
+                "value": 0.85,
+                "weight": 0.4
+              },
+              "completeness": {
+                "value": 0.8333333333333334,
+                "weight": 0.25,
+                "details": "包含具体数据；技术细节较少"
+              },
+              "timeliness": {
+                "value": 0.7,
+                "weight": 0.15,
+                "details": "3天内发布"
+              },
+              "quality": {
+                "value": 0.9,
+                "weight": 0.2,
+                "details": "未检测到明显质量问题；内容结构较简单",
+                "redFlags": []
+              }
+            },
+            "recommendation": "generate_with_note",
+            "reason": "可信度评分中等（0.83/1.0），可以生成但需标注来源",
+            "warnings": [
+              "建议标注来源并验证关键信息",
+              "内容缺少技术细节"
+            ],
+            "suggestedTags": [
+              "#aiprogramming"
+            ],
+            "summary": "Go turns 16 this year."
+          },
+          "assessment": {
+            "impactScore": 50,
+            "isHighImpact": true,
+            "reasons": [
+              "包含2个高影响力关键词",
+              "来源可信度高（0.9）",
+              "包含关键数据指标"
+            ],
+            "needsExpansion": true
+          },
+          "searchQueries": [
+            "The Go Ecosystem in 2025: Key Trends in Frameworks, Tools, and Developer Practices",
+            "The Go Ecosystem in 2025: Key Trends in Frameworks, Tools, and Developer Practices background context",
+            "The Go Ecosystem in 2025: Key Trends in Frameworks, Tools, and Developer Practices technical details",
+            "The Go Ecosystem in 2025: Key Trends in Frameworks, Tools, and Developer Practices market reaction analysis",
+            "The Go Ecosystem in 2025: Key Trends in Frameworks, Tools, and Developer Practices expert opinion"
+          ]
+        },
+        {
+          "title": "What 986 million code pushes say about the developer workflow in 2025",
+          "link": "https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/",
+          "description": "Nearly a billion commits later, the way we ship code has changed for good. Here’s what the 2025 Octoverse data says about how devs really work now.\nThe post What 986 million code pushes say about the developer workflow in 2025 appeared first on The GitHub Blog.",
+          "pubDate": "Fri, 07 Nov 2025 16:00:00 +0000",
+          "source": "GitHub Blog",
+          "sourceUrl": "https://github.blog/feed/",
+          "credibility": 0.95,
+          "category": "ai-programming",
+          "evaluation": {
+            "shouldGenerate": true,
+            "credibilityScore": 0.87,
+            "confidence": "high",
+            "category": "ai-programming",
+            "categoryConfidence": 75,
+            "sourceValidation": {
+              "isTrusted": true,
+              "sourceType": "company",
+              "sourceScore": 0.95,
+              "domain": "github.blog",
+              "reason": "可信来源：GitHub 官方博客"
+            },
+            "contentAnalysis": {
+              "hasNumbers": true,
+              "hasTechnicalTerms": false,
+              "hasCompanyNames": false,
+              "estimatedReadingTime": 1
+            },
+            "scoreBreakdown": {
+              "sourceScore": {
+                "value": 0.95,
+                "weight": 0.4
+              },
+              "completeness": {
+                "value": 0.8333333333333334,
+                "weight": 0.25,
+                "details": "包含具体数据；技术细节较少"
+              },
+              "timeliness": {
+                "value": 0.7,
+                "weight": 0.15,
+                "details": "6天内发布"
+              },
+              "quality": {
+                "value": 0.9,
+                "weight": 0.2,
+                "details": "未检测到明显质量问题；内容结构较简单",
+                "redFlags": []
+              }
+            },
+            "recommendation": "generate",
+            "reason": "可信度评分高（0.87/1.0），建议生成",
+            "warnings": [
+              "内容缺少技术细节"
+            ],
+            "suggestedTags": [
+              "#aiprogramming"
+            ],
+            "summary": "Nearly a billion commits later, the way we ship code has changed for good. Here’s what the 2025 Octoverse data says about how devs really work now."
+          },
+          "assessment": {
+            "impactScore": 75,
+            "isHighImpact": true,
+            "reasons": [
+              "包含3个高影响力关键词",
+              "来源可信度高（0.95）",
+              "涉及知名机构：MIT",
+              "包含关键数据指标"
+            ],
+            "needsExpansion": true
+          },
+          "searchQueries": [
+            "What 986 million code pushes say about the developer workflow in 2025",
+            "What 986 million code pushes say about the developer workflow in 2025 background context",
+            "What 986 million code pushes say about the developer workflow in 2025 technical details",
+            "What 986 million code pushes say about the developer workflow in 2025 market reaction analysis",
+            "What 986 million code pushes say about the developer workflow in 2025 expert opinion"
+          ]
+        }
+      ],
+      "needsExpansion": false
+    },
+    "ai-products": {
+      "itemCount": 3,
+      "isLowVolume": true,
+      "highImpactNews": [],
+      "needsExpansion": false
+    },
+    "tech-general": {
+      "itemCount": 15,
+      "isLowVolume": false,
+      "highImpactNews": [],
+      "needsExpansion": false
+    }
+  },
+  "summary": {
+    "totalCategories": 3,
+    "lowVolumeCategories": 1,
+    "highImpactNewsCount": 5,
+    "expansionRecommended": false
+  }
+}
