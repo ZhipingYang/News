@@ -41,7 +41,7 @@ echo "🚀 推送到 GitHub..."
 if command -v gh &> /dev/null; then
     echo "使用GitHub CLI推送..."
     if gh auth status &> /dev/null; then
-        git push origin master 2>&1
+        git push origin dev 2>&1
         if [ $? -eq 0 ]; then
             echo ""
             echo "✅ 推送成功！（使用GitHub CLI）"
@@ -79,14 +79,14 @@ if [ -z "$GITHUB_TOKEN" ]; then
     echo "  3. 生成token：https://github.com/settings/tokens"
     echo ""
     echo "方式3：手动推送"
-    echo "  git push origin master"
+    echo "  git push origin dev"
     exit 1
 fi
 
 # 使用token推送
 echo "使用Token推送..."
 REPO_URL=$(git remote get-url origin | sed 's/.*github\.com[:/]\(.*\)\.git/\1/' || echo "ZhipingYang/News")
-git push https://${GITHUB_TOKEN}@github.com/${REPO_URL}.git master 2>&1 | grep -v "$GITHUB_TOKEN"
+git push https://${GITHUB_TOKEN}@github.com/${REPO_URL}.git dev 2>&1 | grep -v "$GITHUB_TOKEN"
 
 if [ $? -eq 0 ]; then
     echo ""
@@ -98,7 +98,7 @@ else
     echo ""
     echo "请尝试："
     echo "1. 检查Token权限（需要repo权限）"
-    echo "2. 手动推送：git push origin master"
+    echo "2. 手动推送：git push origin dev"
     echo "3. 查看详细文档：docs/TROUBLESHOOTING.md"
     exit 1
 fi
