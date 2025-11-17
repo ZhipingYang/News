@@ -1,11 +1,11 @@
-# AI编程资讯 - 2025-11-14
-
----
-
 ## 🚀 AlphaEvolve：DeepMind重新定义算法设计的AI革命
 
-**来源**: [LinkedIn AI News](https://www.linkedin.com/pulse/ai-news-highlights-from-15th-may-2025-grok-ai-wct7e)
-**日期**: 2025-11-14
+**发布日期：** 2025-11-14  
+**来源：** [LinkedIn AI News](https://www.linkedin.com/pulse/ai-news-highlights-from-15th-may-2025-grok-ai-wct7e)  
+**分类：** AI编程  
+**可信度评分：** ⭐⭐⭐⭐
+
+---
 
 ### 📰 新闻背景
 

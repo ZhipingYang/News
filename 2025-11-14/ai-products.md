@@ -1,11 +1,11 @@
-# AI产品资讯 - 2025-11-14
-
----
-
 ## 💰 Anthropic押注500亿美元：AI基础设施军备竞赛的新高度
 
-**来源**: [Reuters](https://www.reuters.com/technology/anthropic-invest-50-billion-build-data-centers-us-2025-11-12/)
-**日期**: 2025-11-14
+**发布日期：** 2025-11-14  
+**来源：** [Reuters](https://www.reuters.com/technology/anthropic-invest-50-billion-build-data-centers-us-2025-11-12/)  
+**分类：** AI产品  
+**可信度评分：** ⭐⭐⭐⭐⭐
+
+---
 
 ### 📰 新闻背景
 

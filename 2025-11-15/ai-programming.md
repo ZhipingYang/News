@@ -1,11 +1,11 @@
-# AI编程资讯 - 2025-11-15
-
----
-
 ## 🎵 Stable Audio Open Small：移动端AI音频革命
 
-**来源**: [LinkedIn AI News](https://www.linkedin.com/pulse/ai-news-highlights-from-15th-may-2025-grok-ai-wct7e)
-**日期**: 2025-11-15
+**发布日期：** 2025-11-15  
+**来源：** [LinkedIn AI News](https://www.linkedin.com/pulse/ai-news-highlights-from-15th-may-2025-grok-ai-wct7e)  
+**分类：** AI编程  
+**可信度评分：** ⭐⭐⭐⭐
+
+---
 
 ### 📰 新闻背景
 

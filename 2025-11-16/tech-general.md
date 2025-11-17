@@ -1,11 +1,11 @@
-# 科技综合资讯 - 2025-11-16
-
----
-
 ## 💰 NVIDIA的AI投资帝国：从芯片到生态的全面布局
 
-**来源**: [Bloomberg](https://www.bloomberg.com/news/articles/2025-11-16/nvidia-ai-investment-strategy)  
-**日期**: 2025-11-16
+**发布日期：** 2025-11-16  
+**来源：** [Bloomberg](https://www.bloomberg.com/news/articles/2025-11-16/nvidia-ai-investment-strategy)  
+**分类：** 科技综合  
+**可信度评分：** ⭐⭐⭐⭐⭐
+
+---
 
 ### 📰 新闻背景
 

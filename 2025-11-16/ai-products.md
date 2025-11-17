@@ -1,11 +1,11 @@
-# AI产品资讯 - 2025-11-16
-
----
-
 ## 🤖 Meta的AI重组：从实验室到产品的蜕变
 
-**来源**: [The Information](https://www.theinformation.com/articles/meta-ai-reorganization-2025)  
-**日期**: 2025-11-16
+**发布日期：** 2025-11-16  
+**来源：** [The Information](https://www.theinformation.com/articles/meta-ai-reorganization-2025)  
+**分类：** AI产品  
+**可信度评分：** ⭐⭐⭐⭐
+
+---
 
 ### 📰 新闻背景
 
