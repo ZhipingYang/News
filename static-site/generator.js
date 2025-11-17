@@ -15,7 +15,7 @@ export class StaticSiteGenerator {
   constructor() {
     this.baseDir = path.join(__dirname, "..");
     this.newsMarkdownDir = path.join(this.baseDir, "news_markdown");
-    this.docsDir = path.join(this.baseDir, "publish_site");
+    this.docsDir = path.join(this.baseDir, "docs");
     this.templatesDir = path.join(__dirname, "templates");
 
     this.categoryMap = {
@@ -366,6 +366,34 @@ export class StaticSiteGenerator {
   }
 
   /**
+   * 复制静态资源（CSS、图片等）
+   */
+  async copyStaticAssets() {
+    const stylesSourceDir = path.join(__dirname, "styles");
+    const stylesTargetDir = path.join(this.docsDir, "styles");
+
+    try {
+      // 确保目标目录存在
+      await fs.mkdir(stylesTargetDir, { recursive: true });
+
+      // 读取源目录中的所有文件
+      const files = await fs.readdir(stylesSourceDir);
+
+      for (const file of files) {
+        const sourcePath = path.join(stylesSourceDir, file);
+        const targetPath = path.join(stylesTargetDir, file);
+
+        // 复制文件
+        await fs.copyFile(sourcePath, targetPath);
+      }
+
+      console.log("✅ 复制静态资源：styles/");
+    } catch (error) {
+      console.warn("⚠️  复制静态资源失败：", error.message);
+    }
+  }
+
+  /**
    * 生成所有页面
    */
   async generate() {
@@ -373,6 +401,9 @@ export class StaticSiteGenerator {
 
     // 确保 docs 目录存在
     await fs.mkdir(this.docsDir, { recursive: true });
+
+    // 复制静态资源
+    await this.copyStaticAssets();
 
     // 获取所有日期文件夹
     const dateFolders = await this.getDateFolders();

@@ -6,11 +6,11 @@
   "scripts": {
     "auto": "./scripts/auto-workflow.sh",
     "build": "node static-site/generator.js",
-    "serve": "npx http-server publish_site -p 8080 -o",
+    "serve": "npx http-server docs -p 8080 -o",
     "mcp": "cd mcp-server && npm start",
     "mcp:install": "cd mcp-server && npm install",
     "setup": "npm install && cd mcp-server && npm install && cd ..",
-    "clean": "rm -rf publish_site/*",
+    "clean": "rm -rf docs/*",
     "dev": "npm run build && npm run serve"
   },
   "keywords": [

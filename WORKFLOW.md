@@ -223,9 +223,9 @@ npm run build
 └────────────┬────────────┘
          │ Step 6: generator.js
          ↓
-┌─────────────────────┐
-│ publish_site/*.html │ ← 静态网站（GitHub Pages）
-└──────────┬──────────┘
+┌────────────────┐
+│  docs/*.html   │ ← 静态网站（GitHub Pages）
+└────────┬───────┘
          │ Step 7: auto-push.sh
          ↓
 ┌────────────────┐
@@ -317,14 +317,12 @@ News/
 │       ├── rss-fetch-YYYY-MM-DD.json      # RSS原始数据
 │       └── processed-rss-YYYY-MM-DD.json  # 处理后数据
 │
-├── publish_site/            # 生成的网站（GitHub Pages）
+├── docs/                    # 生成的网站（GitHub Pages）
 │   ├── index.html
 │   ├── YYYY-MM-DD.html
 │   └── news/YYYY-MM-DD/
 │
-└── docs/                    # 文档和归档
-    ├── WORKFLOW.md
-    └── archive/
+└── archive_docs/            # 历史文档归档
 ```
 
 ---

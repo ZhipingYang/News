@@ -181,14 +181,12 @@ News/
 │   ├── generator.js            # 生成器主程序
 │   └── templates/              # HTML模板
 │
-├── publish_site/               # 生成的静态网站（GitHub Pages）
+├── docs/                       # 生成的静态网站（GitHub Pages）
 │   ├── index.html              # 网站首页
 │   ├── YYYY-MM-DD.html         # 每日汇总
 │   └── news/YYYY-MM-DD/        # 资讯详情页
 │
-├── docs/                       # 文档和归档
-│   ├── WORKFLOW.md             # 工作流文档
-│   └── archive/                # 历史归档
+├── archive_docs/               # 历史文档归档
 │
 └── scripts/
     └── auto-push.sh            # 自动推送脚本
