@@ -159,10 +159,11 @@ npm run build
 ```
 News/
 ├── README.md                    # 项目说明
-├── YYYY-MM-DD/                 # 按日期组织的资讯
-│   ├── ai-programming.md       # AI编程资讯
-│   ├── ai-products.md          # AI产品资讯
-│   └── tech-general.md         # 科技综合资讯
+├── news_markdown/               # Markdown 资讯源文件目录
+│   └── YYYY-MM-DD/             # 按日期组织的资讯
+│       ├── ai-programming.md   # AI编程资讯
+│       ├── ai-products.md      # AI产品资讯
+│       └── tech-general.md     # 科技综合资讯
 │
 ├── mcp-server/                 # MCP服务器
 │   ├── config/
@@ -180,10 +181,14 @@ News/
 │   ├── generator.js            # 生成器主程序
 │   └── templates/              # HTML模板
 │
-├── docs/                       # 生成的静态网站（GitHub Pages）
+├── publish_site/               # 生成的静态网站（GitHub Pages）
 │   ├── index.html              # 网站首页
 │   ├── YYYY-MM-DD.html         # 每日汇总
 │   └── news/YYYY-MM-DD/        # 资讯详情页
+│
+├── docs/                       # 文档和归档
+│   ├── WORKFLOW.md             # 工作流文档
+│   └── archive/                # 历史归档
 │
 └── scripts/
     └── auto-push.sh            # 自动推送脚本

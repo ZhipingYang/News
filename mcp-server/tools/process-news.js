@@ -126,7 +126,7 @@ ${content}
    * 确保日期文件夹存在
    */
   async ensureDateFolder(date) {
-    const folderPath = path.join(this.baseDir, date);
+    const folderPath = path.join(this.baseDir, "news_markdown", date);
     try {
       await fs.access(folderPath);
     } catch {

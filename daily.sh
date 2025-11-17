@@ -42,11 +42,11 @@ echo ""
 
 # Step 1: 创建今日文件夹
 info "Step 1: 检查/创建今日文件夹"
-if [ -d "$TODAY" ]; then
-    warning "文件夹已存在：$TODAY"
+if [ -d "news_markdown/$TODAY" ]; then
+    warning "文件夹已存在：news_markdown/$TODAY"
 else
-    mkdir -p "$TODAY"
-    success "创建文件夹：$TODAY"
+    mkdir -p "news_markdown/$TODAY"
+    success "创建文件夹：news_markdown/$TODAY"
 fi
 
 # 创建所有分类的空文件（如果不存在）

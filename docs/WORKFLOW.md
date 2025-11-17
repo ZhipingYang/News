@@ -178,7 +178,7 @@ node utils/content-compressor.js data/processed-rss-YYYY-MM-DD.json
 ## 第八阶段：网站构建（2-3分钟）
 
 ### 文件保存
-- 目录：`YYYY-MM-DD/`
+- 目录：`news_markdown/YYYY-MM-DD/`
 - 文件：
   - `ai-programming.md`
   - `ai-products.md`
@@ -190,9 +190,9 @@ npm run build
 ```
 
 **生成内容：**
-- `docs/index.html` - 首页索引
-- `docs/YYYY-MM-DD.html` - 每日汇总
-- `docs/news/YYYY-MM-DD/*.html` - 资讯详情页
+- `publish_site/index.html` - 首页索引
+- `publish_site/YYYY-MM-DD.html` - 每日汇总
+- `publish_site/news/YYYY-MM-DD/*.html` - 资讯详情页
 
 ---
 

@@ -14,7 +14,8 @@ const __dirname = path.dirname(__filename);
 export class StaticSiteGenerator {
   constructor() {
     this.baseDir = path.join(__dirname, "..");
-    this.docsDir = path.join(this.baseDir, "docs");
+    this.newsMarkdownDir = path.join(this.baseDir, "news_markdown");
+    this.docsDir = path.join(this.baseDir, "publish_site");
     this.templatesDir = path.join(__dirname, "templates");
 
     this.categoryMap = {
@@ -36,7 +37,9 @@ export class StaticSiteGenerator {
    * 获取所有日期文件夹
    */
   async getDateFolders() {
-    const entries = await fs.readdir(this.baseDir, { withFileTypes: true });
+    const entries = await fs.readdir(this.newsMarkdownDir, {
+      withFileTypes: true,
+    });
     const dateFolders = entries
       .filter(
         (entry) => entry.isDirectory() && /^\d{4}-\d{2}-\d{2}$/.test(entry.name)
@@ -51,7 +54,7 @@ export class StaticSiteGenerator {
    * 读取日期文件夹中的所有资讯文件
    */
   async readDateFolder(dateFolder) {
-    const folderPath = path.join(this.baseDir, dateFolder);
+    const folderPath = path.join(this.newsMarkdownDir, dateFolder);
     const newsItems = [];
 
     for (const [category, info] of Object.entries(this.categoryMap)) {
@@ -115,51 +118,42 @@ export class StaticSiteGenerator {
     // 方案1：尝试提取"执行摘要"中的"战略问题"
     let foundExecutiveSummary = false;
     let foundStrategicQuestion = false;
-    for (const line of contentLines) {
+    for (let i = 0; i < contentLines.length; i++) {
+      const line = contentLines[i];
+
       if (line.includes("## 执行摘要")) {
         foundExecutiveSummary = true;
         continue;
       }
+
       if (foundExecutiveSummary && line.includes("**战略问题**")) {
         foundStrategicQuestion = true;
+
+        // 情况1：冒号后直接有内容 (如：**战略问题**：在AI大模型...)
+        const colonIndex = line.indexOf("：");
+        if (colonIndex !== -1 && line.substring(colonIndex + 1).trim()) {
+          summary = line.substring(colonIndex + 1).trim() + " ";
+        }
         continue;
       }
-      if (
-        foundStrategicQuestion &&
-        line.trim() &&
-        !line.startsWith("#") &&
-        !line.startsWith("**")
-      ) {
-        summary += line.trim() + " ";
-        if (summary.length > 200) break;
-      }
-      if (
-        foundStrategicQuestion &&
-        summary &&
-        (line.trim() === "" || line.startsWith("**"))
-      ) {
-        break;
-      }
-    }
 
-    // 方案2：如果没有找到执行摘要，提取"新闻背景"中的关键指标
-    if (!summary) {
-      let foundBackground = false;
-      for (const line of contentLines) {
-        if (
-          line.includes("## 📰 新闻背景") ||
-          line.includes("### 📰 新闻背景")
-        ) {
-          foundBackground = true;
+      // 情况2：战略问题后分多行
+      if (foundStrategicQuestion) {
+        // 跳过空行
+        if (line.trim() === "") {
           continue;
         }
-        if (foundBackground && line.trim() && line.startsWith("•")) {
-          summary += line.trim() + " ";
-          if (summary.length > 150) break;
-        }
-        if (foundBackground && summary && line.trim() === "") {
+        // 遇到下一个标记（如 **关键数据指标**）时停止
+        if (line.startsWith("**") && !line.includes("战略问题")) {
           break;
         }
+        // 遇到新的标题时停止
+        if (line.startsWith("#")) {
+          break;
+        }
+        // 提取内容
+        summary += line.trim() + " ";
+        if (summary.length > 200) break;
       }
     }
 

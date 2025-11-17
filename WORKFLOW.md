@@ -153,7 +153,7 @@ node tools/expand-important-news.js data/processed-rss-YYYY-MM-DD.json
 @AI-ANALYSIS-GUIDE.md @data/processed-rss-YYYY-MM-DD.json
 
 请对今天的资讯进行深度分析，生成1500-2000字的专业分析。
-按类目分别生成markdown文件到 YYYY-MM-DD/ 目录。
+按类目分别生成markdown文件到 news_markdown/YYYY-MM-DD/ 目录。
 ```
 
 **AI自动完成**：
@@ -218,14 +218,14 @@ npm run build
    Step 5: AI深度分析 (可选)
    (Cursor Chat + web_search + 补充/扩展建议)
        ↓
-┌────────────────┐
-│ YYYY-MM-DD/*.md│ ← 最终资讯（1500-2000字深度分析）
-└────────┬───────┘
+┌─────────────────────────┐
+│ news_markdown/YYYY-MM-DD/*.md│ ← 最终资讯（1500-2000字深度分析）
+└────────────┬────────────┘
          │ Step 6: generator.js
          ↓
-┌────────────────┐
-│   docs/*.html  │ ← 静态网站
-└────────┬───────┘
+┌─────────────────────┐
+│ publish_site/*.html │ ← 静态网站（GitHub Pages）
+└──────────┬──────────┘
          │ Step 7: auto-push.sh
          ↓
 ┌────────────────┐
@@ -302,10 +302,11 @@ npm run build
 
 ```
 News/
-├── YYYY-MM-DD/              # 日期文件夹
-│   ├── ai-programming.md    # AI编程资讯
-│   ├── ai-products.md       # AI产品资讯
-│   └── tech-general.md      # 科技综合资讯
+├── news_markdown/           # Markdown 资讯源文件目录
+│   └── YYYY-MM-DD/         # 日期文件夹
+│       ├── ai-programming.md    # AI编程资讯
+│       ├── ai-products.md       # AI产品资讯
+│       └── tech-general.md      # 科技综合资讯
 │
 ├── mcp-server/              # 后端工具
 │   ├── tools/               # CLI工具
@@ -316,10 +317,14 @@ News/
 │       ├── rss-fetch-YYYY-MM-DD.json      # RSS原始数据
 │       └── processed-rss-YYYY-MM-DD.json  # 处理后数据
 │
-└── docs/                    # 生成的网站
-    ├── index.html
-    ├── YYYY-MM-DD.html
-    └── news/YYYY-MM-DD/
+├── publish_site/            # 生成的网站（GitHub Pages）
+│   ├── index.html
+│   ├── YYYY-MM-DD.html
+│   └── news/YYYY-MM-DD/
+│
+└── docs/                    # 文档和归档
+    ├── WORKFLOW.md
+    └── archive/
 ```
 
 ---
