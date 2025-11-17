@@ -82,7 +82,8 @@ export class StaticSiteGenerator {
     if (content.trim().length < 100) return items;
 
     // 提取标题（支持任何emoji，提取emoji之后的文本）
-    const titleMatch = content.match(/^#\s+\S+\s+(.+?)$/m);
+    // 使用 ## 而不是 # 来匹配实际的新闻标题
+    const titleMatch = content.match(/^##\s+\S+\s+(.+?)$/m);
     const title = titleMatch
       ? titleMatch[1].trim()
       : this.categoryMap[category]?.name || "未命名资讯";
@@ -107,27 +108,68 @@ export class StaticSiteGenerator {
       ? tagsMatch[1].split(/\s+/).filter((t) => t.startsWith("#"))
       : [];
 
-    // 生成摘要（取"新闻背景"之后的第一段内容）
+    // 生成摘要：优先提取"执行摘要"中的"战略问题"，否则提取"新闻背景"
     const contentLines = content.split("\n");
     let summary = "";
-    let foundBackground = false;
+
+    // 方案1：尝试提取"执行摘要"中的"战略问题"
+    let foundExecutiveSummary = false;
+    let foundStrategicQuestion = false;
     for (const line of contentLines) {
-      if (line.includes("## 📰 新闻背景")) {
-        foundBackground = true;
+      if (line.includes("## 执行摘要")) {
+        foundExecutiveSummary = true;
         continue;
       }
-      if (foundBackground && line.trim() && line.startsWith("•")) {
-        summary += line.trim() + " ";
-        if (summary.length > 150) break;
+      if (foundExecutiveSummary && line.includes("**战略问题**")) {
+        foundStrategicQuestion = true;
+        continue;
       }
-      if (foundBackground && summary && line.trim() === "") {
+      if (
+        foundStrategicQuestion &&
+        line.trim() &&
+        !line.startsWith("#") &&
+        !line.startsWith("**")
+      ) {
+        summary += line.trim() + " ";
+        if (summary.length > 200) break;
+      }
+      if (
+        foundStrategicQuestion &&
+        summary &&
+        (line.trim() === "" || line.startsWith("**"))
+      ) {
         break;
       }
     }
-    summary =
-      summary.trim().substring(0, 200) + (summary.length > 200 ? "..." : "");
 
-    // 如果没有找到摘要，使用分类名称作为默认
+    // 方案2：如果没有找到执行摘要，提取"新闻背景"中的关键指标
+    if (!summary) {
+      let foundBackground = false;
+      for (const line of contentLines) {
+        if (
+          line.includes("## 📰 新闻背景") ||
+          line.includes("### 📰 新闻背景")
+        ) {
+          foundBackground = true;
+          continue;
+        }
+        if (foundBackground && line.trim() && line.startsWith("•")) {
+          summary += line.trim() + " ";
+          if (summary.length > 150) break;
+        }
+        if (foundBackground && summary && line.trim() === "") {
+          break;
+        }
+      }
+    }
+
+    // 截断并添加省略号
+    summary = summary.trim();
+    if (summary.length > 200) {
+      summary = summary.substring(0, 200) + "...";
+    }
+
+    // 如果仍然没有找到摘要，使用分类名称作为默认
     if (!summary) {
       summary = `${this.categoryMap[category]?.name}相关深度分析`;
     }
