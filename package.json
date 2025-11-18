@@ -1,14 +1,14 @@
 {
   "name": "ai-news-collection",
-  "version": "2.0.0",
-  "description": "AI news collection and static site generation system",
+  "version": "4.0.0",
+  "description": "AI news collection and deep analysis system with WebSearch",
   "type": "module",
   "scripts": {
-    "auto": "./scripts/auto-workflow.sh",
+    "collect": "node mcp-server/tools/collect-news.js",
+    "filter": "node mcp-server/tools/filter-news.js",
+    "outline": "node mcp-server/tools/generate-outline.js",
     "build": "node static-site/generator.js",
     "serve": "npx http-server docs -p 8080 -o",
-    "mcp": "cd mcp-server && npm start",
-    "mcp:install": "cd mcp-server && npm install",
     "setup": "npm install && cd mcp-server && npm install && cd ..",
     "clean": "rm -rf docs/*",
     "dev": "npm run build && npm run serve"

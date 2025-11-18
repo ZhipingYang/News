@@ -1,0 +1,22 @@
+{
+  "date": "2025-11-18",
+  "categories": {
+    "ai-programming": {
+      "name": "AI编程",
+      "items": []
+    },
+    "ai-products": {
+      "name": "AI产品",
+      "items": []
+    },
+    "tech-general": {
+      "name": "科技综合",
+      "items": []
+    }
+  },
+  "metadata": {
+    "collectedAt": "2025-11-18T03:16:52.683Z",
+    "targetPerCategory": 10,
+    "timeRange": "最近7天"
+  }
+}

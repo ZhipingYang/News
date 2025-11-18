@@ -1,23 +1,20 @@
 {
-  "name": "news-mcp-server",
-  "version": "1.0.0",
-  "description": "MCP server for AI news processing and quality evaluation",
+  "name": "news-tools",
+  "version": "4.0.0",
+  "description": "AI news collection and analysis tools",
   "type": "module",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "collect": "node tools/collect-news.js",
+    "filter": "node tools/filter-news.js",
+    "outline": "node tools/generate-outline.js"
   },
   "keywords": [
-    "mcp",
-    "news",
     "ai",
-    "content-evaluation"
+    "news",
+    "websearch",
+    "analysis"
   ],
-  "author": "",
+  "author": "ZhipingYang",
   "license": "MIT",
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.5.0",
-    "rss-parser": "^3.13.0"
-  }
+  "dependencies": {}
 }

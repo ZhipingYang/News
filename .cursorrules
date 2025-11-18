@@ -1,7 +1,33 @@
 # Cursor 规则入口
 
-- 本仓库所有 AI 执行规范已整理为精简指令文件 `cursor-guidelines.md`。  
-- 在启动 Plan / Agent 模式前，请先加载并遵循 `cursor-guidelines.md` 所述规则。  
-- 若需完整上下文，可再参考 `README.md`、`AI-AGENT-WORKFLOW.md` 与 `AI-ANALYSIS-GUIDE.md`。  
-- 更新规则时须确保精简版与完整文档保持同步。  
+- 本仓库的 AI 执行规范和每日工作流已整理在 `AI-DAILY-WORKFLOW.md` 文件中。
+- 在启动 Cursor Agent 前，请先加载并遵循 `AI-DAILY-WORKFLOW.md` 所述的工作流程。
+- 深度分析写作必须严格遵守 `AI-ANALYSIS-GUIDE.md` 的格式和质量标准。
+- 项目介绍和快速开始请参考 `README.md`。
 
+## 核心工作流
+
+使用 AI WebSearch 收集和深度分析 AI 资讯：
+
+1. **收集资讯** - 每类10条 (最近7天)
+2. **筛选资讯** - 按影响力和可信度筛选 (1-3篇/类)
+3. **生成大纲** - 结构化分析框架
+4. **深度分析** - 2000-3000字专业分析
+5. **生成网站** - 静态网站发布
+
+## 快速开始
+
+在 Cursor Chat 中输入：
+```
+@AI-DAILY-WORKFLOW.md 请执行今日资讯收集和分析
+```
+
+AI Agent 会自动完成所有步骤。
+
+## 质量标准
+
+- 可信度 ≥ 0.85
+- 影响力分数 ≥ 50
+- 分析深度 2000-3000 字
+- 必须包含数据、案例、洞察
+- 严格遵守 AI-ANALYSIS-GUIDE.md 格式规范

@@ -1,0 +1,10 @@
+# 数据文件目录
+
+此目录用于存放工作流中生成的数据文件：
+
+- `collected-news-YYYY-MM-DD.json` - 收集的资讯
+- `filtered-news-YYYY-MM-DD.json` - 筛选后的资讯
+- `outlines-YYYY-MM-DD.json` - 资讯大纲
+
+这些文件由工具自动生成，无需手动创建。
+
