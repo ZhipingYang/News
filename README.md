@@ -30,13 +30,14 @@
 | 🚀 **AI产品** | AI产品和商业应用 | 新品发布、商业模式、市场策略、行业应用 |
 | 📡 **科技综合** | 通用科技和技术趋势 | 技术突破、行业动态、学术研究、政策法规 |
 
-**收集标准**: 每个类别每日收集 10 条资讯，筛选 1-3 篇最重要的进行深度分析。
+**收集标准**: 每个类别每日收集 10 条候选资讯，全局筛选最多 10 篇（跨类别，重要性优先）进行深度分析。
 
-**筛选维度**:
-- ⚡ 技术突破性 (创新、性能、架构)
-- 💰 商业影响力 (市场、收入、用户)
-- 🎯 产品颠覆性 (体验、格局、竞争)
-- ⭐ 来源可信度 (官方、权威、专家)
+**筛选维度** (重要性优先，不限类别):
+- ⚡ 技术突破性 (创新、性能、架构) - 35%
+- 💰 商业影响力 (市场、收入、用户) - 35%
+- 🎯 产品颠覆性 (体验、格局、竞争) - 20%
+- ⭐ 来源可信度 (官方、权威、专家) - 10%
+- 🌟 **全局 Top 10**: 可能某类有 8 条，某类有 0 条
 
 ---
 
@@ -69,12 +70,12 @@ cd mcp-server && npm install && cd ..
 ```
 
 AI Agent 会自动完成:
-1. ✅ 收集资讯 (每类10条，使用 WebSearch)
-2. ✅ 评估和筛选 (影响力+可信度)
+1. ✅ 收集资讯 (每类10条候选，使用 WebSearch)
+2. ✅ 评估和筛选 (全局 Top 10，重要性优先)
 3. ✅ 生成资讯大纲
 4. ✅ 收集补充数据
 5. ✅ 生成深度分析 (2000-3000字)
-6. ✅ 保存到 Markdown 文件
+6. ✅ 保存为独立 Markdown 文件 (news-001-[slug].md)
 7. ✅ 生成静态网站
 
 **执行时间**: 15-25 分钟
@@ -157,21 +158,22 @@ News/
 ├── AI-DAILY-WORKFLOW.md      # 每日工作流指南 (AI Agent 必读)
 ├── AI-ANALYSIS-GUIDE.md      # 深度分析写作指南
 │
-├── mcp-server/               # 工具和数据 (已重命名为 tools 目录)
+├── mcp-server/               # 工具和数据
 │   ├── tools/
 │   │   ├── collect-news.js   # 收集资讯工具
-│   │   ├── filter-news.js    # 筛选资讯工具
+│   │   ├── filter-news.js    # 筛选资讯工具（全局Top 10）
 │   │   └── generate-outline.js  # 生成大纲工具
 │   └── data/                 # 数据文件目录
 │       ├── collected-news-YYYY-MM-DD.json   # 收集的资讯
-│       ├── filtered-news-YYYY-MM-DD.json    # 筛选后资讯
+│       ├── filtered-news-YYYY-MM-DD.json    # 筛选后资讯（扁平化）
 │       └── outlines-YYYY-MM-DD.json         # 资讯大纲
 │
 ├── news_markdown/            # Markdown 资讯源文件
 │   └── YYYY-MM-DD/
-│       ├── ai-programming.md   # AI编程资讯
-│       ├── ai-products.md      # AI产品资讯
-│       └── tech-general.md     # 科技综合资讯
+│       ├── news-001-[slug].md   # 独立新闻文件（按影响力排序）
+│       ├── news-002-[slug].md
+│       ├── news-003-[slug].md
+│       └── ...                  # 最多10个文件
 │
 ├── docs/                     # 生成的静态网站 (GitHub Pages)
 │   ├── index.html            # 首页
@@ -188,12 +190,13 @@ News/
 
 ## 🎯 质量标准
 
-### 资讯筛选标准
+### 资讯筛选标准（重要性优先）
 
 - ⭐ **可信度 ≥ 0.85**: 官方发布、权威媒体、学术机构
 - 🎯 **影响力 ≥ 50**: 技术创新35% + 商业价值35% + 产品颠覆20% + 来源可信10%
 - 📊 **内容完整**: 包含技术细节、数据、案例
 - 🕐 **时效性好**: 最近 7 天内
+- 🌟 **全局 Top 10**: 跨类别筛选，可能某类有多条，某类无
 
 ### 深度分析标准
 
@@ -316,6 +319,8 @@ node mcp-server/tools/generate-outline.js data/filtered-news-YYYY-MM-DD.json
 - `IMPACT_DIMENSIONS`: 影响力评分维度和权重
 - `metadata.minImpactScore`: 最低影响力分数 (默认50)
 - `metadata.minCredibility`: 最低可信度 (默认0.85)
+- `metadata.maxNewsCount`: 最大新闻数量 (默认10)
+- **注**: 现在是全局筛选，不再限制每个类别的数量
 
 **Q3: 如何添加新的类目？**
 

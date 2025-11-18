@@ -57,56 +57,114 @@ export class StaticSiteGenerator {
     const folderPath = path.join(this.newsMarkdownDir, dateFolder);
     const newsItems = [];
 
-    for (const [category, info] of Object.entries(this.categoryMap)) {
-      const filename = `${category}.md`;
-      const filePath = path.join(folderPath, filename);
+    try {
+      // 读取所有 news-*.md 文件
+      const files = await fs.readdir(folderPath);
+      const newsFiles = files.filter(
+        (f) => f.startsWith("news-") && f.endsWith(".md")
+      );
 
-      try {
-        const content = await fs.readFile(filePath, "utf-8");
+      for (const filename of newsFiles) {
+        const filePath = path.join(folderPath, filename);
 
-        // 解析 markdown 文件，按分隔符拆分为多条资讯
-        const items = this.parseMarkdownFile(content, category, dateFolder);
-        newsItems.push(...items);
-      } catch (error) {
-        // 文件不存在，跳过
+        try {
+          const content = await fs.readFile(filePath, "utf-8");
+          // 解析独立新闻文件
+          const items = this.parseMarkdownFile(content, dateFolder, filename);
+          newsItems.push(...items);
+        } catch (error) {
+          console.warn(`⚠️  读取文件失败: ${filename}`, error.message);
+        }
       }
+    } catch (error) {
+      console.warn(`⚠️  读取文件夹失败: ${dateFolder}`, error.message);
     }
 
     return newsItems;
   }
 
   /**
-   * 解析 markdown 文件，每个类目文件作为一篇完整文章
+   * 解析 markdown 文件，每个文件作为一篇独立新闻
    */
-  parseMarkdownFile(content, category, date) {
+  parseMarkdownFile(content, date, filename) {
     const items = [];
 
     // 检查内容是否为空或太短
     if (content.trim().length < 100) return items;
+
+    // 提取分类标签（支持中英文冒号）
+    const categoryMatch = content.match(
+      /\*\*分类[：:]?\*\*\s+(AI编程|AI产品|科技综合)/
+    );
+    let category = null;
+    let categoryInfo = null;
+
+    if (categoryMatch) {
+      const categoryName = categoryMatch[1];
+      // 根据名称找到对应的category key
+      for (const [key, info] of Object.entries(this.categoryMap)) {
+        if (info.name === categoryName) {
+          category = key;
+          categoryInfo = info;
+          break;
+        }
+      }
+    }
+
+    // 如果没有找到分类，尝试从文件名推断（兼容旧格式）
+    if (!category) {
+      if (
+        filename.includes("ai-programming") ||
+        filename.includes("programming")
+      ) {
+        category = "ai-programming";
+        categoryInfo = this.categoryMap["ai-programming"];
+      } else if (
+        filename.includes("ai-products") ||
+        filename.includes("products")
+      ) {
+        category = "ai-products";
+        categoryInfo = this.categoryMap["ai-products"];
+      } else if (
+        filename.includes("tech-general") ||
+        filename.includes("general")
+      ) {
+        category = "tech-general";
+        categoryInfo = this.categoryMap["tech-general"];
+      } else {
+        // 默认分类
+        category = "tech-general";
+        categoryInfo = this.categoryMap["tech-general"];
+      }
+    }
 
     // 提取标题（支持任何emoji，提取emoji之后的文本）
     // 使用 ## 而不是 # 来匹配实际的新闻标题
     const titleMatch = content.match(/^##\s+\S+\s+(.+?)$/m);
     const title = titleMatch
       ? titleMatch[1].trim()
-      : this.categoryMap[category]?.name || "未命名资讯";
+      : categoryInfo?.name || "未命名资讯";
 
-    // 提取发布日期
-    const dateMatch = content.match(/\*\*发布日期：\*\*\s+(\d{4}-\d{2}-\d{2})/);
+    // 提取发布日期（支持中英文冒号）
+    const dateMatch = content.match(
+      /\*\*发布日期[：:]?\*\*\s+(\d{4}-\d{2}-\d{2})/
+    );
     const publishDate = dateMatch ? dateMatch[1] : date;
 
-    // 提取来源
-    const sourceMatch = content.match(/\*\*来源：\*\*\s+\[(.*?)\]\((.*?)\)/);
+    // 提取来源（支持中英文冒号）
+    const sourceMatch = content.match(
+      /\*\*来源[：:]?\*\*\s+\[(.*?)\]\((.*?)\)/
+    );
     const source = sourceMatch
       ? { name: sourceMatch[1], url: sourceMatch[2] }
       : { name: "综合多源", url: null };
 
-    // 提取可信度评分
-    const scoreMatch = content.match(/\*\*可信度评分：\*\*\s+(⭐+)/);
+    // 提取可信度评分（支持中英文冒号）
+    const scoreMatch = content.match(/\*\*可信度评分[：:]?\*\*\s+(⭐+)/);
     const stars = scoreMatch ? scoreMatch[1].length : 5;
 
-    // 提取标签（如果有的话）
-    const tagsMatch = content.match(/\*\*标签：\*\*\s+(.*?)$/m);
+    // 提取标签（如果有的话，支持中英文冒号）
+    const tagsMatch = content.match(/\*\*标签[：:]?\*\*\s+(.*?)$/m);
     const tags = tagsMatch
       ? tagsMatch[1].split(/\s+/).filter((t) => t.startsWith("#"))
       : [];
@@ -171,7 +229,7 @@ export class StaticSiteGenerator {
     items.push({
       title,
       category,
-      categoryInfo: this.categoryMap[category],
+      categoryInfo: categoryInfo,
       publishDate,
       collectionDate: date,
       source,

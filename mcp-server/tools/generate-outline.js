@@ -317,26 +317,25 @@ async function main() {
     },
   };
 
-  // 为每个推荐的资讯生成大纲
-  for (const [categoryId, categoryData] of Object.entries(data.categories)) {
-    console.log("=".repeat(60));
-    console.log(`\n📋 ${categoryData.name}`);
-    console.log(`   推荐 ${categoryData.recommendedCount} 篇资讯\n`);
+  // 为每个推荐的资讯生成大纲（扁平化结构）
+  console.log("=".repeat(60));
+  console.log(`\n📋 生成资讯大纲`);
+  console.log(`   推荐 ${data.recommended.length} 篇资讯\n`);
 
-    for (const item of categoryData.recommended) {
-      console.log(`✏️  生成大纲: ${item.title.substring(0, 50)}...`);
+  for (const item of data.recommended) {
+    console.log(`✏️  生成大纲: ${item.title.substring(0, 50)}...`);
+    console.log(`   类别: ${item.categoryName}`);
 
-      const outline = createOutlineTemplate(item, categoryData.name);
-      result.outlines.push(outline);
-      result.metadata.totalOutlines++;
+    const outline = createOutlineTemplate(item, item.categoryName);
+    result.outlines.push(outline);
+    result.metadata.totalOutlines++;
 
-      console.log(
-        `   ✅ 已生成 (影响力: ${item.impactScore}, 可信度: ${item.credibility})`
-      );
-      console.log(
-        `   🔍 补充搜索查询: ${outline.dataCollectionQueries.length} 个\n`
-      );
-    }
+    console.log(
+      `   ✅ 已生成 (影响力: ${item.impactScore}, 可信度: ${item.credibility})`
+    );
+    console.log(
+      `   🔍 补充搜索查询: ${outline.dataCollectionQueries.length} 个\n`
+    );
   }
 
   // 保存结果

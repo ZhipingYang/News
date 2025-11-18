@@ -19,7 +19,7 @@
 
 ### 第一步: 收集资讯 (使用 WebSearch)
 
-**目标**: 每个类别收集 10 条新闻 (最近 7 天内)
+**目标**: 每个类别收集 10 条候选新闻 (最近 7 天内)
 
 **筛选维度**:
 - 技术突破性 (技术创新、性能提升、架构改进)
@@ -61,15 +61,16 @@ node mcp-server/tools/collect-news.js
 
 ---
 
-### 第二步: 筛选重要资讯
+### 第二步: 筛选重要资讯 (全局 Top 10)
 
-**目标**: 每个类别选择 1-3 篇最重要的资讯 (可以是 0 篇)
+**目标**: 全局选择最多 10 篇最重要的资讯 (跨所有类别，重要性优先)
 
 **筛选标准**:
 - ⭐ 可信度 ≥ 0.85 (官方发布、权威媒体)
 - 🎯 影响力分数 ≥ 50 (技术突破、商业重大、产品创新)
 - 📊 内容完整 (有数据、细节、案例)
 - 🕐 时效性好 (7天内)
+- 🌟 **重要性优先**: 不限制每个类别的数量，可能某类有 8 条，某类有 0 条
 
 **影响力评分维度**:
 
@@ -91,8 +92,21 @@ node mcp-server/tools/filter-news.js data/collected-news-YYYY-MM-DD.json
 这个工具会:
 1. 自动评估每条新闻的影响力分数 (技术创新+商业价值+产品颠覆+来源可信)
 2. 计算可信度评分
-3. 推荐需要深度分析的资讯 (影响力≥50, 可信度≥0.85)
-4. 保存筛选结果到: `mcp-server/data/filtered-news-YYYY-MM-DD.json`
+3. **全局排序**: 将所有类别的新闻混合排序，按影响力降序
+4. **全局筛选**: 选择 Top 10 (影响力≥50, 可信度≥0.85)
+5. 保存筛选结果到: `mcp-server/data/filtered-news-YYYY-MM-DD.json`
+
+**示例输出**:
+```
+📊 筛选总结（重要性优先）:
+   - 总资讯数: 30 条
+   - 推荐分析: 7 篇（跨类别 Top 7）
+   - AI编程: 1 篇
+   - AI产品: 5 篇
+   - 科技综合: 1 篇
+
+💡 提示: 类别数量不再均衡，而是按重要性优先排序
+```
 
 ---
 
@@ -207,10 +221,17 @@ AI 会自动:
 - 读取大纲文件
 - 执行 web_search 补充数据
 - 生成符合规范的深度分析
-- 保存到对应文件:
-  - `news_markdown/YYYY-MM-DD/ai-programming.md`
-  - `news_markdown/YYYY-MM-DD/ai-products.md`
-  - `news_markdown/YYYY-MM-DD/tech-general.md`
+- **保存为独立文件**: 每条新闻保存为单独的 markdown 文件
+  - `news_markdown/YYYY-MM-DD/news-001-[slug].md`
+  - `news_markdown/YYYY-MM-DD/news-002-[slug].md`
+  - `news_markdown/YYYY-MM-DD/news-003-[slug].md`
+  - ...
+
+**文件命名规则**:
+- 格式: `news-[序号]-[slug].md`
+- 序号: 001-010，按影响力降序
+- slug: 基于标题生成 (英文词+hash)
+- 文件内包含完整的类别标签: `**分类:** AI产品`
 
 ---
 
@@ -348,18 +369,19 @@ News/
 ├── mcp-server/
 │   ├── tools/
 │   │   ├── collect-news.js   # 收集资讯
-│   │   ├── filter-news.js    # 筛选资讯
+│   │   ├── filter-news.js    # 筛选资讯（全局Top 10）
 │   │   └── generate-outline.js  # 生成大纲
 │   └── data/
 │       ├── collected-news-YYYY-MM-DD.json   # 收集的资讯
-│       ├── filtered-news-YYYY-MM-DD.json    # 筛选后的资讯
+│       ├── filtered-news-YYYY-MM-DD.json    # 筛选后的资讯（扁平化）
 │       └── outlines-YYYY-MM-DD.json         # 资讯大纲
 │
 ├── news_markdown/
 │   └── YYYY-MM-DD/
-│       ├── ai-programming.md   # AI编程资讯
-│       ├── ai-products.md      # AI产品资讯
-│       └── tech-general.md     # 科技综合资讯
+│       ├── news-001-[slug].md   # 独立新闻文件（按影响力排序）
+│       ├── news-002-[slug].md
+│       ├── news-003-[slug].md
+│       └── ...                  # 最多10个文件
 │
 ├── docs/                      # 生成的静态网站
 │   ├── index.html
@@ -367,7 +389,7 @@ News/
 │   └── news/YYYY-MM-DD/
 │
 └── static-site/
-    ├── generator.js          # 网站生成器
+    ├── generator.js          # 网站生成器（支持独立文件）
     └── templates/            # HTML 模板
 ```
 
