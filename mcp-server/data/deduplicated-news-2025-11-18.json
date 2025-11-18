@@ -232,6 +232,10 @@
     "targetPerCategory": 10,
     "timeRange": "最近7天",
     "totalItems": 30,
-    "dataSource": "WebSearch + Manual Collection"
+    "dataSource": "WebSearch + Manual Collection",
+    "deduplicatedAt": "2025-11-18T08:03:27.432Z",
+    "originalCount": 30,
+    "uniqueCount": 30,
+    "duplicateCount": 0
   }
 }

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "collect": "node mcp-server/tools/collect-news.js",
+    "dedupe": "node mcp-server/tools/deduplicate-news.js",
     "filter": "node mcp-server/tools/filter-news.js",
     "outline": "node mcp-server/tools/generate-outline.js",
     "build": "node static-site/generator.js",

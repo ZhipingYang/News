@@ -298,9 +298,10 @@ async function main() {
   }
 
   const inputFile = args[0];
+  // 如果是绝对路径直接使用，否则相对于项目根目录（__dirname的上两级）
   const inputPath = path.isAbsolute(inputFile)
     ? inputFile
-    : path.join(__dirname, "..", inputFile);
+    : path.join(__dirname, "..", "..", inputFile);
 
   console.log("📝 资讯大纲生成工具\n");
   console.log(`读取文件: ${inputPath}\n`);
@@ -342,7 +343,7 @@ async function main() {
   const outputFile = inputFile.replace("filtered-news", "outlines");
   const outputPath = path.isAbsolute(outputFile)
     ? outputFile
-    : path.join(__dirname, "..", outputFile);
+    : path.join(__dirname, "..", "..", outputFile);
 
   await fs.writeFile(outputPath, JSON.stringify(result, null, 2));
 

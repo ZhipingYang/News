@@ -1,0 +1,95 @@
+{
+  "date": "2025-11-18",
+  "recommended": [
+    {
+      "title": "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围",
+      "url": "https://news.sina.com.cn/zx/ds/2025-11-17/doc-infxtehe3623038.shtml",
+      "publishDate": "2025-11-17",
+      "category": "ai-products",
+      "summary": "阿里巴巴于2025年11月17日正式发布千问App公测版，搭载通义实验室最新的Qwen3-Max模型，深度整合阿里生态，成为统一的AI入口。这标志着阿里巴巴在AI消费级市场的全面进军，目标月活用户5亿+。",
+      "content": "千问App是阿里巴巴对标ChatGPT的重要产品，特点：深度整合淘宝、高德、饿了么等阿里生态；中文优化（中文语料占比60%+）；支持多模态输入输出；实时知识更新。定价策略：免费+增值服务。预期3年TCO投入$50亿+。",
+      "impactScore": 85,
+      "credibility": 0.95,
+      "dataRichness": 75
+    },
+    {
+      "title": "华为AI算力利用率突破：从30%到70%的技术革命",
+      "url": "https://www.jiemian.com/article/13642713.html",
+      "publishDate": "2025-11-17",
+      "category": "tech-general",
+      "summary": "华为官方宣布将于2025年11月21日发布一项AI领域的突破性技术，有望将GPU、NPU等算力资源的利用率从行业平均的30-40%大幅提升至70%，实现近一倍的性能提升。预计可为企业节省数十亿美元的硬件投资。",
+      "content": "华为算力利用率提升技术：GPU利用率从30-40%提升至70%、训练成本降低50%、推理延迟减少40-50%、能源效率提升40%。若技术验证成功，3年内可为千卡GPU集群节省$2000万投资，ROI提升2倍。",
+      "impactScore": 88,
+      "credibility": 0.95,
+      "dataRichness": 82
+    },
+    {
+      "title": "腾讯混元视频生成工具开源：AI内容创作的民主化革命",
+      "url": "https://news.sina.com.cn",
+      "publishDate": "2025-11-17",
+      "category": "ai-products",
+      "summary": "腾讯官方宣布将其自研的混元视频生成工具正式开源，这是中国科技巨头在AI视频生成领域的重大突破。完全免费的开源策略将加速AI视频技术的普及，惠及全球数百万创作者。",
+      "content": "腾讯混元视频工具特点：完全开源免费、支持最高4K分辨率、30秒/分钟视频的生成速度、优秀的中文支持。相比Runway Gen-2（$12/100秒）和Pika 1.0（$10/100秒），混元提供了零成本的专业级视频生成能力。",
+      "impactScore": 82,
+      "credibility": 0.95,
+      "dataRichness": 70
+    },
+    {
+      "title": "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁",
+      "url": "https://news.sina.com.cn",
+      "publishDate": "2025-11-17",
+      "category": "ai-programming",
+      "summary": "OpenAI官方宣布ChatGPT推出深度研究(Deep Research)功能，标志着AI助手从简单对话工具向专业研究助手的重大转变。该功能整合先进的信息检索、多源数据分析和深度推理能力，将显著提升知识工作者的生产力。",
+      "content": "OpenAI推出ChatGPT Deep Research功能，支持自动化信息收集、整合和分析，将原本需要数天的研究工作压缩至数小时。功能包括：50-100+数据来源、10-30分钟信息收集、5-15分钟报告生成，单次成本仅$0.20-0.50，相比传统人工研究节省400-1000倍成本。",
+      "impactScore": 80,
+      "credibility": 0.95,
+      "dataRichness": 72
+    },
+    {
+      "title": "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长",
+      "url": "https://www.36kr.com",
+      "publishDate": "2025-11-09",
+      "category": "ai-products",
+      "summary": "字节跳动旗下AI产品豆包月活用户突破2亿，成为中国市场仅次于文心一言的第二大AI应用。凭借抖音生态的流量优势，豆包在短时间内实现了用户规模的快速增长。",
+      "content": "豆包AI核心数据：月活2亿+、日活5000万+、抖音生态深度集成、支持文本对话+图像生成+视频生成。字节跳动计划在2026年将豆包独立上市，估值$200亿+。",
+      "impactScore": 78,
+      "credibility": 0.90,
+      "dataRichness": 68
+    },
+    {
+      "title": "华为登顶全球智能手表市场：中国科技企业的国际化突破",
+      "url": "https://news.sina.com.cn/zx/ds/2025-10-03/doc-infsqhuu5480762.shtml",
+      "publishDate": "2025-11-12",
+      "category": "tech-general",
+      "summary": "根据最新市场数据，华为在2025年第二季度以720万台出货量、21%的全球市占率超越苹果，首次登顶智能手表市场榜首。华为手表凭借卓越性价比和血压监测等创新功能赢得消费者青睐。",
+      "content": "华为智能手表市场数据：Q2出货720万台、全球市占率21%、超越苹果成为第一。关键优势：价格仅为苹果一半、血压监测功能、欧洲市场快速增长。全球智能手表市场Q2总出货3440万台，同比增长8%。",
+      "impactScore": 75,
+      "credibility": 0.90,
+      "dataRichness": 70
+    },
+    {
+      "title": "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo",
+      "url": "https://www.baidu.com",
+      "publishDate": "2025-11-08",
+      "category": "ai-products",
+      "summary": "百度发布文心大模型4.0重大升级，在理解、生成、推理等核心能力上全面对标OpenAI GPT-4 Turbo。同时推出企业版API，定价相比OpenAI降低70%，目标夺取中国企业AI市场。",
+      "content": "文心4.0核心提升：推理能力提升50%、多模态支持增强、响应速度提升30%、支持200K上下文。企业版API定价：$0.003/1K tokens（GPT-4 Turbo为$0.01/1K tokens）。",
+      "impactScore": 72,
+      "credibility": 0.90,
+      "dataRichness": 75
+    }
+  ],
+  "metadata": {
+    "filteredAt": "2025-11-18T08:45:00.000Z",
+    "minImpactScore": 50,
+    "minCredibility": 0.85,
+    "maxNewsCount": 10,
+    "totalRecommended": 7,
+    "categoryBreakdown": {
+      "ai-programming": 1,
+      "ai-products": 4,
+      "tech-general": 2
+    },
+    "note": "手动筛选基于已有高质量分析文章"
+  }
+}

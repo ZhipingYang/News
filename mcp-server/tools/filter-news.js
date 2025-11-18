@@ -180,6 +180,76 @@ function assessCredibility(item) {
   return Math.min(score, 1.0);
 }
 
+// 评估数据丰富度（0-100分）
+function assessDataRichness(item) {
+  let score = 0;
+  const text = (item.title + " " + item.summary).toLowerCase();
+
+  // 1. 数字和数据点 (40分)
+  const numbers = text.match(
+    /\d+[.,]?\d*\s*(亿|万|billion|million|%|美元|\$|元|倍|张|个|家|人|年)/g
+  );
+  score += Math.min((numbers?.length || 0) * 10, 40);
+
+  // 2. 具体公司/产品名 (30分)
+  const entities = [
+    "openai",
+    "google",
+    "microsoft",
+    "meta",
+    "anthropic",
+    "nvidia",
+    "deepmind",
+    "apple",
+    "amazon",
+    "tesla",
+    "spacex",
+    "阿里",
+    "腾讯",
+    "华为",
+    "百度",
+    "字节",
+    "小米",
+    "京东",
+    "chatgpt",
+    "gpt",
+    "claude",
+    "gemini",
+    "llama",
+    "alphafo",
+  ];
+  const entityCount = entities.filter((e) => text.includes(e)).length;
+  score += Math.min(entityCount * 10, 30);
+
+  // 3. 技术细节关键词 (30分)
+  const techKeywords = [
+    "architecture",
+    "algorithm",
+    "model",
+    "api",
+    "gpu",
+    "chip",
+    "training",
+    "inference",
+    "benchmark",
+    "performance",
+    "optimization",
+    "framework",
+    "架构",
+    "算法",
+    "模型",
+    "性能",
+    "训练",
+    "推理",
+    "优化",
+    "芯片",
+  ];
+  const techCount = techKeywords.filter((k) => text.includes(k)).length;
+  score += Math.min(techCount * 7, 30);
+
+  return Math.round(score);
+}
+
 // 主函数
 async function main() {
   const args = process.argv.slice(2);
@@ -193,9 +263,10 @@ async function main() {
   }
 
   const inputFile = args[0];
+  // 如果是绝对路径直接使用，否则相对于项目根目录（__dirname的上两级）
   const inputPath = path.isAbsolute(inputFile)
     ? inputFile
-    : path.join(__dirname, "..", inputFile);
+    : path.join(__dirname, "..", "..", inputFile);
 
   console.log("🔍 资讯筛选工具（重要性优先）\n");
   console.log(`读取文件: ${inputPath}\n`);
@@ -215,6 +286,7 @@ async function main() {
     const evaluated = categoryData.items.map((item) => {
       const impact = calculateImpactScore(item);
       const credibility = assessCredibility(item);
+      const dataRichness = assessDataRichness(item);
 
       return {
         ...item,
@@ -223,7 +295,9 @@ async function main() {
         impactScore: impact.total,
         impactBreakdown: impact.breakdown,
         credibility: Math.round(credibility * 100) / 100,
-        recommended: impact.total >= 50 && credibility >= 0.85,
+        dataRichness,
+        recommended:
+          impact.total >= 50 && credibility >= 0.85 && dataRichness >= 30,
       };
     });
 
@@ -235,13 +309,15 @@ async function main() {
       const icon = item.recommended ? "⭐" : "  ";
       console.log(`${icon} ${index + 1}. ${item.title.substring(0, 60)}...`);
       console.log(
-        `     影响力: ${item.impactScore}/100 | 可信度: ${item.credibility}`
+        `     影响力: ${item.impactScore}/100 | 可信度: ${item.credibility} | 数据丰富度: ${item.dataRichness}/100`
       );
       console.log(`     来源: ${new URL(item.url).hostname}`);
       console.log(`     发布: ${item.publishDate || "未知"}`);
 
       if (item.recommended) {
         console.log(`     ✅ 推荐深度分析`);
+      } else if (item.dataRichness < 30) {
+        console.log(`     ❌ 数据不足 (需要≥30分)`);
       }
       console.log();
     });
@@ -293,10 +369,12 @@ async function main() {
   };
 
   // 保存结果
-  const outputFile = inputFile.replace("collected-news", "filtered-news");
+  const outputFile = inputFile
+    .replace("collected-news", "filtered-news")
+    .replace("deduplicated-news", "filtered-news");
   const outputPath = path.isAbsolute(outputFile)
     ? outputFile
-    : path.join(__dirname, "..", outputFile);
+    : path.join(__dirname, "..", "..", outputFile);
 
   await fs.writeFile(outputPath, JSON.stringify(result, null, 2));
 

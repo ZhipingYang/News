@@ -1,0 +1,1591 @@
+{
+  "date": "2025-11-18",
+  "outlines": [
+    {
+      "title": "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围",
+      "url": "https://news.sina.com.cn/zx/ds/2025-11-17/doc-infxtehe3623038.shtml",
+      "publishDate": "2025-11-17",
+      "impactScore": 85,
+      "credibility": 0.95,
+      "outline": {
+        "header": {
+          "title": "📰 阿里巴巴推出千问App公测版：中国AI消费市场的战略突围",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-17",
+            "source": "[来源名称](https://news.sina.com.cn/zx/ds/2025-11-17/doc-infxtehe3623038.shtml)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "85/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 technical details architecture",
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 pricing cost business model",
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 market size revenue",
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 vs competitors comparison",
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 user feedback reviews",
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 expert analysis opinion",
+        " financial report earnings",
+        "阿里巴巴推出千问App公测版：中国AI消费市场的战略突围 performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    },
+    {
+      "title": "华为AI算力利用率突破：从30%到70%的技术革命",
+      "url": "https://www.jiemian.com/article/13642713.html",
+      "publishDate": "2025-11-17",
+      "impactScore": 88,
+      "credibility": 0.95,
+      "outline": {
+        "header": {
+          "title": "📰 华为AI算力利用率突破：从30%到70%的技术革命",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-17",
+            "source": "[来源名称](https://www.jiemian.com/article/13642713.html)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "88/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "华为AI算力利用率突破：从30%到70%的技术革命 technical details architecture",
+        "华为AI算力利用率突破：从30%到70%的技术革命 pricing cost business model",
+        "华为AI算力利用率突破：从30%到70%的技术革命 market size revenue",
+        "华为AI算力利用率突破：从30%到70%的技术革命 vs competitors comparison",
+        "华为AI算力利用率突破：从30%到70%的技术革命 user feedback reviews",
+        "华为AI算力利用率突破：从30%到70%的技术革命 expert analysis opinion",
+        " financial report earnings",
+        "华为AI算力利用率突破：从30%到70%的技术革命 performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    },
+    {
+      "title": "腾讯混元视频生成工具开源：AI内容创作的民主化革命",
+      "url": "https://news.sina.com.cn",
+      "publishDate": "2025-11-17",
+      "impactScore": 82,
+      "credibility": 0.95,
+      "outline": {
+        "header": {
+          "title": "📰 腾讯混元视频生成工具开源：AI内容创作的民主化革命",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-17",
+            "source": "[来源名称](https://news.sina.com.cn)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "82/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 technical details architecture",
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 pricing cost business model",
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 market size revenue",
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 vs competitors comparison",
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 user feedback reviews",
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 expert analysis opinion",
+        " financial report earnings",
+        "腾讯混元视频生成工具开源：AI内容创作的民主化革命 performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    },
+    {
+      "title": "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁",
+      "url": "https://news.sina.com.cn",
+      "publishDate": "2025-11-17",
+      "impactScore": 80,
+      "credibility": 0.95,
+      "outline": {
+        "header": {
+          "title": "📰 ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-17",
+            "source": "[来源名称](https://news.sina.com.cn)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "80/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 technical details architecture",
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 pricing cost business model",
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 market size revenue",
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 vs competitors comparison",
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 user feedback reviews",
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 expert analysis opinion",
+        " financial report earnings",
+        "ChatGPT深度研究功能上线：AI从对话工具到专业研究助手的跃迁 performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    },
+    {
+      "title": "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长",
+      "url": "https://www.36kr.com",
+      "publishDate": "2025-11-09",
+      "impactScore": 78,
+      "credibility": 0.9,
+      "outline": {
+        "header": {
+          "title": "📰 字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-09",
+            "source": "[来源名称](https://www.36kr.com)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "78/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 technical details architecture",
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 pricing cost business model",
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 market size revenue",
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 vs competitors comparison",
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 user feedback reviews",
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 expert analysis opinion",
+        " financial report earnings",
+        "字节跳动豆包AI月活突破2亿：中国AI消费市场的爆发式增长 performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    },
+    {
+      "title": "华为登顶全球智能手表市场：中国科技企业的国际化突破",
+      "url": "https://news.sina.com.cn/zx/ds/2025-10-03/doc-infsqhuu5480762.shtml",
+      "publishDate": "2025-11-12",
+      "impactScore": 75,
+      "credibility": 0.9,
+      "outline": {
+        "header": {
+          "title": "📰 华为登顶全球智能手表市场：中国科技企业的国际化突破",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-12",
+            "source": "[来源名称](https://news.sina.com.cn/zx/ds/2025-10-03/doc-infsqhuu5480762.shtml)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "75/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "华为登顶全球智能手表市场：中国科技企业的国际化突破 technical details architecture",
+        "华为登顶全球智能手表市场：中国科技企业的国际化突破 pricing cost business model",
+        "华为登顶全球智能手表市场：中国科技企业的国际化突破 market size revenue",
+        "华为登顶全球智能手表市场：中国科技企业的国际化突破 vs competitors comparison",
+        "华为登顶全球智能手表市场：中国科技企业的国际化突破 user feedback reviews",
+        "华为登顶全球智能手表市场：中国科技企业的国际化突破 expert analysis opinion",
+        " financial report earnings",
+        "AI performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    },
+    {
+      "title": "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo",
+      "url": "https://www.baidu.com",
+      "publishDate": "2025-11-08",
+      "impactScore": 72,
+      "credibility": 0.9,
+      "outline": {
+        "header": {
+          "title": "📰 百度文心大模型4.0升级：性能全面对标GPT-4 Turbo",
+          "subtitle": "[待补充: 核心价值/影响的副标题]",
+          "metadata": {
+            "publishDate": "2025-11-08",
+            "source": "[来源名称](https://www.baidu.com)",
+            "credibilityStars": "⭐⭐⭐⭐⭐",
+            "impactScore": "72/100"
+          }
+        },
+        "executiveSummary": {
+          "title": "执行摘要",
+          "coreArgument": "[一句话核心论点]",
+          "strategicQuestion": "[200-300字描述核心商业/技术问题，包含具体矛盾和权衡]",
+          "keyMetrics": {
+            "note": "需要收集3个维度的对比数据",
+            "dimensions": [
+              "初期投入",
+              "TCO（3年）",
+              "性能指标",
+              "生态成本"
+            ],
+            "tableFormat": "| 维度 | 方案A | 方案B | 方案C |"
+          },
+          "strategicJudgment": [
+            "针对企业: [时间节点 + 投资额度 + 预期收益]",
+            "针对投资者: [时间节点 + 投资额度 + 预期收益]",
+            "针对技术人员: [时间节点 + 投资额度 + 预期收益]"
+          ]
+        },
+        "technicalAnalysis": {
+          "title": "技术深度解析",
+          "targetWords": "400-500字",
+          "questions": [
+            "What: 采用什么技术？核心技术机制是什么？",
+            "Why: 为什么选择这个技术路线？",
+            "How: 如何实现的？攻克了什么技术难点？",
+            "So What: 技术突破的本质意义是什么？"
+          ],
+          "mustInclude": [
+            "核心技术机制说明",
+            "创新点分析（渐进式 or 突破性）",
+            "技术成熟度评估",
+            "技术路线图（短期/中期/长期）",
+            "局限性深度剖析（根本原因+突破路径）"
+          ],
+          "dataToCollect": [
+            "性能数据（提升百分比、具体数字）",
+            "技术架构图",
+            "与竞品的技术对比"
+          ]
+        },
+        "businessLogic": {
+          "title": "商业逻辑与价值分析",
+          "targetWords": "600-800字",
+          "note": "这是最重要的部分，必须深入！",
+          "sections": {
+            "businessModel": {
+              "title": "商业模式深度剖析",
+              "questions": [
+                "收入模式: 如何赚钱？为什么？可持续性？",
+                "成本结构: 构成？边际成本？规模经济？",
+                "定价策略: 逻辑？如何平衡价值和成本？",
+                "竞争壁垒: 护城河在哪？如何被突破？"
+              ]
+            },
+            "valueChain": {
+              "title": "价值链与生态重构",
+              "questions": [
+                "价值链变化: 哪些环节被改变？为什么？",
+                "利益重新分配: 谁受损？谁受益？",
+                "生态位变化: 角色如何变？权力如何转移？",
+                "商业模式创新: 新玩法？为什么可行？"
+              ]
+            },
+            "investmentLogic": {
+              "title": "投资与财务逻辑",
+              "questions": [
+                "投资价值: 为什么值得？风险？",
+                "估值逻辑: 如何估？合理区间？",
+                "财务模型: LTV/CAC？盈利路径？",
+                "资本流向: 钱会流向哪？"
+              ]
+            },
+            "marketOpportunity": {
+              "title": "市场机会量化",
+              "format": "TAM (总市场): $XXX亿\nSAM (可服务市场): $XXX亿\nSOM (可获得市场): $XXX亿"
+            },
+            "competitiveLandscape": {
+              "title": "竞争格局分析",
+              "mustInclude": [
+                "主要玩家定位矩阵",
+                "差异化分析（优势/劣势/护城河）",
+                "竞争壁垒评估"
+              ]
+            }
+          },
+          "dataToCollect": [
+            "市场规模数据",
+            "收入和成本数据",
+            "ROI 计算",
+            "竞品对比表格",
+            "定价策略分析"
+          ]
+        },
+        "strategicSignificance": {
+          "title": "战略意义与未来推演",
+          "targetWords": "400-450字",
+          "sections": {
+            "strategicPositioning": {
+              "title": "战略定位分析",
+              "questions": [
+                "历史坐标: 在科技演进图谱中的位置？",
+                "地缘战略: 全球AI竞赛格局中的影响？"
+              ]
+            },
+            "scenarioPlanning": {
+              "title": "情景推演（概率加权）",
+              "scenarios": [
+                "乐观情景 (X%概率): 触发条件、演进路径、影响",
+                "基准情景 (Y%概率): 触发条件、演进路径、影响",
+                "悲观情景 (Z%概率): 触发条件、演进路径、影响"
+              ]
+            },
+            "timeline": {
+              "title": "时间线预测",
+              "phases": [
+                "Phase 1 (0-6个月): 关键里程碑",
+                "Phase 2 (6-12个月): 关键变化",
+                "Phase 3 (12-24个月): 关键转折",
+                "Phase 4 (2-5年): 终局推演"
+              ]
+            }
+          }
+        },
+        "actionRecommendations": {
+          "title": "行动建议",
+          "targetWords": "200-250字",
+          "sections": {
+            "coreInsights": {
+              "title": "核心洞察（3-5条）",
+              "requirements": [
+                "每条必须有论据支撑",
+                "具有反共识特点",
+                "对决策有实质影响"
+              ]
+            },
+            "forEnterprises": {
+              "title": "对企业（CEO/CTO）",
+              "timeline": [
+                "立即行动 (0-3个月): 具体事项 + 预算",
+                "短期行动 (3-12个月): 具体事项 + 预算",
+                "中期战略 (1-3年): 具体事项 + 预算"
+              ]
+            },
+            "forInvestors": {
+              "title": "对投资者（VC/PE）",
+              "sections": [
+                "当前最佳机会（按优先级）",
+                "避免投资方向",
+                "投资策略和退出路径"
+              ]
+            },
+            "forPractitioners": {
+              "title": "对从业者",
+              "timeline": [
+                "短期技能发展 (0-6个月)",
+                "中期能力建设 (6-18个月)",
+                "长期职业规划 (18个月+)"
+              ]
+            },
+            "kpiDashboard": {
+              "title": "关注指标（KPI Dashboard）",
+              "categories": [
+                "技术指标",
+                "商业指标",
+                "竞争指标",
+                "监管指标"
+              ]
+            }
+          }
+        }
+      },
+      "dataCollectionQueries": [
+        "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo technical details architecture",
+        "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo pricing cost business model",
+        "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo market size revenue",
+        "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo vs competitors comparison",
+        "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo user feedback reviews",
+        "百度文心大模型4.0升级：性能全面对标GPT-4 Turbo expert analysis opinion",
+        "Turbo financial report earnings",
+        "百度文心大模型4.0升级：性能全面对标GPT-4 performance benchmarks"
+      ],
+      "qualityChecklist": {
+        "format": [
+          "包含\"发布日期\"",
+          "包含\"来源\"（带链接）",
+          "包含\"分类\"",
+          "包含\"可信度评分\"",
+          "包含\"执行摘要\"",
+          "使用分隔符 ---"
+        ],
+        "content": [
+          "至少3个数据表格",
+          "至少1个代码/架构图",
+          "商业模式分析（收入+成本+ROI）",
+          "行动建议（时间+金额+收益）",
+          "案例+数字佐证",
+          "总字数2000-3000字"
+        ],
+        "depth": [
+          "每个论断有数据支撑",
+          "分析了\"为什么\"",
+          "深入商业逻辑",
+          "多种情景分析",
+          "可操作的建议"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "generatedAt": "2025-11-18T08:04:49.253Z",
+    "totalOutlines": 7
+  }
+}
